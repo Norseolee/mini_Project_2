@@ -4,30 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- HOTEL DE LUNA -->
+    <link rel="stylesheet" href="CSS/homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/hotel_Logo.png" />
     <title>Hotel De Luna</title>
   </head>
   <body>
-    <nav>
-      <div>
-        <h1>Logo</h1>
-        <h1>Book Now!</h1>
-        <h1>Login</h1>
+    <header>
+      <div class="navbar">
+        <div class="logo ps-2">
+          <img href="index.html" src="images/hotel_Logo.png" width="50px" />
+          <h3 class="logo_name">Hotel Del Luna</h3>
+        </div>
+        <ul class="links">
+          <li><a class="link_font" href="">Rooms and Suite</a></li>
+          <li><a class="link_font" href="">Dining</a></li>
+          <li><a class="link_font" href="">Meeting & Events </a></li>
+          <li><a class="link_font" href="">Entertainment </a></li>
+          <li><a class="link_font" href="">wellness</a></li>
+          <li><a class="link_font" href="">Careers </a></li>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <li><a class="book_now link_font" href="">Book Now!</a></li>
+          <li><a class="link_font" href="account">Login</a></li>
+        </ul>
       </div>
-      <div>
-        <p>Rooms and Suite</p>
-        <p>Dining</p>
-        <p>Meeting & Events</p>
-        <p>Entertainment</p>
-        <p>Wellness</p>
-        <p>Careers</p>
-      </div>
-      <div>
-        <h1>PICTURE OF HOTEL</h1>
-      </div>
-    </nav>
+      <div class="hero"></div>
+    </header>
     <main>
       <!-- WELCOME TO HOTEL DE LUNA -->
-      <section>
+      <section class="welcome">
         <h1>Welcome to Hotel De Luna</h1>
         <p>
           Welcome to Hotel De Luna, where the living and departed converge in a
@@ -36,48 +53,84 @@
         </p>
       </section>
       <!-- DEAL OF THE MONTH -->
-      <section>
+
+      <section class="deal">
         <h1>Celebrating Father's Day</h1>
-        <p>
-          Treat your dad to an unforgettable experience at Hotel De Luna. Book
-          now for a special tribute to fatherhood and create cherished memories
-          together. Happy Father's Month!
-        </p>
-        <div class="card"></div>
-        <div class="card-details">
-          <p class="text-title">Father's Day Retreat</p>
-          <p class="text-body">
-            Luxurious rooms and suites for a comfortable and indulgent stay.
-            Rejuvenating spa treatments to help dad relax and unwind. Indoor and
-            outdoor swimming pools for a refreshing dip. Indoor climbing wall to
-            challenge dad's adventurous spirit. Well-equipped gym to maintain
-            fitness routines. Renowned restaurant offering delectable cuisine
-            for a memorable dining experience.
-          </p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">Thrills and Chills Package</p>
-          <p class="text-body">
-            Shooting range for dads to test their marksmanship skills.
-            Exhilarating zip lining activities for an adrenaline rush. Premium
-            accommodations for a comfortable stay. Rooftop swimming pool with
-            stunning views. Access to other hotel amenities such as spa, gym,
-            and restaurant. Unforgettable experiences filled with excitement and
-            adventure.
-          </p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">Family Fun Getaway</p>
-          <p class="text-body">
-            Dedicated kids' playroom with games and activities for children's
-            enjoyment. Indoor and outdoor swimming pools for family water fun.
-            Shops inside the hotel for convenient shopping. Theater showcasing
-            live performances for entertainment. Comfortable rooms and suites to
-            accommodate the whole family. Restaurant offering a diverse menu to
-            cater to everyone's taste buds.
-          </p>
+        <div class="container_Deal">
+          <div class="col-lg-4">
+            <p>
+              Treat your dad to an unforgettable experience at Hotel De Luna.
+              Book now for a special tribute to fatherhood and create cherished
+              memories together. Happy Father's Month!
+            </p>
+          </div>
+          <div class="container scroll-1">
+            <div class="card">
+              <div class="card__image">
+                <img
+                  src="../mini_Project_2/images/Father_Retreat.jpg"
+                  height="300px"
+                  style="object-fit: cover" />
+              </div>
+              <div class="card__content">
+                <span class="card__title">Father's Day Retreat</span>
+                <p class="card__describe">
+                  Luxurious rooms and suites for a comfortable and indulgent
+                  stay. Rejuvenating spa treatments to help dad relax and
+                  unwind. Indoor and outdoor swimming pools for a refreshing
+                  dip. Indoor climbing wall to challenge dad's adventurous
+                  spirit. Well-equipped gym to maintain fitness routines.
+                  Renowned restaurant offering delectable cuisine for a
+                  memorable dining experience.
+                </p>
+              </div>
+              <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+              <div class="card__image">
+                <img
+                  src="../mini_Project_2/images/Thrills_and_Chills.png"
+                  height="300px"
+                  style="object-fit: cover" />
+              </div>
+              <div class="card__content">
+                <span class="card__title">Thrills and Chills Package</span>
+                <p class="card__describe">
+                  Shooting range for dads to test their marksmanship skills.
+                  Exhilarating zip lining activities for an adrenaline rush.
+                  Premium accommodations for a comfortable stay. Rooftop
+                  swimming pool with stunning views. Access to other hotel
+                  amenities such as spa, gym, and restaurant. Unforgettable
+                  experiences filled with excitement and adventure.
+                </p>
+              </div>
+              <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+              <div class="card__image">
+                <img
+                  src="../mini_Project_2/images/Family_Fun_Getaway.jpg"
+                  height="300px"
+                  style="object-fit: cover" />
+              </div>
+              <div class="card__content">
+                <span class="card__title">Family Fun Getaway</span>
+                <p class="card__describe">
+                  Dedicated kids' playroom with games and activities for
+                  children's enjoyment. Indoor and outdoor swimming pools for
+                  family water fun. Shops inside the hotel for convenient
+                  shopping. Theater showcasing live performances for
+                  entertainment. Comfortable rooms and suites to accommodate the
+                  whole family. Restaurant offering a diverse menu to cater to
+                  everyone's taste buds.
+                </p>
+              </div>
+              <button class="card-button">View Details</button>
+            </div>
+          </div>
         </div>
       </section>
+
       <!-- EXPERIENCE WITH US! -->
       <section>
         <h1>Experience with Us!</h1>

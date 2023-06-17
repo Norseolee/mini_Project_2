@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "New York";
+  src: url(../fonts/newyork/NewYork\ PERSONAL\ USE.otf);
+}
+/* ====================== NAVBAR ======================================  */
+
+header {
+  background-color: rgb(25, 55, 109);
+  font-family: Roboto;
+  font-weight: light;
+}
+
+.logo img {
+  margin-bottom: 15px;
+}
+
+.logo_name {
+  display: inline;
+  margin-top: 10px;
+  color: rgb(235, 210, 64);
+  font-weight: normal;
+  font-size: 500;
+  font-family: New York;
+}
+#navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  padding-right: 30px;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+
+.link_font {
+  color: gold;
+  font-size: 15px;
+}
+
+.link_font:hover {
+  color: rgb(224, 224, 205);
+}
+
+.navbar .toggle_btn {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.book_now {
+  background-color: Gold;
+  color: White;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero {
+  height: 700px;
+  background-image: url(../images/Hotel_2.jpg);
+  background-size: cover;
+}
+/* ================================WELCOME==================================================== */
+main {
+  font-family: Roboto;
+}
+
+.welcome {
+  background-color: rgb(11, 36, 71);
+  text-align: center;
+}
+.welcome h1 {
+  font-family: New York;
+  color: gold;
+}
+
+.welcome p {
+  color: White;
+  padding-bottom: 10px;
+}
+
+/* ================================DEAL OF THE MONTH============================================= */
+
+.deal h1 {
+  color: gold;
+}
+
+.deal {
+  margin: 10px;
+}
+.container_Deal {
+  display: flex;
+}
