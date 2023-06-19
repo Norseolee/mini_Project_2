@@ -146,6 +146,108 @@ main {
   align-items: center;
   padding: 30px;
 }
+/* ====================== FOOTER ====================================== */
+.terms {
+  padding-top: 15px;
+  font-size: medium;
+  margin-top: 50px;
+  border-top: 1px solid whitesmoke;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.terms li:hover {
+  text-decoration: underline;
+}
+
+.Bottom p {
+  margin-top: 10px;
+  color: #bcbbbb;
+  text-align: center;
+  font-size: small;
+}
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_name {
+  display: inline;
+
+  color: rgb(235, 210, 64);
+  font-weight: normal;
+  font-size: 50px;
+  font-family: New York;
+}
+footer {
+  background: #0b2447;
+  padding: 40px 0;
+}
+
+.single-box p {
+  color: #fff;
+}
+.single-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.single-box .card-area i {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.single-box ul {
+  list-style: none;
+  padding: 0;
+}
+.single-box ul li a {
+  text-decoration: none;
+  color: #fff;
+
+  font-weight: 100;
+}
+.single-box h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+#basic-addon2 {
+  background: #fe1e4f;
+  color: #fff;
+}
+.socials i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+.input-group {
+  position: relative;
+}
+
+.input-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 /* ======================RESPONSIVENESS================================ */
 
 @media (max-width: 2000px) {

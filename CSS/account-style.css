@@ -93,3 +93,27 @@ footer {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+.terms {
+  padding-top: 15px;
+  font-size: medium;
+  margin-top: 50px;
+  border-top: 1px solid whitesmoke;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.terms li:hover {
+  text-decoration: underline;
+}
+
+.Bottom p {
+  margin-top: 10px;
+  color: #bcbbbb;
+  text-align: center;
+  font-size: small;
+}
