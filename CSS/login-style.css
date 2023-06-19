@@ -6,7 +6,6 @@
 }
 body {
   background-image: url(../images/login_bg.jpg);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +13,31 @@ body {
   background-size: cover;
   background-position: center;
 }
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: #19376d;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none; /* Added */
+}
+
+.back-button:hover {
+  background-color: #a5d7e8;
+}
+
+.back-button i {
+  font-size: 18px;
+}
+
 .container {
   position: relative;
   width: 70vw;
@@ -139,8 +163,8 @@ a {
   text-decoration: none;
 }
 .social-icons:hover {
-  color: #19376d;
-  border-color: #19376d;
+  color: #a5d7e8;
+  border-color: #a5d7e8;
 }
 .panels-container {
   position: absolute;
@@ -257,5 +281,10 @@ a {
 @media (max-width: 320px) {
   form {
     width: 90%;
+  }
+}
+@media (max-width: 635px) {
+  .back-button {
+    display: none;
   }
 }
