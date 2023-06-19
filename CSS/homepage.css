@@ -2,11 +2,12 @@
   font-family: "New York";
   src: url(../fonts/newyork/NewYork\ PERSONAL\ USE.otf);
 }
+
 /* ====================== NAVBAR ======================================  */
 
 header {
   background-color: rgb(25, 55, 109);
-  font-family: Roboto;
+  font-family: "Poppin", sans-serif;
   font-weight: light;
 }
 
@@ -22,12 +23,8 @@ header {
   font-size: 500;
   font-family: New York;
 }
-#navbar {
+.navbar {
   width: 100%;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .links {
@@ -90,7 +87,7 @@ header {
 
 /* ================================WELCOME==================================================== */
 main {
-  font-family: Roboto;
+  font-family: "Poppin", sans-serif;
 }
 
 .welcome {
@@ -116,13 +113,44 @@ main {
 .deal {
   margin: 10px;
 }
-.container_Deal {
+.Deal {
   display: flex;
 }
 
+.image {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.card {
+  position: relative;
+  background-color: rgb(25, 55, 109);
+  border-radius: 10px;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  height: 1;
+}
+.Card_Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+/* ======================RESPONSIVENESS================================ */
+
 @media (max-width: 2000px) {
   .links {
-    gap: 10px;
+    gap: 20px;
   }
 }
 @media (max-width: 992px) {
@@ -131,5 +159,10 @@ main {
   }
   .navbar .toggle_btn {
     display: block;
+  }
+}
+@media (max-width: 1112px) {
+  .links {
+    gap: 5px;
   }
 }
