@@ -1,0 +1,83 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_name {
+  display: inline;
+
+  color: rgb(235, 210, 64);
+  font-weight: normal;
+  font-size: 50px;
+  font-family: New York;
+}
+main {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -mos-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9b9b9b;
+  line-height: 3.8;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+footer {
+  background: #0b2447;
+  padding: 40px 0;
+}
+
+.single-box p {
+  color: #fff;
+}
+.single-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.single-box .card-area i {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.single-box ul {
+  list-style: none;
+  padding: 0;
+}
+.single-box ul li a {
+  text-decoration: none;
+  color: #fff;
+
+  font-weight: 100;
+}
+.single-box h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+#basic-addon2 {
+  background: #fe1e4f;
+  color: #fff;
+}
+.socials i {
+  font-size: 18px;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
