@@ -16,7 +16,20 @@ ul {
   font-size: 50px;
   font-family: New York;
 }
-
+main {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -mos-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9b9b9b;
+  line-height: 3.8;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 footer {
   background: #0b2447;
   padding: 40px 0;
