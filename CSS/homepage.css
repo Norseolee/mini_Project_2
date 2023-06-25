@@ -11,78 +11,136 @@ header {
   font-weight: light;
 }
 
-.logo img {
-  margin-bottom: 15px;
+.logo_img {
+  margin-bottom: 23px;
 }
 
 .logo_name {
   display: inline;
   margin-top: 10px;
   color: rgb(235, 210, 64);
-  font-weight: normal;
-  font-size: 500;
   font-family: New York;
 }
+
 .navbar {
-  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-.links {
+.nav_bar_right {
   list-style-type: none;
-  display: flex;
   padding-right: 30px;
-  gap: 30px;
-  justify-content: space-evenly;
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+  flex: 1;
 }
 
 .link_font {
-  color: gold;
+  color: white;
   font-size: 15px;
+  text-decoration: none;
 }
 
 .link_font:hover {
-  color: rgb(224, 224, 205);
+  color: Gold;
 }
 
-.navbar .toggle_btn {
-  color: white;
-  cursor: pointer;
-  display: none;
+.toggle_btn {
+  flex-shrink: 2;
 }
 
 .book_now {
+  margin-top: -10px;
   background-color: Gold;
-  color: White;
+  color: black;
   padding: 10px 20px;
   border: none;
   outline: none;
+  text-decoration: none;
   border-radius: 20px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.5s;
+  transition: box-shadow 0.2s;
+}
+
+.book_now:hover {
+  color: White;
+  box-shadow: inset 5px 1px 8px rgb(195, 147, 24);
 }
 
 .hero {
   height: 700px;
   background-image: url(../images/Hotel_2.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .toggle_btn {
-  font-size: larger;
+  color: gold;
+  font-size: 35px;
   font-weight: bold;
   margin-right: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 0 transparent solid;
+  transition: background-color 0.2s;
+}
+
+.toggle {
+  display: none;
+  position: relative;
 }
 
 .toggle_btn:hover {
-  border: 1px gold solid;
-  border-radius: 10px;
+  border: 0 gold solid;
+  box-shadow: inset 0px 2px 4px #07182e;
+  border-radius: 5px;
+  background-color: #0b2447;
+  opacity: background-color 50%;
+}
+
+.toggle_option {
+  display: none;
+  background-color: rgba(31, 82, 176, 0.9);
+  border-radius: 20px;
+  width: 200px;
+  display: grid;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+}
+
+.toggle_option a {
+  display: block;
+}
+
+.toggle_font {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: hover 5s;
+  padding: 10px;
+}
+
+.toggle_font:hover {
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgba(25, 55, 109, 0),
+    rgb(49, 109, 221),
+    rgba(255, 0, 0, 0)
+  );
 }
 
 .pipe {
   color: Gold;
+  cursor: default;
 }
 
 /* ================================WELCOME==================================================== */
@@ -95,7 +153,6 @@ main {
   text-align: center;
 }
 .welcome h1 {
-  font-family: New York;
   color: gold;
 }
 
@@ -105,18 +162,6 @@ main {
 }
 
 /* ================================DEAL OF THE MONTH============================================= */
-
-.deal h1 {
-  color: gold;
-}
-
-.deal {
-  margin: 10px;
-}
-.Deal {
-  display: flex;
-}
-
 .image {
   height: 200px;
   width: 200px;
@@ -130,21 +175,17 @@ main {
   border-radius: 10px;
 }
 
-.card {
-  position: relative;
-  background-color: rgb(25, 55, 109);
-  border-radius: 10px;
+.deal_of_month {
+  padding-top: 30px;
+  padding-left: 20px;
 }
-.card::before {
-  content: "";
-  position: absolute;
-  height: 1;
+
+.deal_of_month h1 {
+  color: Gold;
 }
-.Card_Content {
+
+.deal {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
 }
 /* ====================== FOOTER ====================================== */
 .terms {
@@ -176,14 +217,7 @@ main {
   align-items: center;
   justify-content: center;
 }
-.logo_name {
-  display: inline;
 
-  color: rgb(235, 210, 64);
-  font-weight: normal;
-  font-size: 50px;
-  font-family: New York;
-}
 footer {
   background: #0b2447;
   padding: 40px 0;
@@ -225,16 +259,7 @@ footer {
   font-size: 20px;
   margin-right: 15px;
 }
-@media (max-width: 767px) {
-  .single-box {
-    margin-bottom: 50px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .single-box {
-    margin-bottom: 50px;
-  }
-}
+
 .input-group {
   position: relative;
 }
@@ -250,21 +275,27 @@ footer {
 
 /* ======================RESPONSIVENESS================================ */
 
-@media (max-width: 2000px) {
-  .links {
-    gap: 20px;
-  }
-}
-@media (max-width: 992px) {
-  .navbar .links {
+@media (max-width: 1060px) {
+  .navbar .nav_bar_right,
+  .pipe {
     display: none;
   }
-  .navbar .toggle_btn {
+  .navbar .toggle {
     display: block;
   }
+  .book_now {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 }
-@media (max-width: 1112px) {
-  .links {
-    gap: 5px;
+
+@media (max-width: 767px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-box {
+    margin-bottom: 50px;
   }
 }
