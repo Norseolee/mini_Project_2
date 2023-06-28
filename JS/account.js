@@ -1,4 +1,10 @@
 const allSideMenu = document.querySelectorAll("#sidebar .side-menu.top li a");
+const shrink_btn = document.querySelector(".shrink-btn");
+const sidebar_links = document.querySelectorAll(".sidebar-links a");
+const shortcuts = document.querySelector(".sidebar-links h4");
+const tooltip_elements = document.querySelectorAll(".tooltip-element");
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll(".section");
 
 allSideMenu.forEach((item) => {
   const li = item.parentElement;
@@ -11,54 +17,81 @@ allSideMenu.forEach((item) => {
   });
 });
 
-// TOGGLE SIDEBAR
-const menuBar = document.querySelector("#content nav .bx.bx-menu");
-const sidebar = document.getElementById("sidebar");
+shrink_btn.addEventListener("click", () => {
+  document.body.classList.toggle("shrink");
+  setTimeout(moveActiveTab, 400);
 
-menuBar.addEventListener("click", function () {
-  sidebar.classList.toggle("hide");
+  shrink_btn.classList.add("hovered");
+
+  setTimeout(() => {
+    shrink_btn.classList.remove("hovered");
+  }, 500);
 });
 
-const searchButton = document.querySelector(
-  "#content nav form .form-input button"
-);
-const searchButtonIcon = document.querySelector(
-  "#content nav form .form-input button .bx"
-);
-const searchForm = document.querySelector("#content nav form");
+function changeLink() {
+  sidebar_links.forEach((sideLink) => sideLink.classList.remove("active"));
+  this.classList.add("active");
 
-searchButton.addEventListener("click", function (e) {
-  if (window.innerWidth < 576) {
-    e.preventDefault();
-    searchForm.classList.toggle("show");
-    if (searchForm.classList.contains("show")) {
-      searchButtonIcon.classList.replace("bx-search", "bx-x");
-    } else {
-      searchButtonIcon.classList.replace("bx-x", "bx-search");
-    }
-  }
-});
+  activeIndex = this.dataset.active;
 
-if (window.innerWidth < 768) {
-  sidebar.classList.add("hide");
-} else if (window.innerWidth > 576) {
-  searchButtonIcon.classList.replace("bx-x", "bx-search");
-  searchForm.classList.remove("show");
+  moveActiveTab();
 }
 
-window.addEventListener("resize", function () {
-  if (this.innerWidth > 576) {
-    searchButtonIcon.classList.replace("bx-x", "bx-search");
-    searchForm.classList.remove("show");
-  }
+sidebar_links.forEach((link) => link.addEventListener("click", changeLink));
+
+function showTooltip() {
+  let tooltip = this.parentNode.lastElementChild;
+  let spans = tooltip.children;
+  let tooltipIndex = this.dataset.tooltip;
+
+  Array.from(spans).forEach((sp) => sp.classList.remove("show"));
+  spans[tooltipIndex].classList.add("show");
+
+  tooltip.style.top = `${(100 / (spans.length * 2)) * (tooltipIndex * 2 + 1)}%`;
+}
+
+tooltip_elements.forEach((elem) => {
+  elem.addEventListener("mouseover", showTooltip);
 });
 
-const switchMode = document.getElementById("switch-mode");
+// Activate the first section by default
+sections[0].classList.add("active");
 
-switchMode.addEventListener("change", function () {
-  if (this.checked) {
-    document.body.classList.add("dark");
-  } else {
-    document.body.classList.remove("dark");
-  }
+// Add click event listener to each menu link
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Get the section associated with the clicked link
+    const sectionId = menuLink.dataset.section;
+    const section = document.getElementById(sectionId);
+
+    // Toggle the active class for menu links
+    menuLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    menuLink.classList.add("active");
+
+    // Toggle the active class for sections
+    sections.forEach((sec) => {
+      sec.classList.remove("active");
+      sec.style.display = "none";
+    });
+    section.classList.add("active");
+    section.style.display = "block";
+  });
 });
+
+// Hide sections that are not active
+function hideInactiveSections() {
+  sections.forEach((sec) => {
+    if (!sec.classList.contains("active")) {
+      sec.style.display = "none";
+    } else {
+      sec.style.display = "block";
+    }
+  });
+}
+
+// Call the function to hide inactive sections initially
+hideInactiveSections();
