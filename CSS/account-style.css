@@ -1,3 +1,5 @@
+/** Footer Area **/
+
 footer {
   background: #0b2447;
   padding: 20px 0;
@@ -53,7 +55,7 @@ footer {
   position: relative;
 }
 
-.input-btn {
+.input-group input-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -64,14 +66,14 @@ footer {
 
 .terms {
   padding-top: 15px;
+  padding-left: 0;
   font-size: medium;
-  margin-top: 50px;
+  margin-top: 20px;
   border-top: 1px solid whitesmoke;
   color: #f6f6f6;
   text-align: center;
   display: flex;
   justify-content: center;
-  gap: 5px;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -80,9 +82,17 @@ footer {
   text-decoration: underline;
 }
 
-.Bottom p {
+.copyright p {
   margin-top: 10px;
   color: #bcbbbb;
   text-align: center;
   font-size: small;
+  justify-content: center;
 }
+.copyright li {
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/** Footer Area**/
