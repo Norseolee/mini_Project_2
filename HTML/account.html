@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -14,28 +22,178 @@
       src="https://kit.fontawesome.com/f15b7da99a.js"
       crossorigin="anonymous"
     ></script>
-
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- My CSS -->
     <link rel="stylesheet" href="../CSS/account-style.css" />
 
     <title>Hotel De Luna | Account Settings</title>
   </head>
   <body>
-    <header>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquam
-      pariatur, odit quo consequuntur, iste beatae non ipsum autem sit ratione
-      minus tenetur. Modi rem deleniti sapiente accusantium, asperiores velit?
-    </header>
+    <!-- SIDEBAR -->
+
+    <section id="sidebar">
+      <div class="sidebar-top pt-5">
+        <span class="shrink-btn">
+          <i class="bx bx-chevron-left"></i>
+        </span>
+        <img src="../images/hotel_logo.png" width="40%" alt="" />
+        <span class="text-white pt-1">Hotel De Luna</span>
+      </div>
+      <div class="sidebar-links">
+        <ul class="side-menu top">
+          <li class="tooltip-element active" data-tooltip="0">
+            <a
+              href="#"
+              class="menu-link active"
+              data-section="ac"
+              data-active="0"
+            >
+              <i class="fa fa-solid fa-sliders"></i>
+              <span class="text">Account Setting</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="1">
+            <a href="#" class="menu-link" data-section="ai" data-active="1">
+              <i class="fa fa-solid fa-circle-info"></i>
+              <span class="text">Account Information</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="2">
+            <a href="#" class="menu-link" data-section="cl" data-active="2">
+              <i class="fa fa-solid fa-city"></i>
+              <span class="text">Class</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="3">
+            <a
+              href="#"
+              class="menu-link"
+              data-section="reserve"
+              data-active="3"
+            >
+              <i class="fa fa-solid fa-calendar-days"></i>
+              <span class="text">Reservation</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="4">
+            <a href="#" class="menu-link" data-section="ht" data-active="4">
+              <i class="fa fa-solid fa-clock-rotate-left"></i>
+              <span class="text">History Trips</span>
+            </a>
+          </li>
+
+          <li class="tooltip-element" data-tooltip="5">
+            <a href="#" class="menu-link" data-section="refund" data-active="5">
+              <i class="fa fa-solid fa-money-bill-transfer"></i>
+              <span class="text">Refund</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="6">
+            <a href="#" class="menu-link" data-section="pm" data-active="6">
+              <i class="fa fa-solid fa-hand-holding-dollar"></i>
+              <span class="text">Payment Methods</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="7">
+            <a href="#" class="menu-link" data-section="as" data-active="7">
+              <i class="fa fa-solid fa-user-shield"></i>
+              <span class="text">Account Security</span>
+            </a>
+          </li>
+
+          <li class="tooltip-element" data-tooltip="8">
+            <a
+              href="#"
+              class="logout menu-link"
+              data-section="home"
+              data-active="8"
+            >
+              <i class="fa fa-solid fa-user-xmark"></i>
+              <span class="text">Account Delete</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="9">
+            <a
+              href="#"
+              class="logout menu-link"
+              data-section="contact"
+              data-active="9"
+            >
+              <i class="fa fa-solid fa-sliders"></i>
+              <span class="text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <a href="#" class="profile">
+          <img src="../images/default_pp.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="content">
+          <section id="ac" class="section active">
+            <h1>Account Setting</h1>
+            <p>This is the Account Setting section.</p>
+          </section>
+          <section id="ai" class="section">
+            <h1>Account Information</h1>
+            <p>This is the Account Information section.</p>
+          </section>
+          <section id="cl" class="section">
+            <h1>Class</h1>
+            <p>This is the Class section.</p>
+          </section>
+          <section id="reserve" class="section">
+            <h1>Reservation</h1>
+            <p>This is the Reservation section.</p>
+          </section>
+          <section id="ht" class="section">
+            <h1>History Trips</h1>
+            <p>This is the Account Setting section.</p>
+          </section>
+          <section id="refund" class="section">
+            <h1>Refund</h1>
+            <p>This is the Account Information section.</p>
+          </section>
+          <section id="pm" class="section">
+            <h1>Payment Methods</h1>
+            <p>This is the Class section.</p>
+          </section>
+          <section id="as" class="section">
+            <h1>Account Security</h1>
+            <p>This is the Reservation section.</p>
+          </section>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
     <footer>
-      <div class="container">
+      <div class="container2">
         <div class="row justify-content-center align-content-center">
           <div class="logo-footer">
             <img src="../images/hotel_logo.png" alt="" width="90px" />
+            <!-- <h3 class="logo_name ps-2">Hotel Del Luna</h3> -->
           </div>
         </div>
         <div class="row pt-4">
           <div class="col-lg-3 col-sm-6">
             <div class="single-box">
+              <!-- <img src="../images/hotel_logo.png" alt="" id="logo-footer" /> -->
               <h2>VISITOR INFORMATION</h2>
               <ul>
                 <li><a href="#">Getting Here</a></li>
@@ -50,6 +208,13 @@
                 <li><a href="#">Procurement</a></li>
                 <li><a href="#">Contact Us</a></li>
               </ul>
+              <!-- <h3>We Accect</h3>
+                <div class="card-area">
+                  <i class="fa fa-cc-visa"></i>
+                  <i class="fa fa-credit-card"></i>
+                  <i class="fa fa-cc-mastercard"></i>
+                  <i class="fa fa-cc-paypal"></i>
+                </div> -->
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 ps-lg-5">
@@ -96,7 +261,7 @@
                   class="form-control"
                   placeholder="Enter your email"
                 />
-                <button class="btn btn-warning" type="button">
+                <button class="btn btn-warning input-btn" type="button">
                   <i class="fa fa-arrow-right"></i>
                 </button>
               </div>
@@ -111,7 +276,7 @@
             </div>
           </div>
         </div>
-        <div class="copyright">
+        <div>
           <ul class="terms">
             <li>About</li>
             |
@@ -121,6 +286,8 @@
             |
             <li>Careers</li>
           </ul>
+        </div>
+        <div class="Bottom">
           <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
         </div>
       </div>
