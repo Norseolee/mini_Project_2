@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "New York";
+  src: url(../fonts/newyork/NewYork\ PERSONAL\ USE.otf);
+}
+.logo_name {
+  display: inline;
+  font-size: larger;
+  color: rgb(235, 210, 64);
+  font-family: New York;
+}
 ul {
   list-style-type: none;
 }
@@ -91,7 +102,7 @@ body {
 }
 #sidebar .side-menu {
   width: 100%;
-  margin-top: 48px;
+  margin-top: 20px;
 }
 #sidebar .side-menu li {
   height: 48px;
@@ -156,6 +167,10 @@ body {
   display: flex;
   justify-content: center;
 }
+#sidebar.hide ~ #content {
+  width: calc(100% - 60px);
+  left: 60px;
+}
 
 /* SIDEBAR */
 
@@ -165,10 +180,6 @@ body {
   width: calc(100% - 280px);
   left: 280px;
   transition: 0.3s ease;
-}
-#sidebar.hide ~ #content {
-  width: calc(100% - 60px);
-  left: 60px;
 }
 
 /* NAVBAR */
@@ -196,90 +207,12 @@ body {
   border-radius: 50%;
   box-shadow: -20px -20px 0 var(--light);
 }
-#content nav a {
-  color: var(--dark);
-  right: 0;
-}
-#content nav .fa.fa-menu {
-  cursor: pointer;
-  color: var(--dark);
-}
-#content nav .nav-link {
-  font-size: 16px;
-  transition: 0.3s ease;
-}
-#content nav .nav-link:hover {
-  color: var(--blue);
-}
-#content nav form {
-  max-width: 400px;
-  width: 100%;
-  margin-right: auto;
-}
-#content nav form .form-input {
-  display: flex;
-  align-items: center;
-  height: 36px;
-}
-#content nav form .form-input input {
-  flex-grow: 1;
-  padding: 0 16px;
-  height: 100%;
-  border: none;
-  background: var(--grey);
-  border-radius: 36px 0 0 36px;
-  outline: none;
-  width: 100%;
-  color: var(--dark);
-}
-#content nav form .form-input button {
-  width: 36px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--blue);
-  color: var(--light);
-  font-size: 18px;
-  border: none;
-  outline: none;
-  border-radius: 0 36px 36px 0;
-  cursor: pointer;
-}
-#content nav .notification {
-  font-size: 20px;
-  position: relative;
-}
-#content nav .notification .num {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--light);
-  background: var(--red);
-  color: var(--light);
-  font-weight: 700;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 #content nav .profile img {
   width: 36px;
   height: 36px;
   object-fit: cover;
   border-radius: 50%;
-}
-#content nav .switch-mode {
-  display: block;
-  min-width: 50px;
-  height: 25px;
-  border-radius: 25px;
-  background: var(--grey);
-  cursor: pointer;
-  position: relative;
 }
 
 /* NAVBAR */
@@ -295,199 +228,6 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #f6f6f6;
-}
-#content main .head-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-gap: 16px;
-  flex-wrap: wrap;
-}
-#content main .head-title .left h1 {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--dark);
-}
-#content main .head-title .left .breadcrumb {
-  display: flex;
-  align-items: center;
-  grid-gap: 16px;
-}
-#content main .head-title .left .breadcrumb li {
-  color: var(--dark);
-}
-#content main .head-title .left .breadcrumb li a {
-  color: var(--dark-grey);
-  pointer-events: none;
-}
-#content main .head-title .left .breadcrumb li a.active {
-  color: var(--blue);
-  pointer-events: unset;
-}
-#content main .head-title .btn-download {
-  height: 36px;
-  padding: 0 16px;
-  border-radius: 36px;
-  background: var(--blue);
-  color: var(--light);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-gap: 10px;
-  font-weight: 500;
-}
-
-#content main .box-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 24px;
-  margin-top: 36px;
-}
-#content main .box-info li {
-  padding: 24px;
-  background: var(--light);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  grid-gap: 24px;
-}
-#content main .box-info li .fa {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#content main .box-info li:nth-child(1) .fa {
-  background: var(--light-blue);
-  color: var(--blue);
-}
-#content main .box-info li:nth-child(2) .fa {
-  background: var(--light-yellow);
-  color: var(--yellow);
-}
-#content main .box-info li:nth-child(3) .fa {
-  background: var(--light-orange);
-  color: var(--orange);
-}
-#content main .box-info li .text h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--dark);
-}
-#content main .box-info li .text p {
-  color: var(--dark);
-}
-
-#content main .table-data {
-  display: flex;
-  flex-wrap: wrap;
-  grid-gap: 24px;
-  margin-top: 24px;
-  width: 100%;
-  color: var(--dark);
-}
-#content main .table-data > div {
-  border-radius: 20px;
-  background: var(--light);
-  padding: 24px;
-  overflow-x: auto;
-}
-#content main .table-data .head {
-  display: flex;
-  align-items: center;
-  grid-gap: 16px;
-  margin-bottom: 24px;
-}
-#content main .table-data .head h3 {
-  margin-right: auto;
-  font-size: 24px;
-  font-weight: 600;
-}
-#content main .table-data .head .fa {
-  cursor: pointer;
-}
-
-#content main .table-data .order {
-  flex-grow: 1;
-  flex-basis: 500px;
-}
-#content main .table-data .order table {
-  width: 100%;
-  border-collapse: collapse;
-}
-#content main .table-data .order table th {
-  padding-bottom: 12px;
-  font-size: 13px;
-  text-align: left;
-  border-bottom: 1px solid var(--grey);
-}
-#content main .table-data .order table td {
-  padding: 16px 0;
-}
-#content main .table-data .order table tr td:first-child {
-  display: flex;
-  align-items: center;
-  grid-gap: 12px;
-  padding-left: 6px;
-}
-#content main .table-data .order table td img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-#content main .table-data .order table tbody tr:hover {
-  background: var(--grey);
-}
-#content main .table-data .order table tr td .status {
-  font-size: 10px;
-  padding: 6px 16px;
-  color: var(--light);
-  border-radius: 20px;
-  font-weight: 700;
-}
-#content main .table-data .order table tr td .status.completed {
-  background: var(--blue);
-}
-#content main .table-data .order table tr td .status.process {
-  background: var(--yellow);
-}
-#content main .table-data .order table tr td .status.pending {
-  background: var(--orange);
-}
-
-#content main .table-data .todo {
-  flex-grow: 1;
-  flex-basis: 300px;
-}
-#content main .table-data .todo .todo-list {
-  width: 100%;
-}
-#content main .table-data .todo .todo-list li {
-  width: 100%;
-  margin-bottom: 16px;
-  background: var(--grey);
-  border-radius: 10px;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#content main .table-data .todo .todo-list li .fa {
-  cursor: pointer;
-}
-#content main .table-data .todo .todo-list li.completed {
-  border-left: 10px solid var(--blue);
-}
-#content main .table-data .todo .todo-list li.not-completed {
-  border-left: 10px solid var(--orange);
-}
-#content main .table-data .todo .todo-list li:last-child {
-  margin-bottom: 0;
 }
 /* MAIN */
 /* CONTENT */
@@ -558,30 +298,15 @@ footer {
   position: relative;
   width: 100%;
 }
-.terms {
-  padding-top: 15px;
-  font-size: medium;
-  margin-top: 50px;
-  border-top: 1px solid whitesmoke;
-  color: #f6f6f6;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  flex-wrap: wrap;
-  list-style-type: none;
-}
 
-.terms li:hover {
-  text-decoration: underline;
-}
-
-.Bottom p {
-  margin-top: 10px;
+.bottom p {
+  margin-top: 0;
+  margin-bottom: 0;
   color: #bcbbbb;
   text-align: center;
   font-size: small;
 }
+
 .logo-footer {
   display: flex;
   align-items: center;
@@ -639,7 +364,7 @@ footer {
 }
 
 .terms {
-  font-size: medium;
+  font-size: 17px;
   margin-top: 10px;
   border-top: 1px solid whitesmoke;
   color: #f6f6f6;
@@ -648,17 +373,12 @@ footer {
   justify-content: center;
   gap: 5px;
   flex-wrap: wrap;
+  margin-bottom: 0px;
+  padding-left: 0;
 }
 
 .terms li:hover {
   text-decoration: underline;
-}
-
-.Bottom p {
-  margin-top: 10px;
-  color: #bcbbbb;
-  text-align: center;
-  font-size: small;
 }
 
 .shrink-btn {
