@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -23,31 +22,165 @@
       src="https://kit.fontawesome.com/f15b7da99a.js"
       crossorigin="anonymous"
     ></script>
-
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
     <link rel="stylesheet" href="../CSS/account-style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../images/favicon-16x16.png"
-    />
 
-    <title>Hotel De Luna | Account</title>
+    <title>Hotel De Luna | Account Settings</title>
   </head>
-
   <body>
-    <main>Website Content</main>
+    <!-- SIDEBAR -->
+
+    <section id="sidebar">
+      <div class="sidebar-top pt-4">
+        <span class="shrink-btn">
+          <i class="bx bx-chevron-left"></i>
+        </span>
+        <img src="../images/hotel_logo.png" width="50%" alt="" />
+        <span class="pt-1 logo_name">Hotel De Luna</span>
+      </div>
+      <div class="sidebar-links">
+        <ul class="side-menu top">
+          <li class="tooltip-element active" data-tooltip="0">
+            <a
+              href="#"
+              class="menu-link active"
+              data-section="ac"
+              data-active="0"
+            >
+              <i class="fa fa-solid fa-sliders"></i>
+              <span class="text">Account Setting</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="1">
+            <a href="#" class="menu-link" data-section="ai" data-active="1">
+              <i class="fa fa-solid fa-circle-info"></i>
+              <span class="text">Account Information</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="2">
+            <a href="#" class="menu-link" data-section="cl" data-active="2">
+              <i class="fa fa-solid fa-city"></i>
+              <span class="text">Class</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="3">
+            <a
+              href="#"
+              class="menu-link"
+              data-section="reserve"
+              data-active="3"
+            >
+              <i class="fa fa-solid fa-calendar-days"></i>
+              <span class="text">Reservation</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="4">
+            <a href="#" class="menu-link" data-section="ht" data-active="4">
+              <i class="fa fa-solid fa-clock-rotate-left"></i>
+              <span class="text">History Trips</span>
+            </a>
+          </li>
+
+          <li class="tooltip-element" data-tooltip="5">
+            <a href="#" class="menu-link" data-section="refund" data-active="5">
+              <i class="fa fa-solid fa-money-bill-transfer"></i>
+              <span class="text">Refund</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="6">
+            <a href="#" class="menu-link" data-section="pm" data-active="6">
+              <i class="fa fa-solid fa-hand-holding-dollar"></i>
+              <span class="text">Payment Methods</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="7">
+            <a href="#" class="menu-link" data-section="as" data-active="7">
+              <i class="fa fa-solid fa-user-shield"></i>
+              <span class="text">Account Security</span>
+            </a>
+          </li>
+
+          <li class="tooltip-element" data-tooltip="8">
+            <a
+              href="#"
+              class="logout menu-link"
+              data-section="home"
+              data-active="8"
+            >
+              <i class="fa fa-solid fa-user-xmark"></i>
+              <span class="text">Account Delete</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="9">
+            <a
+              href="#"
+              class="logout menu-link"
+              data-section="contact"
+              data-active="9"
+            >
+              <i class="fa fa-solid fa-sliders"></i>
+              <span class="text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <a href="#" class="profile">
+          <img src="../images/default_pp.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="content">
+          <section id="ac" class="section active">
+            <h1>Account Setting</h1>
+            <p>This is the Account Setting section.</p>
+          </section>
+          <section id="ai" class="section">
+            <h1>Account Information</h1>
+            <p>This is the Account Information section.</p>
+          </section>
+          <section id="cl" class="section">
+            <h1>Class</h1>
+            <p>This is the Class section.</p>
+          </section>
+          <section id="reserve" class="section">
+            <h1>Reservation</h1>
+            <p>This is the Reservation section.</p>
+          </section>
+          <section id="ht" class="section">
+            <h1>History Trips</h1>
+            <p>This is the Account Setting section.</p>
+          </section>
+          <section id="refund" class="section">
+            <h1>Refund</h1>
+            <p>This is the Account Information section.</p>
+          </section>
+          <section id="pm" class="section">
+            <h1>Payment Methods</h1>
+            <p>This is the Class section.</p>
+          </section>
+          <section id="as" class="section">
+            <h1>Account Security</h1>
+            <p>This is the Reservation section.</p>
+          </section>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
 
     <footer>
       <div class="container">
@@ -76,15 +209,15 @@
                 <li><a href="#">Contact Us</a></li>
               </ul>
               <!-- <h3>We Accect</h3>
-              <div class="card-area">
-                <i class="fa fa-cc-visa"></i>
-                <i class="fa fa-credit-card"></i>
-                <i class="fa fa-cc-mastercard"></i>
-                <i class="fa fa-cc-paypal"></i>
-              </div> -->
+                <div class="card-area">
+                  <i class="fa fa-cc-visa"></i>
+                  <i class="fa fa-credit-card"></i>
+                  <i class="fa fa-cc-mastercard"></i>
+                  <i class="fa fa-cc-paypal"></i>
+                </div> -->
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-3 col-sm-6 ps-lg-5">
             <div class="single-box">
               <h2>STAY</h2>
               <ul>
@@ -100,7 +233,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-3 col-sm-6 ps-lg-5">
             <div class="single-box">
               <h2>DINE</h2>
               <ul>
@@ -154,10 +287,12 @@
             <li>Careers</li>
           </ul>
         </div>
-        <div class="Bottom">
+        <div class="bottom">
           <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
         </div>
       </div>
     </footer>
+
+    <script src="../JS/account.js"></script>
   </body>
 </html>

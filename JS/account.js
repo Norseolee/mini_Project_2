@@ -1,11 +1,21 @@
+const allSideMenu = document.querySelectorAll("#sidebar .side-menu.top li a");
 const shrink_btn = document.querySelector(".shrink-btn");
-const search = document.querySelector(".search");
 const sidebar_links = document.querySelectorAll(".sidebar-links a");
-const active_tab = document.querySelector(".active-tab");
 const shortcuts = document.querySelector(".sidebar-links h4");
 const tooltip_elements = document.querySelectorAll(".tooltip-element");
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll(".section");
 
-let activeIndex;
+allSideMenu.forEach((item) => {
+  const li = item.parentElement;
+
+  item.addEventListener("click", function () {
+    allSideMenu.forEach((i) => {
+      i.parentElement.classList.remove("active");
+    });
+    li.classList.add("active");
+  });
+});
 
 shrink_btn.addEventListener("click", () => {
   document.body.classList.toggle("shrink");
@@ -17,21 +27,6 @@ shrink_btn.addEventListener("click", () => {
     shrink_btn.classList.remove("hovered");
   }, 500);
 });
-
-search.addEventListener("click", () => {
-  document.body.classList.remove("shrink");
-  search.lastElementChild.focus();
-});
-
-function moveActiveTab() {
-  let topPosition = activeIndex * 58 + 2.5;
-
-  if (activeIndex > 3) {
-    topPosition += shortcuts.clientHeight;
-  }
-
-  active_tab.style.top = `${topPosition}px`;
-}
 
 function changeLink() {
   sidebar_links.forEach((sideLink) => sideLink.classList.remove("active"));
@@ -58,9 +53,6 @@ function showTooltip() {
 tooltip_elements.forEach((elem) => {
   elem.addEventListener("mouseover", showTooltip);
 });
-// Get the menu links and sections
-const menuLinks = document.querySelectorAll(".menu-link");
-const sections = document.querySelectorAll(".section");
 
 // Activate the first section by default
 sections[0].classList.add("active");
