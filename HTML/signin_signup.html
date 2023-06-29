@@ -77,29 +77,38 @@
             Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a>
           </p>
         </form>
-        <form action="" class="sign-up-form">
+        <form
+          action="../PHP/process-form.php"
+          method="post"
+          class="sign-up-form"
+        >
           <h2 class="title">Sign up</h2>
           <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="First Name" />
+            <i class="fas fa-user" for="fname"></i>
+            <input type="text" placeholder="First Name" id="fname" required />
           </div>
           <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Last Name" />
+            <i class="fas fa-user" for="lname"></i>
+            <input type="text" placeholder="Last Name" id="lname" required />
           </div>
           <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Email" />
+            <i class="fas fa-envelope" for="e_mail"></i>
+            <input type="email" placeholder="Email" id="e_mail" />
           </div>
           <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" />
+            <i class="fas fa-lock" for="pass"></i>
+            <input type="password" placeholder="Password" id="pass" required />
           </div>
           <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Confirm Password" />
+            <i class="fas fa-lock" for="c_pass"></i>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="c_pass"
+              required
+            />
           </div>
-          <input type="submit" value="Sign up" class="btn" />
+          <input type="submit" value="SignUp" class="btn" />
           <p class="social-text">Or Sign up with social platform</p>
           <div class="social-media">
             <a href="#" class="social-icons"><i class="fab fa-facebook"></i></a>
