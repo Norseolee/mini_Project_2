@@ -493,3 +493,14 @@ body.shrink .sidebar-links h4 {
   padding-left: 60px;
   padding-right: 60px;
 }
+label {
+  font-weight: 600;
+  color: #666;
+}
+
+.mx-t3 {
+  margin-top: -3rem;
+}
+.chk {
+  display: flex;
+}
