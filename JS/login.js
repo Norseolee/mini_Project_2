@@ -6,19 +6,21 @@ function checkLogin() {
     let firstNameSentenceCase =
       d.firstName.charAt(0).toUpperCase() + d.firstName.slice(1).toLowerCase();
 
-    document.getElementById(
-      "login-nav-item"
-    ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
+    // document.getElementById(
+    //   "login-nav-item"
+    // ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
 
+    // document.getElementById("login-nav-item").href = "HTML/account.html";
+
+    // document.getElementById(
+    //   "loginStatus"
+    // ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
+
+    // document.getElementById("loginStatus").href = "HTML/account.html";
+    $("#login-nav-item").text("Account");
     document.getElementById("login-nav-item").href = "HTML/account.html";
-
-    document.getElementById(
-      "loginStatus"
-    ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
-
-    document.getElementById("loginStatus").href = "HTML/account.html";
-    // $("#login-nav-item").text(d.firstName);
-    // $("#loginStatus").text(d.firstName);
+    $("#loginStatus").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
   }
 }
 
