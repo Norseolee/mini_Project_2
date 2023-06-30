@@ -63,69 +63,41 @@
               <span class="text">Account Information</span>
             </a>
           </li>
+
           <li class="tooltip-element" data-tooltip="2">
-            <a href="#" class="menu-link" data-section="cl" data-active="2">
-              <i class="fa fa-solid fa-city"></i>
-              <span class="text">Class</span>
-            </a>
-          </li>
-          <li class="tooltip-element" data-tooltip="3">
             <a
               href="#"
               class="menu-link"
               data-section="reserve"
-              data-active="3"
+              data-active="2"
             >
               <i class="fa fa-solid fa-calendar-days"></i>
               <span class="text">Reservation</span>
             </a>
           </li>
-          <li class="tooltip-element" data-tooltip="4">
-            <a href="#" class="menu-link" data-section="ht" data-active="4">
+          <li class="tooltip-element" data-tooltip="3">
+            <a href="#" class="menu-link" data-section="ht" data-active="3">
               <i class="fa fa-solid fa-clock-rotate-left"></i>
               <span class="text">History Trips</span>
             </a>
           </li>
 
-          <li class="tooltip-element" data-tooltip="5">
-            <a href="#" class="menu-link" data-section="refund" data-active="5">
+          <li class="tooltip-element" data-tooltip="4">
+            <a href="#" class="menu-link" data-section="refund" data-active="4">
               <i class="fa fa-solid fa-money-bill-transfer"></i>
               <span class="text">Refund</span>
             </a>
           </li>
-          <li class="tooltip-element" data-tooltip="6">
-            <a href="#" class="menu-link" data-section="pm" data-active="6">
+          <li class="tooltip-element" data-tooltip="5">
+            <a href="#" class="menu-link" data-section="pm" data-active="5">
               <i class="fa fa-solid fa-hand-holding-dollar"></i>
               <span class="text">Payment Methods</span>
             </a>
           </li>
-          <li class="tooltip-element" data-tooltip="7">
-            <a href="#" class="menu-link" data-section="as" data-active="7">
-              <i class="fa fa-solid fa-user-shield"></i>
-              <span class="text">Account Security</span>
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="8">
-            <a
-              href="#"
-              class="logout menu-link"
-              data-section="home"
-              data-active="8"
-            >
-              <i class="fa fa-solid fa-user-xmark"></i>
-              <span class="text">Account Delete</span>
-            </a>
-          </li>
-          <li class="tooltip-element" data-tooltip="9">
-            <a
-              href="#"
-              class="logout menu-link"
-              data-section="contact"
-              data-active="9"
-            >
-              <i class="fa fa-solid fa-sliders"></i>
-              <span class="text">Logout</span>
+          <li class="tooltip-element" data-tooltip="6">
+            <a href="#" class="menu-link" data-section="pm" data-active="6">
+              <i class="fa fa-solid fa-people-group"></i>
+              <span class="text">Membership</span>
             </a>
           </li>
         </ul>
@@ -137,18 +109,165 @@
     <section id="content">
       <!-- NAVBAR -->
       <nav>
-        <a href="#" class="profile">
+        <a href="account.html" class="profile">
           <img src="../images/default_pp.png" />
+          <span id="account_name">Account</span>
         </a>
       </nav>
       <!-- NAVBAR -->
 
       <!-- MAIN -->
       <main>
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Modal title
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Understood
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="content">
           <section id="ac" class="section active">
-            <h1>Account Setting</h1>
-            <p>This is the Account Setting section.</p>
+            <div class="container mt-3">
+              <form class="form-acc-setting">
+                <div class="upload">
+                  <img
+                    id="selectedImage"
+                    src="../images/noprofil.jpg"
+                    width="200"
+                    height="200"
+                    alt=""
+                  />
+                  <div class="round">
+                    <input
+                      type="file"
+                      id="imageInput"
+                      onchange="displaySelectedImage(event)"
+                    />
+                    <i class="fa fa-camera" style="color: #fff"></i>
+                  </div>
+                </div>
+
+                <div class="row jumbotron box8 account-settings">
+                  <div class="col-sm-6 form-group">
+                    <label for="fname">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="acc_fname"
+                      id="acc_fname"
+                      required
+                    />
+
+                    <label for="lname">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="acc_lname"
+                      id="acc_lname"
+                      required
+                    />
+
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="acc_email"
+                      id="acc_email"
+                      required
+                    />
+                    <div class="pt-3 buttons-acc-setting">
+                      <button class="btn btn-warning">Save</button>
+                      <button class="btn btn-warning">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form class="form-acc-setting pt-4">
+                <div class="upload">
+                  <img
+                    id="selectedImage"
+                    src="../images/noprofil.jpg"
+                    width="200"
+                    height="200"
+                    alt=""
+                  />
+                  <div class="round">
+                    <input
+                      type="file"
+                      id="imageInput"
+                      onchange="displaySelectedImage(event)"
+                    />
+                    <i class="fa fa-camera" style="color: #fff"></i>
+                  </div>
+                </div>
+
+                <div class="row jumbotron box8 account-settings">
+                  <div class="col-sm-6 form-group">
+                    <label for="fname">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="acc_fname"
+                      id="acc_fname"
+                      required
+                    />
+
+                    <label for="lname">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="acc_lname"
+                      id="acc_lname"
+                      required
+                    />
+
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="acc_email"
+                      id="acc_email"
+                      required
+                    />
+                    <div class="pt-3 buttons-acc-setting">
+                      <button class="btn btn-warning">Save</button>
+                      <button class="btn btn-warning">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </section>
           <section id="ai" class="section">
             <h1 class="text-center">Account Information</h1>
@@ -182,7 +301,7 @@
                       class="form-control"
                       name="email"
                       id="email"
-                      disabled
+                      required
                     />
                   </div>
                   <div class="col-sm-6 form-group">
