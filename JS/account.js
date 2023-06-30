@@ -323,3 +323,42 @@ lstcountires.forEach(function (item) {
   o.value = item;
   countries.appendChild(o);
 });
+
+function checkLoginInfo() {
+  if (localStorage.getItem("login") != null) {
+    let u = localStorage.getItem("login");
+    let d = JSON.parse(u);
+
+    let firstNameSentenceCase =
+      d.firstName.charAt(0).toUpperCase() +
+      d.firstName.slice(1).toLowerCase() +
+      " " +
+      d.lastName.charAt(0).toUpperCase() +
+      d.lastName.slice(1).toLowerCase();
+
+    document.getElementById(
+      "account_name"
+    ).innerHTML = `Welcome, <span id="account_name">${firstNameSentenceCase}</span>!`;
+  }
+}
+checkLoginInfo();
+
+function displaySelectedImage(event) {
+  const selectedFile = event.target.files[0];
+  const selectedImage = document.getElementById("selectedImage");
+  selectedImage.src = URL.createObjectURL(selectedFile);
+  selectedImage.style.objectFit = "cover";
+}
+function checkAccount() {
+  if (localStorage.getItem("login") != null) {
+    let u = localStorage.getItem("login");
+    let d = JSON.parse(u);
+    let formattedFirstName = sentenceCase(d.firstName);
+    let formattedLastName = sentenceCase(d.lastName);
+    document.getElementById("acc_fname").value = formattedFirstName;
+    document.getElementById("acc_lname").value = formattedLastName;
+    document.getElementById("acc_email").value = d.email;
+  }
+}
+
+checkAccount();
