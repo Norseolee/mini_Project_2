@@ -181,7 +181,9 @@ body {
   left: 280px;
   transition: 0.3s ease;
 }
-
+#account_name {
+  color: #342e37;
+}
 /* NAVBAR */
 #content nav {
   height: 56px;
@@ -190,7 +192,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  grid-gap: 24px;
+  grid-gap: 10px;
   font-family: var(--poppins);
   position: sticky;
   top: 0;
@@ -205,7 +207,7 @@ body {
   bottom: -40px;
   left: 0;
   border-radius: 50%;
-  box-shadow: -20px -20px 0 var(--light);
+  /* box-shadow: -20px -20px 0 var(--light); */
 }
 
 #content nav .profile img {
@@ -226,7 +228,7 @@ body {
   max-height: calc(100vh - 56px);
   overflow-y: scroll;
   position: relative;
-  overflow: hidden;
+
   background-color: #f6f6f6;
 }
 /* MAIN */
@@ -503,4 +505,70 @@ label {
 }
 .chk {
   display: flex;
+}
+.upload {
+  width: 100px;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.upload img {
+  border-radius: 50%;
+  border: 6px solid #eaeaea;
+}
+
+.upload .round {
+  position: absolute;
+  left: 84px;
+  top: 162px;
+  bottom: 0;
+  right: 0;
+  background: #00b4ff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.upload .round input[type="file"] {
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+.account-settings {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  align-items: center;
+
+  flex-direction: column;
+  /* align-content: stretch; */
+  justify-content: center;
+}
+.buttons-acc-setting {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.buttons-acc-setting button {
+  width: 30%;
+}
+.form-acc-setting {
+  padding-bottom: 100px;
+  border-bottom: 1px solid rgb(49, 49, 49);
 }
