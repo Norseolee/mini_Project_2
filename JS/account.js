@@ -206,6 +206,24 @@ const lstcountires = [
   "Zimbabwe",
 ];
 
+function sentenceCase(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+}
+
+function checkLogin() {
+  if (localStorage.getItem("login") != null) {
+    let u = localStorage.getItem("login");
+    let d = JSON.parse(u);
+    let formattedFirstName = sentenceCase(d.firstName);
+    let formattedLastName = sentenceCase(d.lastName);
+    document.getElementById("fname").value = formattedFirstName;
+    document.getElementById("lname").value = formattedLastName;
+    document.getElementById("email").value = d.email;
+  }
+}
+
+checkLogin();
+
 const allSideMenu = document.querySelectorAll("#sidebar .side-menu.top li a");
 const shrink_btn = document.querySelector(".shrink-btn");
 const sidebar_links = document.querySelectorAll(".sidebar-links a");
