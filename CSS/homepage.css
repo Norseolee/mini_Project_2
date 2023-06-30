@@ -3,89 +3,103 @@
   src: url(../fonts/newyork/NewYork\ PERSONAL\ USE.otf);
 }
 
+:root {
+  --spacer: 1rem;
+  --bigspace: 2rem;
+
+  /* --backgroundcolor: #152238; */
+  --MainBlue: #1c2e4a;
+  --darkblue: #0b2447;
+  --gold: #f1c913;
+  --white: #f3f3f3;
+  --black: #202020;
+
+  --blueHover: #2b4875;
+
+  --colorCard: #d9eaf5;
+  --buttonColor: #f4e91d;
+  --buttonColorHover: #f5d207;
+  --buttonColorActive: #d19e00;
+
+  --Logofonts: New York;
+  --fonts: "Poppin", sa/ns-serif;
+}
 /* ====================== NAVBAR ======================================  */
 
 header {
-  background-color: rgb(25, 55, 109);
-  font-family: "Poppin", sans-serif;
+  user-select: none;
+  background-color: var(--MainBlue);
+  font-family: var(--fonts);
   font-weight: light;
 }
-
 .logo_img {
   margin-bottom: 23px;
   margin-left: 15px;
 }
-
 .logo_name {
   display: inline;
   margin-top: 10px;
-  color: rgb(235, 210, 64);
-  font-family: New York;
+  color: var(--gold);
+  font-family: var(--Logofonts);
 }
-
+.nav_bar_left a {
+  text-decoration: none;
+}
 .navbar {
   display: flex;
   flex-wrap: nowrap;
 }
-
 .nav_bar_right {
   list-style-type: none;
   padding-right: 30px;
   display: flex;
-  gap: 10px;
+  gap: var(--spacer);
   justify-content: end;
   flex: 1;
 }
-
 .link_font {
-  color: white;
+  color: var(--white);
   font-size: 15px;
   text-decoration: none;
   padding: 10px;
   border-radius: 8px;
   transition: background-color 0.4s;
 }
-
 .link_font:hover {
   border-radius: 8px;
-  color: Gold;
-  background-color: #3463a1;
+  color: var(--gold);
+  background-color: var(--blueHover);
   padding: 10px;
 }
-
 .toggle_btn {
   flex-shrink: 2;
 }
-
 .book_now {
-  background-color: Gold;
-  color: black;
+  background-color: var(--buttonColor);
+  color: var(--black);
   padding: 10px 20px;
   border: none;
   outline: none;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.5s;
-  transition: box-shadow 0.2s;
+  transition: background-color 0.2s;
 }
-
 .book_now:hover {
-  color: White;
-  box-shadow: inset 5px 1px 8px rgb(195, 147, 24);
+  color: var(--black);
+  background-color: var(--buttonColorHover);
 }
-
 .hero {
   height: 750px;
   background-image: url(../images/Hotel_2.jpg);
   background-size: cover;
   background-position: center;
 }
-
 .toggle_btn {
-  color: gold;
+  color: var(--gold);
   font-size: 35px;
   font-weight: bold;
   margin-right: 10px;
@@ -95,35 +109,30 @@ header {
   border: 0 transparent solid;
   transition: background-color 0.2s;
 }
-
 .toggle {
   display: none;
   position: relative;
 }
-
 .toggle_btn:hover {
   border: 0 gold solid;
   box-shadow: inset 0px 2px 4px #07182e;
   border-radius: 5px;
-  background-color: #0b2447;
+  background-color: var(--darkblue);
   opacity: background-color 50%;
 }
-
 .toggle_option {
   display: none;
   background-color: rgba(31, 82, 176, 0.9);
-  border-radius: 20px;
+  border-radius: 10px;
   width: 200px;
   display: grid;
   position: absolute;
   right: 20px;
   text-align: center;
 }
-
 .toggle_option a {
   display: block;
 }
-
 .toggle_font {
   color: white;
   font-size: 15px;
@@ -133,81 +142,51 @@ header {
   transition: hover 5s;
   padding: 10px;
 }
-
 .toggle_font:hover {
   color: white;
-  background-image: linear-gradient(
-    to right,
-    rgba(25, 55, 109, 0),
-    rgb(49, 109, 221),
-    rgba(255, 0, 0, 0)
-  );
+  background-color: var(--blueHover);
 }
-
+.toggle_font:first-child:hover {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .pipe {
   font-size: 25px;
   color: Gold;
   cursor: default;
 }
-
-/* 
-
-
-
-
-
-
-
-
-*/
-/* ================================WELCOME==================================================== */
+/*  ================================ WELCOME =============================*/
 main {
-  font-family: "Poppin", sans-serif;
-  background-color: #f6f6f6;
+  font-family: var(--fonts);
+  background-color: var(--white);
   text-align: center;
 }
-
 .welcome {
-  background-color: rgb(11, 36, 71);
+  user-select: none;
+  background-color: var(--MainBlue);
   text-align: center;
 }
 .welcome h1 {
-  color: goldenrod;
+  color: var(--gold);
 }
-
 .welcome p {
-  color: White;
+  color: var(--white);
   padding-bottom: 10px;
 }
-
-/* 
-
-
-
-
-
-
-
-
-
-
-
-*/
-/* ================================DEAL OF THE MONTH============================================= */
+/* ============================= DEAL OF THE MONTH ====================== */
 .image {
   height: 200px;
   width: 200px;
   border-radius: 10px;
 }
-
 .image img {
   height: 100%;
   width: 100%;
   object-fit: contain;
   border-radius: 10px;
 }
-
 .deal_of_month {
+  user-select: none;
   padding-top: 30px;
   padding-left: 20px;
   animation-name: slideInLeft;
@@ -218,137 +197,176 @@ main {
   animation-direction: normal;
   animation-fill-mode: none;
 }
-
-@keyframes slideInLeft {
-  from {
-    transform: translatex(-100rem);
-  }
-
-  to {
-    transform: translatex(0rem);
-  }
-}
-
 .deal_of_month h1 {
-  color: Gold;
+  color: var(--gold);
   text-align: center;
 }
-
 .deal_left {
   text-align: center;
 }
-
 .deals {
   display: flex;
   justify-content: center;
-  column-gap: 30px;
-  row-gap: 30px;
+  column-gap: var(--spacer);
+  row-gap: var(--spacer);
   flex-wrap: wrap;
 }
-
 .card_deal {
   width: 320px;
   border-radius: 20px;
-  background-color: #a4bedf;
+  background-color: var(--colorCard);
 }
-
 .card_image {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
 .card_image img {
   width: 100%;
   height: 200px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
 .content_card_deal {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
 .card_title {
-  border-top: 3px #07182e solid;
+  border-top: 3px var(--buttonColor) solid;
   text-align: center;
   padding-top: 10px;
 }
-
 .card_content {
   padding-left: 20px;
   padding-right: 20px;
   height: 220px;
 }
-
 .deal_readmore {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding: 10px;
 }
-
 .deal_btn {
-  background-color: #66a1f3;
-  color: white;
+  background-color: var(--buttonColor);
   border: 1px transparent;
   border-radius: 10px;
   padding: 10px 20px;
   margin-bottom: 10px;
   transition: background-color 0.5s;
 }
-
 .deal_btn:hover {
-  background-color: #3e6eb1;
+  background-color: var(--buttonColorHover);
 }
-
 /* ======================= EXPERIENCE WITH US =========================== */
-.experience {
-  width: 600px;
-}
+.experience_section {
+  margin-top: 30px;
+  background-color: var(--blueHover);
+  user-select: none;
 
+  animation-name: slideInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.experience_section h1 {
+  color: var(--gold);
+  padding-top: var(--spacer);
+}
 .carousel {
+  gap: var(--spacer);
   display: grid;
   grid-auto-flow: column;
-  scroll-behavior: auto;
-  gap: 1.2rem;
-  overflow-y: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
+  padding: 61px var(--spacer) 61px;
 
+  cursor: grab;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
 .carousel::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  background-color: var(--blueHover);
 }
-
-.card {
-  scroll-snap-align: start;
-  border-radius: 30px;
-  min-height: 200px;
-  min-width: 300px;
+.carousel.active::-webkit-scrollbar-thumb {
+  background-color: var(--darkblue);
+  border-radius: 5px;
+}
+.carousel:active {
+  cursor: grabbing;
+}
+.card_exp {
+  background-color: var(--colorCard);
+  border-radius: 10px;
+  gap: var(--spacer);
+  width: 380px;
+}
+.card-body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
 }
-/* 
+.card_exp img {
+  inline-size: 100%;
+  height: 490px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-content {
+  margin-top: 10px;
+}
+.btn_Experience {
+  width: 140px;
+  background-color: var(--buttonColor);
+  align-self: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  border-style: none;
+  transition: background-color 0.5s;
+  margin-bottom: 10px;
+}
+.btn_Experience:hover {
+  background-color: var(--buttonColorHover);
+}
+/* ====================== WELLNESS CAMP ====================================== */
+.wellness_camp {
+  user-select: none;
+  padding-top: 30px;
+}
+.wellness_camp h1 {
+  color: var(--gold);
+}
+/* ====================== WELLNESS PROGRAM ====================================== */
 
+/* ====================== REWARDS POINTS ====================================== */
+.reward_cards {
+  background-color: white;
+  user-select: none;
+}
 
+.reward_cards h1 {
+  color: var(--gold);
+}
+.reward_card_design p {
+  width: 400px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 70px;
+  padding-bottom: 30px;
 
+  border-radius: 10px;
 
-
-
-
-
-
-
-
-
-
-
-
-*/
+  border: 1px black solid;
+}
+.rewards_cards p {
+  font-size: 30px;
+}
 /* ====================== FOOTER ====================================== */
 .terms {
   padding-top: 15px;
@@ -363,11 +381,9 @@ main {
   flex-wrap: wrap;
   list-style-type: none;
 }
-
 .terms li:hover {
   text-decoration: underline;
 }
-
 .Bottom p {
   margin-top: 10px;
   color: #bcbbbb;
@@ -379,12 +395,10 @@ main {
   align-items: center;
   justify-content: center;
 }
-
 footer {
   background: #0b2447;
   padding: 20px 0;
 }
-
 .single-box p {
   color: #fff;
 }
@@ -425,7 +439,6 @@ footer {
 .input-group {
   position: relative;
 }
-
 .input-btn {
   position: absolute;
   top: 0;
@@ -434,9 +447,7 @@ footer {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 /* ======================RESPONSIVENESS================================ */
-
 @media (max-width: 1060px) {
   .navbar .nav_bar_right,
   .pipe {
@@ -454,14 +465,60 @@ footer {
     display: block;
   }
 }
-
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .single-box {
     margin-bottom: 50px;
   }
+  .nav_bar_right {
+    gap: 5px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .link_font {
+    font-size: small;
+    padding: 8px;
+    padding-top: 10px;
+  }
+
+  .link_font:hover {
+    padding: 8px;
+    padding-top: 10px;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .single-box {
-    margin-bottom: 50px;
+@media (min-width: 800px) {
+  .nav_bar_right {
+    gap: 5px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  .link_font {
+    font-size: small;
+    padding: 8px;
+    padding-top: 10px;
+  }
+
+  .link_font:hover {
+    padding: 8px;
+    padding-top: 10px;
+  }
+}
+/* ========================== KEY FRAMS ================================= */
+@keyframes slideInLeft {
+  from {
+    transform: translatex(-100rem);
+  }
+
+  to {
+    transform: translatex(0rem);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translatex(+100rem);
+  }
+
+  to {
+    transform: translatex(0rem);
   }
 }
