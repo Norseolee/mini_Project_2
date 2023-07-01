@@ -178,9 +178,9 @@
                   </div>
                 </div>
 
-                <div class="row jumbotron box8 account-settings">
+                <div class="row jumbotron box8 account-settings pt-2">
                   <div class="col-sm-6 form-group">
-                    <label for="fname">First Name</label>
+                    <label for="fname">First Name:</label>
                     <input
                       type="text"
                       class="form-control"
@@ -189,7 +189,7 @@
                       required
                     />
 
-                    <label for="lname">Last name</label>
+                    <label for="lname" class="pt-4">Last name:</label>
                     <input
                       type="text"
                       class="form-control"
@@ -198,7 +198,7 @@
                       required
                     />
 
-                    <label for="email">Email</label>
+                    <label for="email" class="pt-4">Email:</label>
                     <input
                       type="email"
                       class="form-control"
@@ -214,52 +214,67 @@
                 </div>
               </form>
               <form class="form-acc-setting pt-4">
-                <div class="upload">
-                  <img
-                    id="selectedImage"
-                    src="../images/noprofil.jpg"
-                    width="200"
-                    height="200"
-                    alt=""
-                  />
-                  <div class="round">
-                    <input
-                      type="file"
-                      id="imageInput"
-                      onchange="displaySelectedImage(event)"
-                    />
-                    <i class="fa fa-camera" style="color: #fff"></i>
-                  </div>
-                </div>
+                <h1 class="text-center">ACCOUNT SECURITY</h1>
 
-                <div class="row jumbotron box8 account-settings">
+                <div class="row jumbotron box8 account-settings pt-4">
                   <div class="col-sm-6 form-group">
-                    <label for="fname">First Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="acc_fname"
-                      id="acc_fname"
-                      required
-                    />
-
-                    <label for="lname">Last name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="acc_lname"
-                      id="acc_lname"
-                      required
-                    />
-
-                    <label for="email">Email</label>
+                    <label for="as_email">Email:</label>
                     <input
                       type="email"
                       class="form-control"
-                      name="acc_email"
-                      id="acc_email"
+                      name="as_email"
+                      id="as_email"
                       required
                     />
+                    <label for="as_fname" class="pt-4">Code:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="as_fname"
+                      id="as_fname"
+                      required
+                    />
+
+                    <label for="as_code" class="pt-4">Mobile Number:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="as_code"
+                      id="as_code"
+                      required
+                    />
+                    <label for="as_code" class="pt-4"
+                      >Alternative Mobile Number(Optional):</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="as_code"
+                      id="as_code"
+                      required
+                    />
+
+                    <div class="pt-3 buttons-acc-setting">
+                      <button class="btn btn-warning">Save</button>
+                      <button class="btn btn-warning">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form class="form-acc-setting2 pt-4">
+                <h1 class="text-center">ACCOUNT DELETION</h1>
+
+                <div class="row jumbotron box8 account-settings pt-2">
+                  <div class="col-sm-6 form-group">
+                    <div class="acc_delete">
+                      <input type="checkbox" id="terms" class="me-2" required />
+
+                      <label for="terms"
+                        >Understand that your account will be deleted
+                        permanently, <br />all your information and history will
+                        be permanently deleted.
+                      </label>
+                    </div>
                     <div class="pt-3 buttons-acc-setting">
                       <button class="btn btn-warning">Save</button>
                       <button class="btn btn-warning">Cancel</button>
