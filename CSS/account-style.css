@@ -583,3 +583,54 @@ input[type="file"]::-webkit-file-upload-button {
 .form-acc-setting2 {
   padding-bottom: 20px;
 }
+.card {
+  display: flex;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card .image {
+  flex: 0 0 20%;
+}
+
+.card .image img {
+  width: 100%;
+  height: auto;
+  padding-left: 13px;
+}
+
+.card .details {
+  flex: 1;
+  padding: 20px;
+}
+
+.card .details h3 {
+  margin-top: 0;
+}
+
+.card .details p {
+  margin-bottom: 10px;
+}
+
+.card .button {
+  display: inline-block;
+  padding: 12px 46px;
+  background-color: #576cbc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.details h5 {
+  font-size: medium;
+}
+.details p {
+  font-size: medium;
+}
+/* Existing CSS styles */
+.details {
+  width: 20%;
+}
