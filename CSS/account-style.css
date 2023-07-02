@@ -171,10 +171,19 @@ body {
   width: calc(100% - 60px);
   left: 60px;
 }
+@media (min-width: 576px) {
+  .dropdown:hover > .dropdown-menu {
+    display: flex;
+    margin-top: 0;
+    margin-top: 0;
+    right: 0;
+    left: auto;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
 
-/* SIDEBAR */
-
-/* CONTENT */
 .content {
   position: relative;
   width: calc(100% - 280px);
@@ -314,6 +323,19 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.single-box a:hover {
+  color: #a5d7e8;
+}
+.socials i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+.socials a:hover {
+  color: #a5d7e8;
+}
+.socials a {
+  color: #f6f6f6;
+}
 
 .single-box p {
   color: #fff;
@@ -351,7 +373,12 @@ footer {
   font-size: 20px;
   margin-right: 15px;
 }
-
+.socials a:hover {
+  color: #a5d7e8;
+}
+.socials a {
+  color: #f6f6f6;
+}
 .input-group {
   position: relative;
 }
@@ -1230,6 +1257,7 @@ body {
 }
 .card-input__input.-select {
   -webkit-appearance: none;
+  appearance: none;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAYAAABuUU38AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUxJREFUeNrM1sEJwkAQBdCsngXPHsQO9O5FS7AAMVYgdqAd2IGCDWgFnryLFQiCZ8EGnJUNimiyM/tnk4HNEAg/8y6ZmMRVqz9eUJvRaSbvutCZ347bXVJy/ZnvTmdJ862Me+hAbZCTs6GHpyUi1tTSvPnqTpoWZPUa7W7ncT3vK4h4zVejy8QzM3WhVUO8ykI6jOxoGA4ig3BLHcNFSCGqGAkig2yqgpEiMsjSfY9LxYQg7L6r0X6wS29YJiYQYecemY+wHrXD1+bklGhpAhBDeu/JfIVGxaAQ9sb8CI+CQSJ+QmJg0Ii/EE2MBiIXooHRQhRCkBhNhBcEhLkwf05ZCG8ICCOpk0MULmvDSY2M8UawIRExLIQIEgHDRoghihgRIgiigBEjgiFATBACAgFgghEwSAAGgoBCBBgYAg5hYKAIFYgHBo6w9RRgAFfy160QuV8NAAAAAElFTkSuQmCC");
   background-size: 12px;
   background-position: 90% center;
@@ -1362,4 +1390,32 @@ body {
 .paypal-button img {
   width: 100%;
   height: auto;
+}
+.membership .card {
+  display: flex;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+main .content .membership {
+  position: relative;
+  width: 35%;
+  transition: 0.3s ease;
+}
+.membership .card .image {
+  flex: 0 0 45%;
+}
+.membership .card .image img {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+}
+.membership .card .details {
+  flex: 1;
+  padding: 20px;
+  background-color: #a5d7e8;
 }
