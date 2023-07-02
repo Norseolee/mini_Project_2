@@ -333,11 +333,21 @@
     <!-- CONTENT -->
     <section id="content">
       <!-- NAVBAR -->
+
       <nav>
-        <a href="account.html" class="profile">
-          <img src="../images/default_pp.png" />
-          <span id="account_name">Account</span>
-        </a>
+        <div class="dropdown">
+          <a class="profile">
+            <img src="../images/default_pp.png" />
+            <span id="account_name">Account</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <button class="dropdown-item" type="button" id="logout-btn">
+                Log out
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
       <!-- NAVBAR -->
 
@@ -1639,8 +1649,31 @@
             </div>
           </section>
           <section id="membership" class="section membership">
-            <h1>Account Security</h1>
-            <p>This is the Reservation section.</p>
+            <div class="card">
+              <div class="details ps-4">
+                <h3>GYM</h3>
+
+                <p>
+                  ID:225<br />
+                  Valid Until June 23, 2023<br /><br />
+                  Fitness Gym<br />
+                  At the Ground floor near KFC resto.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="details ps-4">
+                <h3>INDOOR POOL</h3>
+
+                <p>
+                  ID:6881<br />
+                  Valid Until April 4, 2023<br /><br />
+                  Indoor Pool<br />
+                  At the 10th Floor.
+                </p>
+              </div>
+            </div>
           </section>
         </div>
       </main>
@@ -1734,10 +1767,10 @@
 
               <h2 class="pt-4">Follow us on</h2>
               <p class="socials">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-linkedin"></i>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
               </p>
             </div>
           </div>
