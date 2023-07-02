@@ -448,3 +448,10 @@ new Vue({
     },
   },
 });
+
+document.getElementById("logout-btn").addEventListener("click", logout);
+
+function logout() {
+  localStorage.removeItem("login");
+  window.location.href = "../index.html";
+}
