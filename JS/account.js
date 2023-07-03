@@ -299,7 +299,7 @@ menuLinks.forEach((menuLink) => {
       sec.style.display = "none";
     });
     section.classList.add("active");
-    section.style.display = "block";
+    section.style.display = "flex";
   });
 });
 
@@ -309,7 +309,7 @@ function hideInactiveSections() {
     if (!sec.classList.contains("active")) {
       sec.style.display = "none";
     } else {
-      sec.style.display = "block";
+      sec.style.display = "flex";
     }
   });
 }
