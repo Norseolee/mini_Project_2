@@ -33,6 +33,91 @@
   </head>
 
   <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <span class="shrink-btn">
+        <span class="fa-solid fa-chevron-left"></span>
+      </span>
+      <a href="../index.html">
+        <div class="sidebar-top pt-4">
+          <img src="../images/hotel_logo.png" width="50%" alt="" />
+          <span class="pt-1 logo_name">Hotel De Luna</span>
+        </div>
+      </a>
+      <div class="sidebar-links">
+        <ul class="side-menu top">
+          <li class="tooltip-element active" data-tooltip="0">
+            <a
+              href="#"
+              class="menu-link active"
+              data-section="ac"
+              data-active="0"
+            >
+              <i class="fa fa-solid fa-sliders"></i>
+              <span class="text">Account Setting</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="1">
+            <a href="#" class="menu-link" data-section="ai" data-active="1">
+              <i class="fa fa-solid fa-circle-info"></i>
+              <span class="text">Account Information</span>
+            </a>
+          </li>
+
+          <li class="tooltip-element" data-tooltip="2">
+            <a
+              href="#"
+              class="menu-link"
+              data-section="reserve"
+              data-active="2"
+            >
+              <i class="fa fa-solid fa-calendar-days"></i>
+              <span class="text">Reservation</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="3">
+            <a href="#" class="menu-link" data-section="ht" data-active="3">
+              <i class="fa fa-solid fa-clock-rotate-left"></i>
+              <span class="text">History Trips</span>
+            </a>
+          </li>
+
+          <li class="tooltip-element" data-tooltip="4">
+            <a href="#" class="menu-link" data-section="refund" data-active="4">
+              <i class="fa fa-solid fa-money-bill-transfer"></i>
+              <span class="text">Refund</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="5">
+            <a href="#" class="menu-link" data-section="pm" data-active="5">
+              <i class="fa fa-solid fa-hand-holding-dollar"></i>
+              <span class="text">Payment Methods</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="6">
+            <a
+              href="#"
+              class="menu-link"
+              data-section="membership"
+              data-active="6"
+            >
+              <i class="fa fa-solid fa-people-group"></i>
+              <span class="text">Membership</span>
+            </a>
+          </li>
+          <li class="tooltip-element" data-tooltip="7">
+            <button
+              class="btn btn-danger log-out-btn"
+              type="button"
+              id="logout-btn"
+            >
+              <i class="fa fa-solid fa-arrow-right-from-bracket"></i> Log out
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- SIDEBAR -->
     <!-- Reservation Modal -->
     <div
       class="modal fade"
@@ -255,81 +340,6 @@
     </div>
     <!-- History Trips Modal -->
 
-    <!-- SIDEBAR -->
-    <section id="sidebar">
-      <a href="../index.html">
-        <div class="sidebar-top pt-4">
-          <span class="shrink-btn"> </span>
-          <img src="../images/hotel_logo.png" width="50%" alt="" />
-          <span class="pt-1 logo_name">Hotel De Luna</span>
-        </div>
-      </a>
-      <div class="sidebar-links">
-        <ul class="side-menu top">
-          <li class="tooltip-element active" data-tooltip="0">
-            <a
-              href="#"
-              class="menu-link active"
-              data-section="ac"
-              data-active="0"
-            >
-              <i class="fa fa-solid fa-sliders"></i>
-              <span class="text">Account Setting</span>
-            </a>
-          </li>
-          <li class="tooltip-element" data-tooltip="1">
-            <a href="#" class="menu-link" data-section="ai" data-active="1">
-              <i class="fa fa-solid fa-circle-info"></i>
-              <span class="text">Account Information</span>
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="2">
-            <a
-              href="#"
-              class="menu-link"
-              data-section="reserve"
-              data-active="2"
-            >
-              <i class="fa fa-solid fa-calendar-days"></i>
-              <span class="text">Reservation</span>
-            </a>
-          </li>
-          <li class="tooltip-element" data-tooltip="3">
-            <a href="#" class="menu-link" data-section="ht" data-active="3">
-              <i class="fa fa-solid fa-clock-rotate-left"></i>
-              <span class="text">History Trips</span>
-            </a>
-          </li>
-
-          <li class="tooltip-element" data-tooltip="4">
-            <a href="#" class="menu-link" data-section="refund" data-active="4">
-              <i class="fa fa-solid fa-money-bill-transfer"></i>
-              <span class="text">Refund</span>
-            </a>
-          </li>
-          <li class="tooltip-element" data-tooltip="5">
-            <a href="#" class="menu-link" data-section="pm" data-active="5">
-              <i class="fa fa-solid fa-hand-holding-dollar"></i>
-              <span class="text">Payment Methods</span>
-            </a>
-          </li>
-          <li class="tooltip-element" data-tooltip="6">
-            <a
-              href="#"
-              class="menu-link"
-              data-section="membership"
-              data-active="6"
-            >
-              <i class="fa fa-solid fa-people-group"></i>
-              <span class="text">Membership</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- SIDEBAR -->
-
     <!-- CONTENT -->
     <section id="content">
       <!-- NAVBAR -->
@@ -491,7 +501,7 @@
           <section id="ai" class="section">
             <h1 class="text-center">Account Information</h1>
             <div class="container mt-3">
-              <form>
+              <form class="account-info">
                 <div class="row jumbotron box8">
                   <div class="col-sm-6 form-group">
                     <label for="fname">First Name</label>
