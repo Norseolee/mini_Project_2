@@ -227,6 +227,49 @@ body {
 }
 
 /* NAVBAR */
+@media (max-width: 1024px) {
+  .content {
+    width: calc(130% - 280px);
+    left: 170px;
+  }
+}
+.account-info .row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+main .content .reserve {
+  position: relative;
+  width: 50%;
+  transition: 0.3s ease;
+}
+
+/* iPad View */
+@media (max-width: 1024px) {
+  main .content .reserve {
+    position: relative;
+    width: calc(109% - 280px);
+    left: 102px;
+    transition: 0.3s ease;
+  }
+}
+
+@media (max-width: 1024px) {
+  .account-info .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(4.5 * var(--bs-gutter-x));
+    flex-direction: column;
+  }
+}
 
 /* MAIN */
 #content main {
@@ -415,7 +458,7 @@ footer {
   top: 50%;
   height: 27px;
   padding: 0 0.3rem;
-  background-color: var(--main-color);
+  background-color: blue;
   border-radius: 6px;
   cursor: pointer;
   box-shadow: 0 3px 10px -3px rgb(255, 0, 0);
@@ -467,6 +510,21 @@ body.shrink .tooltip {
 }
 .sidebar-links ul {
   position: relative;
+}
+.log-out-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 48px;
+  font-size: 16px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow-x: hidden;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
 .sidebar-links li {
@@ -587,13 +645,13 @@ input[type="file"]::-webkit-file-upload-button {
 }
 .buttons-acc-setting {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  margin-top: 20px;
   align-items: center;
+  row-gap: 30px;
 }
 .buttons-acc-setting button {
-  width: 30%;
+  width: 50%;
 }
 .form-acc-setting {
   padding-bottom: 100px;
@@ -673,11 +731,7 @@ button:disabled {
   border: none;
   text-decoration: none;
 }
-main .content .reserve {
-  position: relative;
-  width: 50%;
-  transition: 0.3s ease;
-}
+
 .reserve .card .image {
   flex: 0 0 45%;
 }
