@@ -1,0 +1,49 @@
+.aboutcontainer {
+  background-color: var(--MainBlue);
+  font-family: var(--fonts);
+  font-weight: light;
+  user-select: none;
+}
+#aboutintro {
+  text-align: center;
+  color: gold;
+}
+#aboutpar {
+  text-align: center;
+  color: white;
+}
+.imgaccomlg {
+  margin-left: 150px;
+  user-select: none;
+}
+
+.row_accom h2 {
+  text-align: center;
+  user-select: none;
+}
+.row_accom p {
+  text-align: center;
+  user-select: none;
+}
+.row_accom img {
+  text-align: center;
+  align-items: center;
+  user-select: none;
+}
+.spafitness {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.swimpool h2,
+p,
+img {
+  text-align: center;
+  user-select: none;
+}
+@media (min-width: 800px) {
+  .imgaccomsm {
+    margin: 0;
+    user-select: none;
+  }
+}
