@@ -1,10 +1,10 @@
 function checkLogin() {
   if (localStorage.getItem("login") != null) {
-    let u = localStorage.getItem("login");
-    let d = JSON.parse(u);
+    // let u = localStorage.getItem("login");
+    // let d = JSON.parse(u);
 
-    let firstNameSentenceCase =
-      d.firstName.charAt(0).toUpperCase() + d.firstName.slice(1).toLowerCase();
+    // let firstNameSentenceCase =
+    //   d.firstName.charAt(0).toUpperCase() + d.firstName.slice(1).toLowerCase();
 
     // document.getElementById(
     //   "login-nav-item"
@@ -72,24 +72,36 @@ var signUpForm = document.getElementById("sign-up-form");
 signUpForm.addEventListener("submit", addAccount);
 
 function validateLogin() {
-  event.preventDefault();
-
   var email = document.getElementById("login-email").value;
   var password = document.getElementById("login-pass").value;
 
   var user = localStorage.getItem(email);
-  var data = JSON.parse(user);
 
   if (user == null) {
-    console.log("wrong email or password");
-  } else if (email == data.email && password == data.password) {
-    window.location.replace("../index.html");
-    console.log("Success!");
-    localStorage.setItem("login", user);
+    showErrorModal("Wrong email or password");
   } else {
-    console.log("wrong email or password");
+    var data = JSON.parse(user);
+
+    if (email === data.email && password === data.password) {
+      localStorage.setItem("login", user);
+      console.log("Success!");
+      window.location.replace("../index.html");
+    } else {
+      showErrorModal("Wrong email or password");
+    }
   }
 }
+
+function showErrorModal(message) {
+  var errorModal = new bootstrap.Modal(document.getElementById("errorModal"), {
+    keyboard: false,
+    backdrop: "static",
+  });
+  var errorModalMessage = document.getElementById("errorModalMessage");
+  errorModalMessage.textContent = message;
+  errorModal.show();
+}
+
 // Retrieve the name from localStorage
 const loggedInUserName = localStorage.getItem("loggedInUser");
 
