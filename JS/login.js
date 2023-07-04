@@ -53,6 +53,13 @@ function addAccount(e) {
   var lastName = document.getElementById("lname").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("pass").value;
+  var confirmPassword = document.getElementById("c_pass").value;
+
+  // Validate password and confirm password
+  if (password !== confirmPassword) {
+    showErrorModal("Password and confirm password do not match");
+    return;
+  }
 
   var user = {
     firstName: firstName,
