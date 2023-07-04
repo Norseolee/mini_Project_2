@@ -1,0 +1,38 @@
+.pool img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.pool-details {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  color: #0b2447;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.pool-details .container {
+  border-bottom: 1px solid rgb(49, 49, 49);
+}
+
+.inquiry {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 64px;
+}
+.form-group label {
+  display: flex;
+}
+.form-group textarea {
+  height: 155px;
+}
+.buttons-acc-setting button {
+  background-color: #f1c913;
+  width: 50%;
+}
