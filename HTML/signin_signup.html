@@ -91,13 +91,14 @@
               placeholder="Enter your password"
               id="login-pass"
             />
+            <i class="fas fa-eye toggle-password" id="togglePassword1"></i>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="remember" />
             <label class="form-check-label" for="remember"> Remember me </label>
           </div>
           <input type="submit" value="Login" class="btn" />
-          <p class="social-text">Or Sign in with social platform</p>
+          <p class="social-text text-center">Or Sign in with social platform</p>
           <div class="social-media">
             <a href="#" class="social-icons"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
@@ -125,6 +126,7 @@
           <div class="input-field">
             <i class="fas fa-lock" for="pass"></i>
             <input type="password" placeholder="Password" id="pass" required />
+            <i class="fas fa-eye toggle-password" id="togglePassword2"></i>
           </div>
           <div class="input-field">
             <i class="fas fa-lock" for="c_pass"></i>
@@ -134,9 +136,10 @@
               id="c_pass"
               required
             />
+            <i class="fas fa-eye toggle-password" id="togglePassword3"></i>
           </div>
           <input type="submit" value="SignUp" class="btn" />
-          <p class="social-text">Or Sign up with social platform</p>
+          <p class="social-text text-center">Or Sign up with social platform</p>
           <div class="social-media">
             <a href="#" class="social-icons"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
@@ -175,6 +178,7 @@
         </div>
       </div>
     </div>
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=YOUR_APP_ID&autoLogAppEvents=1"></script>
     <script src="../JS/login.js"></script>
   </body>
 </html>
