@@ -1,22 +1,33 @@
+// function checkLogin() {
+//   if (localStorage.getItem("login") != null) {
+// let u = localStorage.getItem("login");
+// let d = JSON.parse(u);
+
+// let firstNameSentenceCase =
+//   d.firstName.charAt(0).toUpperCase() + d.firstName.slice(1).toLowerCase();
+
+// document.getElementById(
+//   "login-nav-item"
+// ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
+
+// document.getElementById("login-nav-item").href = "HTML/account.html";
+
+// document.getElementById(
+//   "loginStatus"
+// ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
+
+// document.getElementById("loginStatus").href = "HTML/account.html";
+//     $("#login-nav-item").text("Account");
+//     document.getElementById("login-nav-item").href = "HTML/account.html";
+//     $("#loginStatus").text("Account");
+//     document.getElementById("login-nav-item").href = "HTML/account.html";
+//   }
+// }
 function checkLogin() {
-  if (localStorage.getItem("login") != null) {
-    // let u = localStorage.getItem("login");
-    // let d = JSON.parse(u);
-
-    // let firstNameSentenceCase =
-    //   d.firstName.charAt(0).toUpperCase() + d.firstName.slice(1).toLowerCase();
-
-    // document.getElementById(
-    //   "login-nav-item"
-    // ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
-
-    // document.getElementById("login-nav-item").href = "HTML/account.html";
-
-    // document.getElementById(
-    //   "loginStatus"
-    // ).innerHTML = `Welcome, <span id="loggedInUserName">${firstNameSentenceCase} </span>!`;
-
-    // document.getElementById("loginStatus").href = "HTML/account.html";
+  if (
+    localStorage.getItem("login") != null ||
+    sessionStorage.getItem("login") != null
+  ) {
     $("#login-nav-item").text("Account");
     document.getElementById("login-nav-item").href = "HTML/account.html";
     $("#loginStatus").text("Account");
@@ -79,23 +90,29 @@ var signUpForm = document.getElementById("sign-up-form");
 signUpForm.addEventListener("submit", addAccount);
 
 function validateLogin() {
+  event.preventDefault();
+
   var email = document.getElementById("login-email").value;
   var password = document.getElementById("login-pass").value;
+  var remember = document.getElementById("remember").checked;
 
   var user = localStorage.getItem(email);
+  var data = JSON.parse(user);
 
   if (user == null) {
     showErrorModal("Wrong email or password");
-  } else {
-    var data = JSON.parse(user);
-
-    if (email === data.email && password === data.password) {
+  } else if (email == data.email && password == data.password) {
+    window.location.replace("../index.html");
+    console.log("Success!");
+    if (remember) {
       localStorage.setItem("login", user);
-      console.log("Success!");
-      window.location.replace("../index.html");
+      sessionStorage.removeItem("login");
     } else {
-      showErrorModal("Wrong email or password");
+      sessionStorage.setItem("login", user);
+      localStorage.removeItem("login");
     }
+  } else {
+    showErrorModal("Wrong email or password");
   }
 }
 
