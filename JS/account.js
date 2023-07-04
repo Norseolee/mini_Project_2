@@ -358,10 +358,60 @@ function checkAccount() {
     document.getElementById("acc_fname").value = formattedFirstName;
     document.getElementById("acc_lname").value = formattedLastName;
     document.getElementById("acc_email").value = d.email;
+    document.getElementById("as_email").value = d.email;
   }
 }
-
 checkAccount();
+
+function addAccount() {
+  var firstName = document.getElementById("acc_fname").value;
+  var lastName = document.getElementById("acc_lname").value;
+  var email = document.getElementById("acc_email").value;
+
+  // Retrieve existing user data from local storage using the current email
+  var existingUserData = localStorage.getItem("login");
+  var existingUser = JSON.parse(existingUserData);
+
+  if (existingUser) {
+    if (existingUser.email === email) {
+      // If the current email matches the updated email, update the existing entry
+      existingUser.firstName = firstName;
+      existingUser.lastName = lastName;
+    } else {
+      // Check if an entry with the updated email already exists
+      var updatedUserData = localStorage.getItem(email);
+      var updatedUser = JSON.parse(updatedUserData);
+
+      if (updatedUser) {
+        console.log("Email already taken. Please choose a different email.");
+        return;
+      }
+
+      // Delete the old entry and update with the updated user data
+      localStorage.removeItem(existingUser.email);
+      existingUser.email = email;
+      existingUser.firstName = firstName;
+      existingUser.lastName = lastName;
+    }
+  } else {
+    // If user does not exist, create a new user object
+    var user = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+    };
+    existingUser = user;
+  }
+
+  // Store the updated/created user data in local storage under the email key
+  var json = JSON.stringify(existingUser);
+  localStorage.setItem(email, json);
+
+  // Update the value of the login key if necessary
+  localStorage.setItem("login", json);
+
+  console.log("User added/updated:", existingUser);
+}
 
 new Vue({
   el: "#app",
@@ -454,4 +504,32 @@ document.getElementById("logout-btn").addEventListener("click", logout);
 function logout() {
   localStorage.removeItem("login");
   window.location.href = "../index.html";
+}
+function deleteAccount() {
+  var email = document.getElementById("acc_email").value;
+  var checkbox = document.getElementById("terms");
+
+  if (checkbox.checked) {
+    // Retrieve the user data from local storage
+    var userData = localStorage.getItem(email);
+
+    if (userData) {
+      // Remove the user entry from local storage
+      localStorage.removeItem(email);
+      // Remove the login entry if the deleted account is the current user
+      if (localStorage.getItem("login") === userData) {
+        localStorage.removeItem("login");
+      }
+      console.log("Account deleted successfully");
+
+      // Delay before redirecting to the index page (200ms)
+      setTimeout(function () {
+        window.location.pathname = "../index.html";
+      }, 200);
+    } else {
+      console.log("Account not found");
+    }
+  } else {
+    console.log("Please check the checkbox to confirm account deletion");
+  }
 }
