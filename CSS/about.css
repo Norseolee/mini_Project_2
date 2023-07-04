@@ -6,7 +6,7 @@
 }
 #aboutintro {
   text-align: center;
-  color: gold;
+  color: var(--gold);
 }
 #aboutpar {
   text-align: center;
@@ -19,10 +19,11 @@
 
 .row_accom h2 {
   text-align: center;
+  color: var(--gold);
   user-select: none;
 }
 .row_accom p {
-  text-align: center;
+  text-align: left;
   user-select: none;
 }
 .row_accom img {
@@ -30,14 +31,80 @@
   align-items: center;
   user-select: none;
 }
+
 .spafitness {
   margin-left: 5px;
   margin-right: 5px;
 }
 
-.swimpool h2,
-p,
-img {
+.swimpool h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.swimpool p {
+  color: rgb(253, 246, 214);
+  text-align: left;
+  user-select: none;
+}
+.swimpoollg {
+  text-align: center;
+  margin: 50px;
+  user-select: none;
+}
+.swimpoolsm {
+  text-align: center;
+  margin: 50px;
+  user-select: none;
+}
+.swimcon {
+  background-image: url("../images/pool.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.meetevent h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.meetevent p {
+  text-align: left;
+  user-select: none;
+}
+.meetevent h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.meetevent p {
+  text-align: left;
+  user-select: none;
+}
+
+.spafitness h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.spafitness p {
+  text-align: center;
+  user-select: none;
+}
+.careercon {
+  background-color: #111d30;
+}
+.acareer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.acareer h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.acareer p {
+  color: rgb(253, 246, 214);
   text-align: center;
   user-select: none;
 }
