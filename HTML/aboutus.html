@@ -86,13 +86,13 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="herovid">
         <video
           autoplay
           muted
           loop
           src="../images/test.mkv"
-          width="1350"
+          width="100%"
         ></video>
       </div>
     </header>
@@ -111,10 +111,10 @@
       </div>
     </div>
     <!--accomodation-->
-    <div class="container">
+    <div class="container conacom">
       <div class="row my-5 row_accom d-flex align-items-center">
         <div class="col-lg-5">
-          <h2>**Our Accommodations**</h2>
+          <h2>Our Accommodations</h2>
           <div class="my-4">
             <p>
               Indulge in the ultimate comfort and elegance with our meticulously
@@ -145,13 +145,39 @@
     </div>
 
     <!--Swimming Pool-->
-    <div class="container">
+    <div class="container-fluid swimcon bg-dark">
       <div class="row my-5 d-flex align-items-center swimpool">
-        <div class="col-lg-5">
-          <img src="../images/infinitypool.webp" alt="pool" width="400" />
+        <div class="col-lg-5 d-none d-lg-block">
+          <card class="card-area">
+            <img
+              class="imgswimpoollg"
+              src="../images/infinitypool.webp"
+              alt="pool"
+              width="400"
+            />
+          </card>
         </div>
-        <div class="col-lg-7">
-          <h2>**Swimming Pools**</h2>
+        <div class="col-lg-7 d-md-block d-lg-none">
+          <h2>Swimming Pools</h2>
+          <div class="my-4">
+            <p>
+              Experience the epitome of luxury at our hotel's swimming pools.
+              Dive into the refreshing waters of our expansive main pool or
+              elevate your relaxation at our rooftop swimming pool, where
+              breathtaking views and a serene atmosphere await you.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5 d-md-block d-lg-none">
+          <img
+            class="imgswimpoolsm"
+            src="../images/infinitypool.webp"
+            alt="pool"
+            width="350"
+          />
+        </div>
+        <div class="col-lg-7 d-none d-lg-block">
+          <h2>Swimming Pools</h2>
           <div class="my-4">
             <p>
               Experience the epitome of luxury at our hotel's swimming pools.
@@ -163,10 +189,11 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <!--Meeting & Event-->
+    <div class="container meeteventcon">
       <div class="row my-5 d-flex align-items-center meetevent">
         <div class="col-lg-7">
-          <h2>**Meetings and Events**</h2>
+          <h2>Meetings and Events</h2>
           <div class="my-4">
             <p>
               Host your corporate gatherings, social celebrations, and special
@@ -178,12 +205,25 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-5">
-          <img src="../images/meeting.jpg" alt="meeting" width="400" />
+        <div class="col-lg-5 d-none d-lg-block">
+          <img
+            class="imgmeetevent"
+            src="../images/meeting.jpg"
+            alt="meeting"
+            width="400"
+          />
+        </div>
+        <div class="col-lg-5 d-md-block d-lg-none">
+          <img
+            class="imgmeetevent"
+            src="../images/meeting.jpg"
+            alt="meeting"
+            width="350"
+          />
         </div>
       </div>
     </div>
-    <div class="container my-5">
+    <div class="container my-5 spafitnesscon">
       <div class="row my-5 spafitness">
         <div class="col-lg-4 text-center">
           <h2>Fitness Facilities</h2>
@@ -191,7 +231,7 @@
             <img
               src="../images/fitness.jpg"
               alt="Fitness"
-              width="360"
+              width="250"
               id="imgfitness"
             />
           </div>
@@ -208,7 +248,7 @@
         <div class="col-lg-4 text-center">
           <h2>Spa and Wellness</h2>
           <div>
-            <img src="../images/spa.jpg" alt="SPA" width="285" id="imgspa" />
+            <img src="../images/spa.jpg" alt="SPA" width="185" id="imgspa" />
           </div>
           <div class="my-3">
             <p>
@@ -223,7 +263,7 @@
         <div class="col-lg-4 text-center">
           <h2>Entertainment</h2>
           <div>
-            <img src="../images/theatre.jpg" alt="theatre" width="250" />
+            <img src="../images/theatre.jpg" alt="theatre" width="150" />
           </div>
           <div class="my-3">
             <p>
@@ -237,10 +277,10 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row my-5 text-center">
+    <div class="container-fluid careercon">
+      <div class="row text-center acareer">
         <div class="col-lg-12">
-          <h2>**Careers**</h2>
+          <h2>Careers</h2>
           <div>
             <p>
               Join our team of dedicated professionals who strive to provide
@@ -255,8 +295,8 @@
               experiences.
             </p>
             <p>
-              Phone: [+1-555-123-4567](tel:+15551234567) Email:
-              info@hoteldeluna.com
+              <span> Phone: [+1-555-123-4567] | (tel:+15551234567)</span>
+              | <span> Email: info@hoteldeluna.com</span>
             </p>
           </div>
         </div>
