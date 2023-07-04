@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- HOTEL DE LUNA -->
+    <!-- aos -->
+    <link rel="stylesheet" href="aos-by-red.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="CSS/homepage.css" />
     <link
@@ -12,11 +30,6 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/f15b7da99a.js"
       crossorigin="anonymous"></script>
@@ -38,152 +51,156 @@
     <title>Hotel De Luna</title>
   </head>
   <body>
+    <div class="loader-wrapper">
+      <span class="leader"><img src="images/favicon.ico" /></span>
+      <!-- <span class="loader"><span class="loader-inner"></span></span> -->
+    </div>
+
     <!-- ? THIS HEADER IS COMPLETE! -->
     <header>
       <div class="navbar">
-        <div class="nav_bar_left">
+        <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
           <a href="/index.html">
             <img
               href="index.html"
               src="images/hotel_logo.png"
               width="50px"
-              class="logo_img"
-            />
+              class="logo_img" />
             <h1 class="logo_name">Hotel Del Luna</h1>
           </a>
         </div>
-        <div class="nav_bar_right">
+        <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
           <a class="link_font" href="">Rooms and Suite</a>
           <a class="link_font" href="">Dining</a>
           <a class="link_font" href="">Meeting & Events </a>
           <a class="link_font" href="">Entertainment </a>
           <a class="link_font" href="">wellness</a>
           <a class="link_font" href="#">Careers </a>
-          <a
-            class="link_font"
-            id="login-nav-item"
-            href="HTML/signin_signup.html"
-            >Login</a
-          >
+          <div class="link_font dropdown">
+            <a
+              class="login_dropdown"
+              id="login-nav-item"
+              href="HTML/signin_signup.html"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+            <div class="login_content_dropdown">
+              <a class="account_info" href="/HTML/account.html"
+                >Account Setting</a
+              >
+              <a class="account_info" href="/HTML/account.html"
+                >Account information</a
+              >
+              <a class="account_info" href="/HTML/account.html">Reservation</a>
+              <a class="account_info" href="/HTML/account.html"
+                >History Trips</a
+              >
+              <a class="account_info" href="/HTML/account.html">Refund</a>
+              <a class="account_info" href="/HTML/account.html"
+                >Payment Methods</a
+              >
+              <a class="account_info" href="/HTML/account.html">Membership</a>
+              <a class="account_info" href="/HTML/account.html">log out</a>
+            </div>
+          </div>
           <i class="pipe">|</i>
           <a class="book_now" href="">Book Now!</a>
         </div>
-        <div class="toggle">
+        <div class="toggle" data-aos="fade-left" data-aos-duration="800">
           <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
           </div>
           <div class="toggle_option">
-            <a class="toggle_font" href="">Rooms and Suite</a>
-            <a class="toggle_font" href="">Dining</a>
-            <a class="toggle_font" href="">Meeting & Events </a>
-            <a class="toggle_font" href="">Entertainment </a>
-            <a class="toggle_font" href="">wellness</a>
-            <a class="toggle_font" href="">Careers </a>
-            <a
-              class="toggle_font"
-              id="loginStatus"
-              href="HTML/signin_signup.html"
-              >Login</a
-            >
-            <i class="pipe">|</i>
-            <a class="book_now" href="">Book Now!</a>
+            <div class="toggle_option_left">
+              <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="toggle_option_right">
+              <a class="toggle_font" href="">Rooms and Suite</a>
+              <a class="toggle_font" href="">Dining</a>
+              <a class="toggle_font" href="">Meeting & Events </a>
+              <a class="toggle_font" href="">Entertainment </a>
+              <a class="toggle_font" href="">wellness</a>
+              <a class="toggle_font" href="">Careers </a>
+              <a class="toggle_font_login" id="loginStatus">Login</a>
+              <div class="account_hover_toggle">
+                <a class="account_info" href="/HTML/account.html"
+                  >Account Setting</a
+                >
+                <a class="account_info" href="/HTML/account.html"
+                  >Account information</a
+                >
+                <a class="account_info" href="/HTML/account.html"
+                  >Reservation</a
+                >
+                <a class="account_info" href="/HTML/account.html"
+                  >History Trips</a
+                >
+                <a class="account_info" href="/HTML/account.html">Refund</a>
+                <a class="account_info" href="/HTML/account.html"
+                  >Payment Methods</a
+                >
+                <a class="account_info" href="/HTML/account.html">Membership</a>
+                <a class="account_info" href="/HTML/account.html">log out</a>
+              </div>
+              <a class="book_now" href="">Book Now!</a>
+              <a class="rewards" href="">Rewards</a>
+              <img src="/images/hotel_logo.png" width="100px" />
+            </div>
           </div>
         </div>
       </div>
-      <div class="hero"></div>
+
+      <!-- end login hover -->
+      <div class="hero" data-aos="fade-down" data-aos-duration="1000"></div>
     </header>
     <main>
       <!-- ? WELCOME TO HOTEL DE LUNA -->
       <section class="welcome py-3 px-4">
-        <h1>Welcome to Hotel De Luna</h1>
-        <p>
-          Welcome to Hotel De Luna, where the living and departed converge in a
-          realm of enchantment and secrets. Immerse yourself in an extraordinary
-          experience that transcends the boundaries of the mortal world.
-        </p>
+        <div data-aos="zoom-in" data-aos-duration="800">
+          <h1>Welcome to Hotel De Luna</h1>
+          <p>
+            Welcome to Hotel De Luna, where the living and departed converge in
+            a realm of enchantment and secrets. Immerse yourself in an
+            extraordinary experience that transcends the boundaries of the
+            mortal world.
+          </p>
+        </div>
       </section>
+      <!-- ! END OF WELCOME -->
+      <!-- 
 
+
+
+  
+ -->
       <!-- ? DEAL OF THE MONTH -->
-      <section class="deal_of_month">
+      <section
+        class="deal_of_month"
+        data-aos="zoom-in"
+        data-aos-duration="1100">
         <h1>Celebrating Father's Day</h1>
-        <div class="deal">
-          <div class="deal_left">
-            <p>
-              Treat your dad to an unforgettable experience at Hotel De Luna.
-              <br />
-              Book now for a special tribute to fatherhood and create cherished
-              memories together. <br />
-              Happy Father's Month!
-            </p>
-          </div>
-          <div class="deal_right">
-            <div class="deals">
-              <div class="card_deal">
-                <div class="card_image">
-                  <img
-                    src="images/Father_Retreat.jpg"
-                    style="object-fit: cover"
-                    alt="family in a spa message" />
-                </div>
+        <div class="deal_left">
+          <p>
+            Treat your dad to an unforgettable experience at Hotel De Luna.
+            <br />
+            Book now for a special tribute to fatherhood and create cherished
+            memories together. <br />
+            Happy Father's Month!
+          </p>
+        </div>
+        <div class="deal_right">
+          <div class="deals">
+            <div class="card_deal">
+              <div class="card_image_deal">
+                <img
+                  src="images/Father_Retreat.jpg"
+                  alt="family in a spa message" />
                 <div class="content_card_deal">
                   <div class="card_title">
-                    <h4>Father's Day Retreat</h4>
+                    <h3>Father's Day Retreat</h3>
                   </div>
                   <div class="card_content">
-                    Indulge in luxurious rooms, rejuvenating spa treatments,
-                    refreshing pools, an adventurous climbing wall, a
-                    well-equipped gym, and a renowned restaurant for a memorable
-                    stay and dining experience.
-                  </div>
-                  <div class="deal_readmore">
-                    <button class="deal_btn">Read More...</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card_deal">
-                <div class="card_image">
-                  <img
-                    src="images/Thrills_and_Chills.png"
-                    style="object-fit: cover"
-                    alt="child and father swimming in the pool" />
-                </div>
-                <div class="content_card_deal">
-                  <div class="card_title">
-                    <h4>Thrills and Chills Package</h4>
-                  </div>
-                  <div class="card_content">
-                    <p>
-                      Our Father's Day Retreat offers luxurious rooms and
-                      suites, rejuvenating spa treatments, refreshing pools, an
-                      indoor climbing wall, a well-equipped gym, and a renowned
-                      restaurant for a memorable stay and dining experience.
-                    </p>
-                  </div>
-                  <div class="deal_readmore">
-                    <button class="deal_btn">Read More...</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card_deal">
-                <div class="card_image">
-                  <img
-                    src="images/Family_Fun_Getaway.jpg"
-                    style="object-fit: cover"
-                    alt="family swimming in the pool" />
-                </div>
-                <div class="content_card_deal">
-                  <div class="card_title">
-                    <h4>Family Fun Getaway</h4>
-                  </div>
-                  <div class="card_content">
-                    <p>
-                      Our family-friendly hotel features a dedicated kids'
-                      playroom, indoor and outdoor swimming pools, convenient
-                      shops, a theater with live performances, comfortable rooms
-                      and suites, and a restaurant with a diverse menu to cater
-                      to everyone's tastes. Enjoy a memorable and enjoyable stay
-                      with activities for the whole family.
-                    </p>
+                    Treat dad to a luxurious getaway with lavish rooms,
+                    rejuvenating spa, refreshing pools, and renowned dining.
                   </div>
                   <div class="deal_readmore">
                     <button class="deal_btn">Read More...</button>
@@ -191,187 +208,426 @@
                 </div>
               </div>
             </div>
+            <div class="card_deal">
+              <div class="card_image_deal">
+                <img
+                  src="images/indoor-climbing.jpg"
+                  alt="child and father swimming in the pool" />
+              </div>
+              <div class="content_card_deal">
+                <div class="card_title">
+                  <h3>Thrills and Chills Package</h3>
+                </div>
+                <div class="card_content">
+                  <p>
+                    Surprise dad with adrenaline-pumping activities like indoor
+                    climbing and thrilling outdoor adventures.
+                  </p>
+                </div>
+                <div class="deal_readmore">
+                  <button class="deal_btn">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="card_deal">
+              <div class="card_image_deal">
+                <img
+                  src="images/Family_Fun_Getaway.jpg"
+                  alt="family swimming in the pool" />
+              </div>
+              <div class="content_card_deal">
+                <div class="card_title">
+                  <h3>Family Fun Getaway</h3>
+                </div>
+                <div class="card_content">
+                  <p>
+                    Create cherished family memories with swimming, garden
+                    exploration, and captivating theater performances.
+                  </p>
+                </div>
+                <div class="deal_readmore">
+                  <button class="deal_btn">Read More...</button>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- 
+
+  
+Father's Day Retreat: Treat your dad to a luxurious getaway filled with relaxation and indulgence. With lavish rooms, rejuvenating spa treatments, refreshing pools, and a renowned restaurant, our Father's Day Retreat is the perfect way to show your appreciation.
+
+Thrills and Chills Package: Surprise your adventurous dad with our Thrills and Chills Package. Experience adrenaline-pumping activities such as indoor climbing, thrilling outdoor adventures, and enjoy the excitement of our vibrant clubs. It's an action-packed Father's Day he won't forget.
+
+Family Fun Getaway: Make lasting memories with your family on Father's Day with our Family Fun Getaway. Enjoy a wide range of activities suitable for all ages, including swimming in our indoor and outdoor pools, exploring our beautiful garden, and attending captivating theater performances. It's a perfect opportunity to bond and have fun together.
+
+
+ -->
         </div>
       </section>
+      <!-- !END OF DEAL OF MONTH -->
 
+      <!-- 
+
+
+
+  
+ -->
       <!-- ? EXPERIENCE WITH US! -->
-      <section class="experience_section">
-        <h1>Experience with Us!</h1>
-        <div class="experience">
-          <div class="carousel">
-            <div class="card_exp">
-              <img
-                src="/images/Family_Fun_Getaway.jpg"
-                style="object-position: center"
-                alt="Club Pictures"
-              />
-              <div class="card-body">
-                <h5 class="card-content">ROOM AND SUITE</h5>
-                <button class="btn_Experience">Check out</button>
+      <section class="pt-5 pb-5" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="container-fluid container_exp">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="mb-3">Experience with us!</h1>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <div
+                id="carouselExampleIndicators2"
+                class="carousel slide"
+                data-ride="">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card_exp">
+                          <div class="card_image_exp">
+                            <img
+                              alt="100%x280"
+                              src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6" />
+                            <div class="card_body_exp">
+                              <h3 class="card-title">
+                                Special title treatment
+                              </h3>
+                              <button class="btn_Experience">Check out</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card_exp">
-              <img src="/images/Family_Fun_Getaway.jpg" alt="Club Pictures" />
-              <div class="card-body">
-                <h5 class="card-content">DINING</h5>
-                <button class="btn_Experience">Check out</button>
-              </div>
-            </div>
-            <div class="card_exp">
-              <img
-                src="/images/Father_Retreat.jpg"
-                class="img-fluid"
-                alt="Club Pictures"
-              />
-              <div class="card-body">
-                <h5 class="card-content">ENTERTAINMENT</h5>
-                <button class="btn_Experience">Check out</button>
-              </div>
-            </div>
-            <div class="card_exp">
-              <img
-                src="/images/Family_Fun_Getaway.jpg"
-                class="img-fluid"
-                alt="Club Pictures"
-              />
-              <div class="card-body">
-                <h5 class="card-content">MEETING AND EVENT</h5>
-                <button class="btn_Experience">Check out</button>
-              </div>
-            </div>
-            <div class="card_exp">
-              <img
-                src="/images/Family_Fun_Getaway.jpg"
-                class="img-fluid"
-                alt="Club Pictures"
-              />
-              <div class="card-body">
-                <h5 class="card-content">RECREATION</h5>
-                <button class="btn_Experience">Check out</button>
-              </div>
-            </div>
-            <div class="card_exp">
-              <img
-                src="/images/Father_Retreat.jpg"
-                class="img-fluid"
-                alt="Club Pictures"
-              />
-              <div class="card-body">
-                <h5 class="card-content">REWARDS</h5>
-                <button class="btn_Experience">Check out</button>
-              </div>
-            </div>
-            <div class="card_exp">
-              <img
-                src="/images/Father_Retreat.jpg"
-                class="img-fluid"
-                alt="Club Pictures"
-              />
-              <div class="card-body">
-                <h5 class="card-content">HOTEL DEL LUNA</h5>
-                <button class="btn_Experience">Check out</button>
-              </div>
+            <div class="col-12 mt-2">
+              <a
+                class="btn btn_exp mb-3 mr-1"
+                href="#carouselExampleIndicators2"
+                role="button"
+                data-slide="prev">
+                <i class="fa fa-arrow-left"></i>
+              </a>
+              <a
+                class="btn btn_exp mb-3"
+                href="#carouselExampleIndicators2"
+                role="button"
+                data-slide="next">
+                <i class="fa fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
       </section>
+      <!-- ! END OF EXPERIENCE WITH US -->
+      <!-- 
 
-      <!-- ! WELLNESS CAMP -->
+
+
+
+       -->
+      <!-- ? WELLNESS CAMP -->
       <section class="wellness_camp">
-        <h1>WELLNESS CAMP</h1>
-        <!-- GYM PICTURE -->
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <!-- INDOOR CLIMBING -->
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <!-- SPA -->
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <!-- SHOOTING RANGE -->
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <!-- ZIPLINING  -->
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <!-- SWIMMING POOL -->
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <div class="card-details">
-          <p class="text-title">CLUBS PICTURE</p>
-          <p class="text-body">LEARN MORE</p>
-        </div>
-        <h1>SIGN UP WITH OUR HEALTH WELLNESS PROGRAM</h1>
-        <button>SIGN UP</button>
+        <img
+          class="wellness_img"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          src="/images/swimming.jpg"
+          alt="spa" />
+        <h1 class="mt-3">WELLNESS CAMP</h1>
+        <p>
+          Discover the path to wellness at Hotel Del Luna's Wellness Camp.<br />
+          Immerse yourself in rejuvenating spa treatments, invigorating fitness
+          sessions, nourishing cuisine, and tranquil surroundings. <br />
+          Elevate your well-being and embark on a journey of self-care at
+          Wellness Camp.
+        </p>
+        <section class="pt-5 pb-5" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="container-fluid container_wellness">
+            <div class="row">
+              <div class="col-12 all_wellness">
+                <div
+                  id="carousel_indicator_wellness"
+                  class="carousel slide"
+                  data-ride="">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="row">
+                        <div class="col-md-4 mb-3 content_wellness">
+                          <h1>GYM</h1>
+                          <p>
+                            Unleash your fitness potential at Hotel Del Luna's
+                            state-of-the-art gym, where cutting-edge equipment,
+                            expert trainers, and a breathtaking view come
+                            together to elevate your workout experience.
+                          </p>
+                          <button class="btn-Wellness">Check out</button>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                          <div class="card_well">
+                            <img
+                              class="card_image_wellness"
+                              alt="people running in tranmil"
+                              src="/images/gym_pic.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col-md-4 mb-3 content_wellness">
+                          <h1>SPA</h1>
+                          <p>
+                            Indulge in pure relaxation and rejuvenation at Hotel
+                            Del Luna's luxurious spa. Immerse yourself in a
+                            world of tranquility as expert therapists pamper you
+                            with soothing treatments, leaving you refreshed,
+                            revitalized, and ready to embrace blissful serenity.
+                          </p>
+                          <button class="btn-Wellness">Check out</button>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                          <div class="card_well">
+                            <img
+                              class="card_image_wellness"
+                              alt="girl massage"
+                              src="/images/spa.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col-md-4 mb-3 content_wellness">
+                          <h1>Deliciously Nourishing</h1>
+                          <p>
+                            Revitalize your palate with Hotel Del Luna's healthy
+                            food luxury, where every dish is thoughtfully
+                            crafted to nourish your body and delight your taste
+                            buds, ensuring a delectable culinary journey that
+                            promotes wellness.
+                          </p>
+                          <button class="btn-Wellness">Check out</button>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                          <div class="card_well">
+                            <img
+                              class="card_image_wellness"
+                              alt="indoor climbing"
+                              src="/images/healty_food.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_btn_wellness">
+                <a
+                  class="btn btn_wellness mb-3 mr-1"
+                  href="#carousel_indicator_wellness"
+                  role="button"
+                  data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+                </a>
+                <a
+                  class="btn btn_wellness mb-3"
+                  href="#carousel_indicator_wellness"
+                  role="button"
+                  data-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
-      <!-- REWARDS POINTS -->
-      <section class="reward_cards">
-        <h1>REWARDS POINTS</h1>
-        <div class="reward_card_design">
-          <p>123 456 7890</p>
-          <p>111 222 3333</p>
-          <p>123 123 1234</p>
+      <!-- !END OF WELLNESS CAMP -->
+      <!-- 
+
+
+
+
+       -->
+      <!-- ? REWARDS POINTS -->
+      <section class="reward_cards_section">
+        <div data-aos="zoom-in" data-aos-duration="1000">
+          <h1>REWARDS</h1>
+          <p>
+            Experience a world of luxury at Hotel Del Luna and earn valuable
+            points with every purchase, check-in, and event attendance,
+            unlocking a realm of exclusive rewards and privileges."
+          </p>
         </div>
-        <p>GET POINTS FROM BUYING, CHECK-IN, JOIN EVENTS</p>
+
+        <div
+          class="reward_card_design"
+          data-aos="zoom-in"
+          data-aos-duration="1000">
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />123 456 7890
+          </p>
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />975 310 4826
+          </p>
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />624 578 1930
+          </p>
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />408 729 5613
+          </p>
+        </div>
+        <button class="btn_Experience" href="/HTML/rewards.html">
+          Discover more
+        </button>
       </section>
+      <!-- ! END OF REWARDS POINTS -->
+      <!-- 
+
+
+
+       -->
     </main>
+    <!-- FOOTER SECTION -->
     <footer>
       <div class="container">
         <div class="row justify-content-center align-content-center">
@@ -483,5 +739,12 @@
     </footer>
     <script src="JS/homepage.js"></script>
     <script src="JS/login.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
