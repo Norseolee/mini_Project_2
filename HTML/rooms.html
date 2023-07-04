@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f15b7da99a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../CSS/room-style.css" />
+
+    <title>Hotel De Luna | Room</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand ms-2" href="#home"
+        ><img src="../images/hotel_logo.png" width="50px"
+      /></a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto me-3">
+          <a class="nav-item nav-link" href="#">Rooms and Suite</a>
+          <a class="nav-item nav-link" href="#">Dining</a>
+          <a class="nav-item nav-link" href="#">Meeting & Events</a>
+          <a class="nav-item nav-link" href="#">Entertainment</a>
+          <a class="nav-item nav-link" href="#">Careers</a>
+          <a class="nav-item nav-link">|</a>
+        </div>
+      </div>
+      <button type="submit" id="btn-inquire">
+        <a href="#contact">Inquire Now</a>
+      </button>
+      <button
+        class="navbar-toggler me-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3500"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../images/hotel_bedroom9.jpg"
+            class="d-block w-100"
+            alt="Bedroom 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hotel_bedroom7.jpg"
+            class="d-block w-100"
+            alt="Bedroom 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hotel_bedroom6.jpg"
+            class="d-block w-100"
+            alt="Bedroom 3"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hotel_bedroom10.jpg"
+            class="d-block w-100"
+            alt="Bedroom 4"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
+
+    <!-- Section -->
+    <section class="book">
+      <div class="container flex">
+        <div class="row input grid">
+          <div class="col-lg-12 box">
+            <label>Check-in:</label>
+            <input type="date" placeholder="Check-in-Date" />
+          </div>
+          <div class="box">
+            <label>Check-out:</label>
+            <input type="date" placeholder="Check-out-Date" />
+          </div>
+          <div class="box">
+            <label>Adults:</label> <br />
+            <input type="number" placeholder="0" />
+          </div>
+          <div class="box">
+            <label>Children:</label> <br />
+            <input type="number" placeholder="0" />
+          </div>
+        </div>
+        <div class="search">
+          <input type="submit" value="SEARCH" id="search" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+
+    <div class="container mt-5">
+      <p>RAISING COMFORT TO THE HIGHEST LEVEL</p>
+      <h3>Rooms & Suites</h3>
+    </div>
+    <div class="container mt-5">
+      <div class="row mx-auto">
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Double Room</h5>
+              <p>$129 | <span></span id="price">per night</span></p>
+              <p class="card-text">
+                <i> "Twice the Comfort, Double the Relaxation."</i>
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        DOUBLE ROOM (1 QUEEN BED AND 1 SINGLE BED)
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      ROOM DETAILS
+                      <ul>
+                        <li>345 sq ft / 32 sq m</li>
+                        <li>1 Queen Beds</li>
+                        <li>1 Single Bed</li>
+                        <li>Maximum Occupancy: 3 Adults and 2 Kids</li>
+                        <li>Rooms located at 10/F - 29/F</li>
+                        <li>City View</li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Queen Bed Room</h5>
+              <p>$129 | <span></span id="price">per night</span></p>
+              <p class="card-text">
+                <i> "Experience Regal Comfort in a Queen-Sized Haven."</i>
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed3.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">King Bed Room</h5>
+              <p>$129 | <span></span id="price">per night</span></p>
+              <p class="card-text">
+                <i> "Luxuriate in Royal Opulence in a King-Sized Retreat."</i>
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed4.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Twin Room</h5>
+              <p>$129 | <span></span id="price">per night</span></p>
+              <p class="card-text">
+                <i>
+                  "Share Adventures and Sweet Dreams in a Cozy Twin-Sized
+                  Oasis."</i
+                >
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map -->
+  
+    <section class="map top m-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57247880.37461633!2d-134.70241670956676!3d28.86465222091496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotel%20usa!5e0!3m2!1sen!2sph!4v1688489219447!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+    <!-- Gallery -->
+      <h5 class="text-center mt-5">FEATURES AND AMENITIES</h5>
+      <div class="gallery-image pt-0">
+        <div class="img-box">
+          <img src="../images/swimmingpool.png" alt="" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Swimming Pool</p>
+              <p class="opacity-low">"Freshen your day!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="../images/spamassage.png" alt="" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Spa</p>
+              <p class="opacity-low">"Relax and Soothes your senses."</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="../images/surfing.png" alt="" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Surfing</p>
+              <p class="opacity-low">
+                "Different Stories, One Unforgettable Experience."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="../images/conference-room.png" alt="" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Conference</p>
+              <p class="opacity-low">"Reserved Comfort for your Meetings."</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="../images/snorkeling.png" alt="" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Snorkeling</p>
+              <p class="opacity-low">
+                "Memories you will never forget."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="../images/gym.png" alt="" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Gym</p>
+              <p class="opacity-low">
+                "Energize your body."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container pt-5">
+        <div class="row justify-content-center align-content-center">
+          <div class="logo-footer">
+            <img src="../images/hotel_logo.png" alt="" width="90px" />
+            <!-- <h3 class="logo_name ps-2">Hotel Del Luna</h3> -->
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-box">
+              <!-- <img src="../images/hotel_logo.png" alt="" id="logo-footer" /> -->
+              <h2>VISITOR INFORMATION</h2>
+              <ul>
+                <li><a href="#">Getting Here</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+              <h2 class="pt-4">ABOUT HOTEL MANILA</h2>
+              <ul>
+                <li><a href="#">Company Information</a></li>
+                <li><a href="#">TRLEI</a></li>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Procurement</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+              <!-- <h3>We Accect</h3>
+                  <div class="card-area">
+                    <i class="fa fa-cc-visa"></i>
+                    <i class="fa fa-credit-card"></i>
+                    <i class="fa fa-cc-mastercard"></i>
+                    <i class="fa fa-cc-paypal"></i>
+                  </div> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 ps-lg-5">
+            <div class="single-box">
+              <h2>STAY</h2>
+              <ul>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Suites</a></li>
+                <li><a href="#">Villas</a></li>
+                <li><a href="#">Facilities</a></li>
+              </ul>
+              <h2 class="pt-4">SHOP</h2>
+              <ul>
+                <li><a href="#">Gift Boutique</a></li>
+                <li><a href="#">Pandora</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 ps-lg-5">
+            <div class="single-box">
+              <h2>DINE</h2>
+              <ul>
+                <li><a href="#">KFC</a></li>
+                <li><a href="#">McDonalds</a></li>
+                <li><a href="#">Greenwich</a></li>
+                <li><a href="#">Jollibee</a></li>
+                <li><a href="#">Gnern</a></li>
+              </ul>
+              <h2 class="pt-4">RELAX</h2>
+              <ul>
+                <li><a href="#">SPA</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-box">
+              <h2 id="contact">CONTACT US<img src="../images/phone_icon.png" width="50px" /></h2>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your First Name"
+                />
+              </div>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div><br/>
+              <button type="submit" class="btn btn-warning">Submit</button>
+
+              <h2 class="pt-4">Follow us on</h2>
+              <p class="socials">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul class="terms">
+            <li>About</li>
+            |
+            <li>Privacy</li>
+            |
+            <li>Terms of Use</li>
+            |
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="Bottom">
+          <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
