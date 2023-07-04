@@ -1,3 +1,57 @@
+// var passwordField = document.getElementById("login-pass");
+// var togglePassword = document.getElementById("togglePassword");
+
+// togglePassword.addEventListener("click", function () {
+//   if (passwordField.type === "password") {
+//     passwordField.type = "text";
+//     togglePassword.classList.remove("fa-lock");
+//     togglePassword.classList.add("fa-eye-slash");
+//   } else {
+//     passwordField.type = "password";
+//     togglePassword.classList.remove("fa-eye-slash");
+//     togglePassword.classList.add("fa-lock");
+//   }
+// });
+var passwordField = document.getElementById("login-pass");
+var togglePassword = document.getElementById("togglePassword1");
+
+togglePassword.addEventListener("click", function () {
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    togglePassword.classList.remove("fa-eye");
+    togglePassword.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password";
+    togglePassword.classList.remove("fa-eye-slash");
+    togglePassword.classList.add("fa-eye");
+  }
+});
+
+var passwordField1 = document.getElementById("pass");
+var togglePassword1 = document.getElementById("togglePassword2");
+
+var passwordField2 = document.getElementById("c_pass");
+var togglePassword2 = document.getElementById("togglePassword3");
+
+togglePassword1.addEventListener("click", function () {
+  togglePasswordVisibility(passwordField1, togglePassword1);
+});
+
+togglePassword2.addEventListener("click", function () {
+  togglePasswordVisibility(passwordField2, togglePassword2);
+});
+
+function togglePasswordVisibility(passwordField, togglePassword) {
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    togglePassword.classList.remove("fa-eye");
+    togglePassword.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password";
+    togglePassword.classList.remove("fa-eye-slash");
+    togglePassword.classList.add("fa-eye");
+  }
+}
 // function checkLogin() {
 //   if (localStorage.getItem("login") != null) {
 // let u = localStorage.getItem("login");
