@@ -1,0 +1,358 @@
+/* Navbar */
+.navbar {
+  background-color: #19376d;
+  padding: 15px;
+  width: 100%;
+}
+
+.nav-link {
+  color: #f9f9f9;
+}
+
+.navbar a:hover {
+  color: #ffce26;
+}
+
+#btn-inquire {
+  background-color: #ffce26;
+  border: none;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2em;
+}
+
+#btn-inquire a {
+  color: #070101;
+  text-decoration: none;
+}
+
+#btn-inquire:hover {
+  background-color: #ffc400;
+}
+
+/* Cinematic Video */
+
+#theatre {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Events Theatre */
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#events {
+  text-align: center;
+  padding: 15px 80px;
+  background-color: #0b2447;
+  color: #ffce26;
+  display: inline-block;
+}
+
+.price {
+  color: #ffce26;
+}
+
+/* Modals */
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f9f9f9;
+}
+
+.card {
+  background-color: #0b2447;
+  margin: 10px;
+  padding: 5px;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #f9f9f9;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+/* Btn */
+
+.btn {
+  font-size: 13px;
+  background: #ffc400;
+  color: #070101;
+  outline: #ffc400;
+}
+
+.btn:hover {
+  background-color: #0b2447;
+  color: #ffc400;
+}
+
+/* Theatre Plays and Shows */
+
+#theatre-plays {
+  color: black;
+  padding: 15px 70px;
+  background-color: #0b2447;
+  color: #ffce26;
+  display: inline-block;
+  text-align: right;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 1px;
+  padding: 40px;
+  color: white;
+}
+
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
+  height: 250px;
+  width: 350px;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+
+/* Amenities */
+#contacts {
+  color: black;
+  padding: 15px 70px;
+  background-color: #0b2447;
+  color: #ffce26;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* Contact */
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 30%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 18px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #0b2447;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #ffce26;
+  color: #070101;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  background-image: var("../images/event1.png");
+}
+
+/* footer */
+
+footer {
+  background: #0b2447;
+  padding: 20px 0;
+  z-index: 3000;
+  position: relative;
+  width: 100%;
+}
+.terms {
+  padding-top: 15px;
+  font-size: medium;
+  margin-top: 50px;
+  border-top: 1px solid whitesmoke;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.terms li:hover {
+  text-decoration: underline;
+}
+
+.Bottom p {
+  margin-top: 10px;
+  color: #bcbbbb;
+  text-align: center;
+  font-size: small;
+}
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-box p {
+  color: #fff;
+}
+.single-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.single-box .card-area i {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.single-box ul {
+  list-style: none;
+  padding: 0;
+}
+.single-box ul li a {
+  text-decoration: none;
+  color: #fff;
+
+  font-weight: 100;
+}
+.single-box h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+#basic-addon2 {
+  background: #fe1e4f;
+  color: #fff;
+}
+.socials i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.terms {
+  font-size: medium;
+  margin-top: 10px;
+  border-top: 1px solid whitesmoke;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.terms li:hover {
+  text-decoration: underline;
+}
+
+.Bottom p {
+  margin-top: 10px;
+  color: #bcbbbb;
+  text-align: center;
+  font-size: small;
+}
