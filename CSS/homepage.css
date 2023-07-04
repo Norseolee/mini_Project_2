@@ -10,7 +10,7 @@
   /* --backgroundcolor: #152238; */
   --MainBlue: #1c2e4a;
   --darkblue: #0b2447;
-  --gold: #f1c913;
+  --gold: rgb(231, 212, 103);
   --white: #f3f3f3;
   --black: #202020;
 
@@ -18,11 +18,107 @@
 
   --colorCard: #d9eaf5;
   --buttonColor: #f4e91d;
-  --buttonColorHover: #f5d207;
+  --buttonColorHover: #f1c913;
   --buttonColorActive: #d19e00;
 
   --Logofonts: New York;
-  --fonts: "Poppin", sa/ns-serif;
+  --fonts: "Poppin", sans-serif;
+}
+/* ====================== Loading screen================================ */
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #07182e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+/* ====================== SCROLLBAR====================================  */
+html.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+html::-webkit-scrollbar {
+  display: none;
+  width: 3px;
+  background-color: rgba(31, 82, 176, 0);
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--darkblue);
 }
 /* ====================== NAVBAR ======================================  */
 
@@ -41,6 +137,9 @@ header {
   color: var(--gold);
   font-family: var(--Logofonts);
 }
+.nav_bar_left {
+  margin-top: 10px;
+}
 .nav_bar_left a {
   text-decoration: none;
   text-decoration: none;
@@ -54,10 +153,12 @@ ul {
 .navbar {
   display: flex;
   flex-wrap: nowrap;
+  position: relative;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
 }
 .nav_bar_right {
   list-style-type: none;
-  padding-right: 30px;
   display: flex;
   gap: var(--spacer);
   justify-content: end;
@@ -99,7 +200,8 @@ ul {
   background-color: var(--buttonColorHover);
 }
 .hero {
-  height: 750px;
+  min-height: 300px;
+  height: 762px;
   background-image: url(../images/Hotel_2.jpg);
   background-size: cover;
   background-position: center;
@@ -117,7 +219,6 @@ ul {
 }
 .toggle {
   display: none;
-  position: relative;
 }
 .toggle_btn:hover {
   border: 0 gold solid;
@@ -128,38 +229,124 @@ ul {
 }
 .toggle_option {
   display: none;
-  background-color: rgba(31, 82, 176, 0.9);
-  border-radius: 10px;
-  width: 200px;
-  display: grid;
-  position: absolute;
-  right: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   text-align: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 .toggle_option a {
   display: block;
 }
-.toggle_font {
+.toggle_option_left {
+  background-color: rgba(0, 0, 0, 0.6);
+  flex: 1;
+  text-align: left;
+}
+.fa-x {
+  font-size: 50px;
+  color: var(--gold);
+  border-radius: 10px;
+  border: 1px solid gold;
+  padding: 10px;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.fa-x:hover {
+  opacity: 1;
+}
+.rewards {
+  padding: 10px;
+  font-size: 25px;
+  text-decoration: none !important;
+  color: var(--gold);
+}
+.rewards:hover {
+  color: var(--gold);
+  text-shadow: 4px 0px 40px white;
+}
+.toggle_option_right {
+  background-color: var(--darkblue);
+  flex: 3;
+}
+.toggle_font,
+.toggle_font_login {
   color: white;
   font-size: 15px;
-  text-decoration: none;
+  text-decoration: none !important;
   padding-left: 30px;
   padding-right: 30px;
   transition: hover 5s;
   padding: 10px;
 }
-.toggle_font:hover {
+.toggle_font:hover,
+.toggle_font_login:hover {
   color: white;
   background-color: var(--blueHover);
-}
-.toggle_font:first-child:hover {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 .pipe {
   font-size: 25px;
   color: Gold;
   cursor: default;
+}
+/* nav bar drop down ============================ */
+.login_dropdown {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.4s;
+}
+.fa-circle-user {
+  font-size: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.login_content_dropdown {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  right: 0px;
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  width: 1500%;
+
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.login_content_dropdown a {
+  background-color: #07182e;
+  color: var(--white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.login_content_dropdown a:hover {
+  background-color: var(--blueHover);
+}
+
+.dropdown:hover .login_content_dropdown {
+  display: block;
+}
+
+.dropdown:hover .login_dropdown {
+  color: var(--gold);
+  background-color: var(--blueHover);
 }
 /*  ================================ WELCOME =============================*/
 main {
@@ -180,198 +367,317 @@ main {
   padding-bottom: 10px;
 }
 /* ============================= DEAL OF THE MONTH ====================== */
-.image {
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
-}
-.image img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  border-radius: 10px;
-}
 .deal_of_month {
-  user-select: none;
-  padding-top: 30px;
-  padding-left: 20px;
-  animation-name: slideInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .deal_of_month h1 {
+  padding-top: 10px;
   color: var(--gold);
-  text-align: center;
-}
-.deal_left {
-  text-align: center;
 }
 .deals {
   display: flex;
   justify-content: center;
-  column-gap: var(--spacer);
-  row-gap: var(--spacer);
   flex-wrap: wrap;
+  gap: 30px;
 }
+
 .card_deal {
-  width: 320px;
-  border-radius: 20px;
-  background-color: var(--colorCard);
+  max-width: 585px;
+  min-height: 250px;
+  background: var(--colorCard);
 }
-.card_image {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.card_image img {
+.card_image_deal > img {
   width: 100%;
-  height: 200px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: 400px;
+  object-fit: cover;
 }
 .content_card_deal {
+  padding-left: 10px;
+  padding-left: 10px;
   display: flex;
+  height: 190px;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-evenly;
 }
-.card_title {
-  border-top: 3px var(--buttonColor) solid;
-  text-align: center;
-  padding-top: 10px;
-}
-.card_content {
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 220px;
-}
-.deal_readmore {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 10px;
-}
+
 .deal_btn {
   background-color: var(--buttonColor);
   border: 1px transparent;
   border-radius: 10px;
   padding: 10px 20px;
-  margin-bottom: 10px;
   transition: background-color 0.5s;
 }
 .deal_btn:hover {
   background-color: var(--buttonColorHover);
 }
 /* ======================= EXPERIENCE WITH US =========================== */
-.experience_section {
-  margin-top: 30px;
-  background-color: var(--blueHover);
+.container_exp {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
   user-select: none;
-
-  animation-name: slideInRight;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
 }
-.experience_section h1 {
+.container_exp h1 {
+  padding-top: 10px;
   color: var(--gold);
-  padding-top: var(--spacer);
 }
-.carousel {
-  gap: var(--spacer);
-  display: grid;
-  grid-auto-flow: column;
-  padding: 61px var(--spacer) 61px;
-
-  cursor: grab;
-
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
+.btn_exp {
+  background-color: var(--buttonColorHover);
+  width: 150px;
 }
-.carousel::-webkit-scrollbar {
-  width: 10px;
-  background-color: var(--blueHover);
-}
-.carousel.active::-webkit-scrollbar-thumb {
-  background-color: var(--darkblue);
-  border-radius: 5px;
-}
-.carousel:active {
-  cursor: grabbing;
+.btn_exp:hover {
+  background-color: var(--buttonColorActive);
 }
 .card_exp {
-  background-color: var(--colorCard);
-  border-radius: 10px;
-  gap: var(--spacer);
-  width: 380px;
+  background-color: var(--blueHover);
+  height: 500px;
+  max-width: 600px;
+  justify-content: center;
 }
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 90px;
+.card_image_exp {
+  position: relative;
+  overflow: hidden;
 }
-.card_exp img {
-  inline-size: 100%;
-  height: 490px;
+.card_image_exp > img {
+  width: 100%;
+  height: 600px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
-.card-content {
-  margin-top: 10px;
+.card_body_exp {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+
+  padding-top: 40px;
+  transition: 0.8s;
 }
+.card_image_exp:hover > .card_body_exp,
+.card_image_exp:hover
+  > .btn_Experience
+  .card_image_exp:hover
+  > .card_body_exp
+  h3 {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+  bottom: 60px;
+}
+.card_body_exp h3 {
+  font-size: 35px;
+  padding-bottom: 10px;
+  color: var(--white);
+}
+
 .btn_Experience {
-  width: 140px;
+  bottom: -15px;
+  border-radius: 10px;
+  padding: 8px 40px;
   background-color: var(--buttonColor);
-  align-self: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 5px;
+  transition: background-color 0.2s;
   border-style: none;
-  transition: background-color 0.5s;
-  margin-bottom: 10px;
 }
 .btn_Experience:hover {
+  bottom: -15px;
+  border-radius: 10px;
+  padding: 8px 40px;
   background-color: var(--buttonColorHover);
 }
 /* ====================== WELLNESS CAMP ====================================== */
 .wellness_camp {
   user-select: none;
-  padding-top: 30px;
+}
+.container_wellness {
+  padding: 0px 50px;
 }
 .wellness_camp h1 {
   color: var(--gold);
 }
+.wellness_img {
+  width: 100%;
+  height: 1030px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card_well {
+  background-color: var(--blueHover);
+  height: 500px;
+  width: 100%;
+}
+.card_image_wellness {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.content_wellness {
+  /* content height of wellness */
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btn-Wellness {
+  align-self: center;
+  width: 200px;
+  border-radius: 10px;
+  padding: 8px 40px;
+  background-color: var(--buttonColor);
+  transition: background-color 0.2s;
+  border-style: none;
+}
+.all_wellness {
+  position: relative;
+}
+.section_btn_wellness {
+  position: absolute;
+  bottom: 50px;
+  left: -33.2%;
+}
+
+.btn_wellness {
+  margin-top: 10px;
+  background-color: var(--buttonColorHover);
+  width: 150px;
+}
+.btn_wellness:hover {
+  background-color: var(--buttonColorActive);
+}
 /* ====================== WELLNESS PROGRAM ====================================== */
 
 /* ====================== REWARDS POINTS ====================================== */
-.reward_cards {
+.reward_cards_section {
+  padding: 0px 20px;
   background-color: white;
   user-select: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-
-.reward_cards h1 {
+.reward_cards_section h1 {
   color: var(--gold);
 }
-.reward_card_design p {
-  width: 400px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 70px;
-  padding-bottom: 30px;
+.reward_card_design {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 290px 290px 290px 290px;
+  grid-template-rows: 180px;
+  justify-content: center;
+}
+.reward_card {
+  padding-left: 25px;
+  padding-right: 80px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 
   border-radius: 10px;
 
-  border: 1px black solid;
+  border: 1px black;
+  font-size: 15px;
+  text-align: left;
 }
-.rewards_cards p {
-  font-size: 30px;
+.reward_card:nth-child(1) {
+  background-color: #0b2447;
+  z-index: 1;
+  color: white;
+
+  transition: transform 0.8s;
+
+  transform: translate(60%, 0px) skew(10deg, 0deg);
+  box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(133, 78, 20);
+  background: linear-gradient(
+    241deg,
+    rgba(133, 78, 20, 1) 0%,
+    rgba(0, 0, 0, 1) 58%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(76, 44, 11, 1) 100%
+  );
+}
+.reward_card:nth-child(1):hover {
+  transform: translate(60%, -20px) skew(10deg, 0deg);
+}
+.reward_card:nth-child(2) {
+  background-color: #d19e00;
+  z-index: 2;
+
+  transition: transform 0.8s;
+
+  transform: translate(20%, 0px) skew(10deg, 0deg);
+  box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(250, 111, 94);
+  background: linear-gradient(
+    241deg,
+    rgb(255, 163, 151) 0%,
+    rgba(245, 181, 48, 1) 13%,
+    rgb(155, 128, 52) 28%,
+    rgb(218, 137, 49) 76%,
+    rgb(230, 199, 86) 100%
+  );
+}
+.reward_card:nth-child(2):hover {
+  transform: translate(20%, -20px) skew(10deg, 0deg);
+}
+.reward_card:nth-child(3) {
+  background-color: #f4e91d;
+  z-index: 3;
+
+  transition: transform 0.8s;
+
+  transform: translate(-20%, 0px) skew(10deg, 0deg);
+  box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(46, 45, 71);
+  background: linear-gradient(
+    241deg,
+    rgba(46, 45, 71, 1) 24%,
+    rgba(42, 112, 173, 1) 68%,
+    rgba(40, 51, 239, 1) 100%,
+    rgba(9, 5, 255, 1) 100%
+  );
+}
+.reward_card:nth-child(3):hover {
+  transform: translate(-20%, -20px) skew(10deg, 0deg);
+}
+.reward_card:nth-child(4) {
+  background-color: #c1bd6d;
+  z-index: 4;
+
+  transition: transform 0.8s;
+
+  transform: translate(-60%, 0px) skew(10deg, 0deg);
+  box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(255, 151, 140);
+  background: linear-gradient(
+    241deg,
+    rgba(255, 151, 140, 1) 0%,
+    rgba(226, 10, 88, 1) 42%,
+    rgba(249, 186, 143, 1) 100%,
+    rgba(255, 227, 179, 1) 100%
+  );
+}
+.reward_card:nth-child(4):hover {
+  transform: translate(-60%, -20px) skew(10deg, 0deg);
+}
+.reward_card_hover {
+  position: relative;
+  height: 50px;
 }
 /* ====================== FOOTER ====================================== */
 footer {
@@ -485,16 +791,25 @@ footer {
 
 /* ======================RESPONSIVENESS================================ */
 @media (max-width: 1060px) {
-  .navbar .nav_bar_right,
-  .pipe {
+  .navbar .nav_bar_right {
     display: none;
   }
   .navbar .toggle {
     display: block;
   }
   .book_now {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-radius: 0px;
+  }
+  .account_info {
+    color: var(--white);
+  }
+  .account_info:hover {
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .book_now:hover {
+    text-decoration: none;
   }
   .deal {
     text-align: center;
@@ -521,8 +836,212 @@ footer {
     padding: 8px;
     padding-top: 10px;
   }
+
+  .reward_card:nth-child(1) {
+    background-color: #0b2447;
+    z-index: 1;
+    color: white;
+
+    transition: transform 0.8s;
+
+    transform: translate(70%, 0px) skew(10deg, 0deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(133, 78, 20);
+    background: linear-gradient(
+      241deg,
+      rgba(133, 78, 20, 1) 0%,
+      rgba(0, 0, 0, 1) 58%,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(76, 44, 11, 1) 100%
+    );
+  }
+  .reward_card:nth-child(1):hover {
+    transform: translate(70%, -20px) skew(10deg, 0deg);
+  }
+  .reward_card:nth-child(2) {
+    background-color: #d19e00;
+    z-index: 2;
+
+    transition: transform 0.8s;
+
+    transform: translate(20%, 0px) skew(10deg, 0deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(250, 111, 94);
+    background: linear-gradient(
+      241deg,
+      rgb(255, 163, 151) 0%,
+      rgba(245, 181, 48, 1) 13%,
+      rgb(155, 128, 52) 28%,
+      rgb(218, 137, 49) 76%,
+      rgb(230, 199, 86) 100%
+    );
+  }
+  .reward_card:nth-child(2):hover {
+    transform: translate(20%, -20px) skew(10deg, 0deg);
+  }
+  .reward_card:nth-child(3) {
+    background-color: #f4e91d;
+    z-index: 3;
+
+    transition: transform 0.8s;
+
+    transform: translate(-25%, 0px) skew(10deg, 0deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(46, 45, 71);
+    background: linear-gradient(
+      241deg,
+      rgba(46, 45, 71, 1) 24%,
+      rgba(42, 112, 173, 1) 68%,
+      rgba(40, 51, 239, 1) 100%,
+      rgba(9, 5, 255, 1) 100%
+    );
+  }
+  .reward_card:nth-child(3):hover {
+    transform: translate(-25%, -20px) skew(10deg, 0deg);
+  }
+  .reward_card:nth-child(4) {
+    background-color: #c1bd6d;
+    z-index: 4;
+
+    transition: transform 0.8s;
+
+    transform: translate(-70%, 0px) skew(10deg, 0deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(255, 151, 140);
+    background: linear-gradient(
+      241deg,
+      rgba(255, 151, 140, 1) 0%,
+      rgba(226, 10, 88, 1) 42%,
+      rgba(249, 186, 143, 1) 100%,
+      rgba(255, 227, 179, 1) 100%
+    );
+  }
+  .reward_card:nth-child(4):hover {
+    transform: translate(-70%, -20px) skew(10deg, 0deg);
+  }
 }
-@media (min-width: 800px) {
+@media (max-width: 768px) {
+  .btn_wellness {
+    margin-top: 10px;
+    background-color: var(--buttonColorHover);
+    width: 50px;
+  }
+  /* 
+  
+  */
+  .reward_card_design {
+    height: 350px;
+  }
+  .card-body {
+    padding-top: 0px;
+    bottom: -10px;
+    transition: none;
+  }
+  .card_exp:hover .card-body {
+    bottom: -10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  }
+  .card_exp {
+    width: 250px;
+    height: 350px;
+  }
+  .card_exp img {
+    inline-size: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .reward_card:nth-child(1) {
+    z-index: 1;
+    color: white;
+    transition: transform 0.8s;
+
+    transform: translate(135%, 70px) rotate(70deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(133, 78, 20);
+    background: linear-gradient(
+      241deg,
+      rgba(133, 78, 20, 1) 0%,
+      rgba(0, 0, 0, 1) 58%,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(76, 44, 11, 1) 100%
+    );
+  }
+  .reward_card:nth-child(1):hover {
+    transform: translate(152%, 70px);
+    z-index: 99;
+  }
+  .reward_card:nth-child(2) {
+    background-color: #d19e00;
+    z-index: 2;
+
+    transition: transform 0.8s;
+
+    transform: translate(45%, 70px) rotate(70deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(250, 111, 94);
+    background: linear-gradient(
+      241deg,
+      rgb(255, 163, 151) 0%,
+      rgba(245, 181, 48, 1) 13%,
+      rgb(155, 128, 52) 28%,
+      rgb(218, 137, 49) 76%,
+      rgb(230, 199, 86) 100%
+    );
+  }
+  .reward_card:nth-child(2):hover {
+    transform: translate(52%, 70px);
+    z-index: 99;
+  }
+  .reward_card:nth-child(3) {
+    background-color: #f4e91d;
+    z-index: 3;
+
+    transition: transform 0.8s;
+
+    transform: translate(-45%, 70px) rotate(70deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(46, 45, 71);
+    background: linear-gradient(
+      241deg,
+      rgba(46, 45, 71, 1) 24%,
+      rgba(42, 112, 173, 1) 68%,
+      rgba(40, 51, 239, 1) 100%,
+      rgba(9, 5, 255, 1) 100%
+    );
+  }
+  .reward_card:nth-child(3):hover {
+    transform: translate(-48%, 70px);
+    z-index: 99;
+  }
+  .reward_card:nth-child(4) {
+    background-color: #c1bd6d;
+    z-index: 4;
+
+    transition: transform 0.8s;
+
+    transform: translate(-135%, 70px) rotate(70deg);
+    box-shadow: -11px 11px 16px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(255, 151, 140);
+    background: linear-gradient(
+      241deg,
+      rgba(255, 151, 140, 1) 0%,
+      rgba(226, 10, 88, 1) 42%,
+      rgba(249, 186, 143, 1) 100%,
+      rgba(255, 227, 179, 1) 100%
+    );
+  }
+  .reward_card:nth-child(4):hover {
+    transform: translate(-148%, 70px);
+    z-index: 99;
+  }
+}
+@media (min-width: 870px) {
+  /* 
+  
+  
+  */
   .nav_bar_right {
     gap: 5px;
     padding-left: 20px;
@@ -534,11 +1053,19 @@ footer {
     padding-top: 10px;
   }
 
+  .book_now {
+    margin-top: 3px;
+    font-size: 13px;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .link_font:hover {
     padding: 8px;
     padding-top: 10px;
   }
 }
+
 /* ========================== KEY FRAMS ================================= */
 @keyframes slideInLeft {
   from {
