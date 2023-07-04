@@ -1,51 +1,82 @@
 $(function () {
+  if (
+    $(document).height() > $(window).height() &&
+    !("ontouchstart" in document.documentElement)
+  ) {
+    var scrollTop = $("html").scrollTop()
+      ? $("html").scrollTop()
+      : $("body").scrollTop();
+    $("html").addClass("noscroll").css("top", -scrollTop);
+  }
+
+  $(".fa-x").click(function () {
+    let $toggleOption = $(this).closest(".toggle_option");
+    $toggleOption.slideUp("fast", enableScroll);
+  });
+
   $(".toggle_option").hide();
   $(".toggle_btn").click(function () {
-    $(this).next(".toggle_option").slideToggle();
+    let $toggleOption = $(this).next(".toggle_option");
+    $toggleOption.slideToggle(function () {
+      if ($toggleOption.is(":visible")) {
+        disableScroll();
+      } else {
+        enableScroll();
+      }
+    });
+  });
+
+  function disableScroll() {
+    var scrollTop = parseInt($("html").css("top"));
+    $("html").addClass("noscroll");
+    $("html,body").scrollTop(-scrollTop);
+  }
+
+  function enableScroll() {
+    var scrollTop = parseInt($("html").css("top"));
+    $("html").removeClass("noscroll");
+    $("html,body").scrollTop(-scrollTop);
+  }
+
+  enableScroll();
+
+  // toggle for login =========================================
+  let $accountToggle = $(".account_hover_toggle");
+  let $toggleOption = $(".toggle_font");
+
+  // toggle for login =========================================
+  $("#loginStatus").click(function () {
+    let $this = $(this);
+
+    if (!$this.hasClass("clicked")) {
+      $accountToggle.slideDown();
+      $this.css("background-color", "#2b4875");
+      $this.addClass("clicked");
+      $toggleOption.hide("fast");
+    } else {
+      $accountToggle.slideUp(function () {
+        $this.css("background-color", "");
+        $this.removeClass("clicked");
+        $toggleOption.show("fast");
+      });
+    }
   });
 
   $(document).click(function (e) {
-    var target = e.target;
-    if (
-      !$(target).is(".toggle_btn") &&
-      !$(target).parents().is(".toggle_btn")
-    ) {
-      //{ $('.dropdown').hide(); }
-      $(".toggle_option").slideUp();
+    let target = e.target;
+    let $accountToggleArea = $("#loginStatus, .account_hover_toggle");
+
+    if (!$accountToggleArea.is(target)) {
+      $accountToggle.slideUp(function () {
+        $("#loginStatus").css("background-color", "");
+        $("#loginStatus").removeClass("clicked");
+        $toggleOption.show("fast");
+      });
     }
   });
 });
 
-$(document).ready(function () {
-  $(".carousel").scrollLeft(0);
-});
-
-const slider = document.querySelector(".carousel");
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener("mousedown", (e) => {
-  isDown = true;
-  slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("mouseleave", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = x - startX;
-  slider.scrollLeft = scrollLeft - walk;
+// loading page ==================================================
+$(window).on("load", function () {
+  $(".loader-wrapper").fadeOut("slow");
 });
