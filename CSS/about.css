@@ -68,9 +68,8 @@
 }
 .swimcon {
   background-image: url("../images/pool.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-
   animation-name: slideInRight;
   animation-duration: 3s;
   animation-timing-function: ease;
@@ -140,6 +139,12 @@
 .acareer p {
   color: rgb(253, 246, 214);
   text-align: center;
+  user-select: none;
+}
+.carconinfo {
+  color: rgb(253, 246, 214);
+  text-align: left;
+  justify-content: start;
   user-select: none;
 }
 @media (min-width: 800px) {
