@@ -415,7 +415,9 @@
                       required
                     />
                     <div class="pt-3 buttons-acc-setting">
-                      <button class="btn btn-warning">Save</button>
+                      <button class="btn btn-warning" onclick="addAccount()">
+                        Update
+                      </button>
                       <button class="btn btn-warning">Cancel</button>
                     </div>
                   </div>
@@ -435,33 +437,33 @@
                       placeholder="Enter your email"
                       required
                     />
-                    <label for="as_fname" class="pt-4">Code:</label>
+                    <label for="as_email_code" class="pt-4">Code:</label>
                     <input
                       type="text"
                       class="form-control"
-                      name="as_fname"
-                      id="as_fname"
+                      name="as_email_code"
+                      id="as_email_code"
                       placeholder="Enter your email code"
                       required
                     />
 
-                    <label for="as_code" class="pt-4">Mobile Number:</label>
+                    <label for="as_mobile" class="pt-4">Mobile Number:</label>
                     <input
                       type="text"
                       class="form-control"
-                      name="as_code"
-                      id="as_code"
+                      name="as_mobile"
+                      id="as_mobile"
                       placeholder="Enter your Mobile Number"
                       required
                     />
-                    <label for="as_code" class="pt-4"
+                    <label for="as_mobile_op" class="pt-4"
                       >Alternative Mobile Number(Optional):</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      name="as_code"
-                      id="as_code"
+                      name="as_mobile_op"
+                      id="as_mobile_op"
                       placeholder="Enter your Alternative Mobile Number"
                       required
                     />
@@ -480,15 +482,16 @@
                   <div class="col-sm-6 form-group">
                     <div class="acc_delete">
                       <input type="checkbox" id="terms" class="me-2" required />
-
                       <label for="terms"
                         >Understand that your account will be deleted
                         permanently, all your information and history will be
-                        permanently deleted.
-                      </label>
+                        permanently deleted.</label
+                      >
                     </div>
                     <div class="pt-3 buttons-acc-setting">
-                      <button class="btn btn-warning">Save</button>
+                      <button class="btn btn-warning" onclick="deleteAccount()">
+                        Delete Account
+                      </button>
                       <button class="btn btn-warning">Cancel</button>
                     </div>
                   </div>
@@ -579,7 +582,7 @@
                     />
                   </div>
                   <div class="col-sm-6 form-group">
-                    <label for="Country">Country</label>
+                    <label for="countries">Country</label>
                     <select
                       id="countries"
                       name="countries"
@@ -611,7 +614,7 @@
                     </select>
                   </div>
                   <div class="col-sm-2 form-group">
-                    <label for="cod">Country code</label>
+                    <label for="countries">Country code</label>
                     <select class="form-control browser-default custom-select">
                       <option data-countryCode="US" value="1" selected>
                         USA (+1)
