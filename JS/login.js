@@ -1,3 +1,18 @@
+function checkLogin() {
+  if (localStorage.getItem("login") != null) {
+    $("#login-nav-item").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
+    $("#loginStatus").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
+  } else if (sessionStorage.getItem("login") != null) {
+    $("#login-nav-item").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
+    $("#loginStatus").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
+  }
+}
+checkLogin();
+
 // var passwordField = document.getElementById("login-pass");
 // var togglePassword = document.getElementById("togglePassword");
 
@@ -77,19 +92,6 @@ function togglePasswordVisibility(passwordField, togglePassword) {
 //     document.getElementById("login-nav-item").href = "HTML/account.html";
 //   }
 // }
-function checkLogin() {
-  if (
-    localStorage.getItem("login") != null ||
-    sessionStorage.getItem("login") != null
-  ) {
-    $("#login-nav-item").text("Account");
-    document.getElementById("login-nav-item").href = "HTML/account.html";
-    $("#loginStatus").text("Account");
-    document.getElementById("login-nav-item").href = "HTML/account.html";
-  }
-}
-
-checkLogin();
 
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
@@ -180,13 +182,13 @@ function showErrorModal(message) {
   errorModal.show();
 }
 
-// Retrieve the name from localStorage
-const loggedInUserName = localStorage.getItem("loggedInUser");
+// // Retrieve the name from localStorage
+// const loggedInUserName = localStorage.getItem("loggedInUser");
 
-// Check if the name exists in localStorage
-if (loggedInUserName) {
-  // Update the login status in the navbar with the logged-in user's name
-  document.getElementById(
-    "loginStatus"
-  ).innerHTML = `Welcome, <span id="loggedInUserName">${loggedInUserName}</span>!`;
-}
+// // Check if the name exists in localStorage
+// if (loggedInUserName) {
+//   // Update the login status in the navbar with the logged-in user's name
+//   document.getElementById(
+//     "loginStatus"
+//   ).innerHTML = `Welcome, <span id="loggedInUserName">${loggedInUserName}</span>!`;
+// }
