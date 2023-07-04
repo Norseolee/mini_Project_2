@@ -1,0 +1,198 @@
+.aboutcontainer {
+  background-color: var(--MainBlue);
+  font-family: var(--fonts);
+  font-weight: light;
+  user-select: none;
+}
+#aboutintro {
+  text-align: center;
+  color: var(--gold);
+}
+#aboutpar {
+  text-align: center;
+  color: white;
+}
+.conacom {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.imgaccomlg {
+  margin-left: 150px;
+  user-select: none;
+}
+
+.row_accom h2 {
+  text-align: center;
+  color: var(--gold);
+  user-select: none;
+}
+.row_accom p {
+  text-align: left;
+  user-select: none;
+}
+.row_accom img {
+  text-align: center;
+  align-items: center;
+  user-select: none;
+}
+
+.spafitness {
+  margin-left: 5px;
+  margin-right: 5px;
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.theatreent {
+  margin-left: 5px;
+  margin-right: 5px;
+  animation-name: slideInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.swimpool h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.swimpool p {
+  color: white;
+  text-align: left;
+  user-select: none;
+}
+.imgswimpoollg {
+  text-align: center;
+  margin: 50px;
+  user-select: none;
+}
+.imgswimpoolsm {
+  text-align: center;
+  user-select: none;
+}
+.swimcon {
+  background: linear-gradient(rgba(24, 23, 24, 0.8), rgba(7, 21, 52, 0.8)),
+    url("../images/pool.jpg"); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(rgba(27, 27, 28, 0.8), rgba(22, 31, 53, 0.8)),
+    url("../images/pool.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation-name: slideInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.meeteventcon {
+  margin-top: 70px;
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.meetevent h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.meetevent p {
+  text-align: left;
+  user-select: none;
+}
+.meetevent h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.meetevent p {
+  text-align: left;
+  user-select: none;
+}
+.spafitness {
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.spafitness h2 {
+  text-align: left;
+  user-select: none;
+  color: var(--gold);
+}
+.spafitness p {
+  text-align: left;
+  justify-content: start;
+  user-select: none;
+}
+.theatreent h2 {
+  text-align: left;
+  user-select: none;
+  color: var(--gold);
+}
+.theatreent p {
+  text-align: left;
+  justify-content: start;
+  user-select: none;
+}
+.careercon {
+  background: linear-gradient(rgba(24, 23, 24, 0.8), rgba(7, 21, 52, 0.8)),
+    url("../images/marinabay.jpg"); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(rgba(27, 27, 28, 0.8), rgba(22, 31, 53, 0.8)),
+    url("../images/marinabay.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.acareer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.acareer h2 {
+  text-align: center;
+  user-select: none;
+  color: var(--gold);
+}
+.acareer p {
+  color: rgb(253, 246, 214);
+  text-align: center;
+  user-select: none;
+}
+.carconinfo {
+  color: rgb(253, 246, 214);
+  text-align: left;
+  justify-content: start;
+  user-select: none;
+}
+@media (min-width: 800px) {
+  .imgaccomsm {
+    margin: 0;
+    user-select: none;
+  }
+}

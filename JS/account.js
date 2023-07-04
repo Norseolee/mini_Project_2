@@ -206,24 +206,6 @@ const lstcountires = [
   "Zimbabwe",
 ];
 
-function sentenceCase(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
-}
-
-function checkLogin() {
-  if (localStorage.getItem("login") != null) {
-    let u = localStorage.getItem("login");
-    let d = JSON.parse(u);
-    let formattedFirstName = sentenceCase(d.firstName);
-    let formattedLastName = sentenceCase(d.lastName);
-    document.getElementById("fname").value = formattedFirstName;
-    document.getElementById("lname").value = formattedLastName;
-    document.getElementById("email").value = d.email;
-  }
-}
-
-checkLogin();
-
 const allSideMenu = document.querySelectorAll("#sidebar .side-menu.top li a");
 const shrink_btn = document.querySelector(".shrink-btn");
 const sidebar_links = document.querySelectorAll(".sidebar-links a");
@@ -299,7 +281,7 @@ menuLinks.forEach((menuLink) => {
       sec.style.display = "none";
     });
     section.classList.add("active");
-    section.style.display = "block";
+    section.style.display = "flex";
   });
 });
 
@@ -309,7 +291,7 @@ function hideInactiveSections() {
     if (!sec.classList.contains("active")) {
       sec.style.display = "none";
     } else {
-      sec.style.display = "block";
+      sec.style.display = "flex";
     }
   });
 }
@@ -323,10 +305,49 @@ lstcountires.forEach(function (item) {
   o.value = item;
   countries.appendChild(o);
 });
+function sentenceCase(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+}
+
+function checkLogin() {
+  if (localStorage.getItem("login") != null) {
+    let u = localStorage.getItem("login");
+    let d = JSON.parse(u);
+    let formattedFirstName = sentenceCase(d.firstName);
+    let formattedLastName = sentenceCase(d.lastName);
+    document.getElementById("fname").value = formattedFirstName;
+    document.getElementById("lname").value = formattedLastName;
+    document.getElementById("email").value = d.email;
+  } else if (sessionStorage.getItem("login") != null) {
+    let u = sessionStorage.getItem("login");
+    let d = JSON.parse(u);
+    let formattedFirstName = sentenceCase(d.firstName);
+    let formattedLastName = sentenceCase(d.lastName);
+    document.getElementById("fname").value = formattedFirstName;
+    document.getElementById("lname").value = formattedLastName;
+    document.getElementById("email").value = d.email;
+  }
+}
+
+checkLogin();
 
 function checkLoginInfo() {
   if (localStorage.getItem("login") != null) {
     let u = localStorage.getItem("login");
+    let d = JSON.parse(u);
+
+    let firstNameSentenceCase =
+      d.firstName.charAt(0).toUpperCase() +
+      d.firstName.slice(1).toLowerCase() +
+      " " +
+      d.lastName.charAt(0).toUpperCase() +
+      d.lastName.slice(1).toLowerCase();
+
+    document.getElementById(
+      "account_name"
+    ).innerHTML = `Welcome, <span id="account_name">${firstNameSentenceCase}</span>!`;
+  } else if (sessionStorage.getItem("login") != null) {
+    let u = sessionStorage.getItem("login");
     let d = JSON.parse(u);
 
     let firstNameSentenceCase =
@@ -358,11 +379,200 @@ function checkAccount() {
     document.getElementById("acc_fname").value = formattedFirstName;
     document.getElementById("acc_lname").value = formattedLastName;
     document.getElementById("acc_email").value = d.email;
+    document.getElementById("as_email").value = d.email;
+  } else if (sessionStorage.getItem("login") != null) {
+    let u = sessionStorage.getItem("login");
+    let d = JSON.parse(u);
+    let formattedFirstName = sentenceCase(d.firstName);
+    let formattedLastName = sentenceCase(d.lastName);
+    document.getElementById("acc_fname").value = formattedFirstName;
+    document.getElementById("acc_lname").value = formattedLastName;
+    document.getElementById("acc_email").value = d.email;
+    document.getElementById("as_email").value = d.email;
+  }
+}
+checkAccount();
+
+function addAccount() {
+  var firstName = document.getElementById("acc_fname").value;
+  var lastName = document.getElementById("acc_lname").value;
+  var email = document.getElementById("acc_email").value;
+  if (localStorage.getItem("login") != null) {
+    var existingUserData = localStorage.getItem("login");
+    var existingUser = JSON.parse(existingUserData);
+
+    if (existingUser) {
+      if (existingUser.email === email) {
+        // If the current email matches the updated email, update the existing entry
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      } else {
+        // Check if an entry with the updated email already exists
+        var updatedUserData = localStorage.getItem(email);
+        var updatedUser = JSON.parse(updatedUserData);
+
+        if (updatedUser) {
+          console.log("Email already taken. Please choose a different email.");
+          return;
+        }
+
+        // Delete the old entry and update with the updated user data
+        localStorage.removeItem(existingUser.email);
+        existingUser.email = email;
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      }
+    } else {
+      // If user does not exist, create a new user object
+      var user = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+      };
+      existingUser = user;
+    }
+
+    // Store the updated/created user data in local storage under the email key
+    var json = JSON.stringify(existingUser);
+    localStorage.setItem(email, json);
+
+    // Update the value of the login key if necessary
+    localStorage.setItem("login", json);
+
+    console.log("User added/updated:", existingUser);
+
+    // Retrieve existing user data from local storage using the current email
+    var existingUserData = localStorage.getItem("login");
+    var existingUser = JSON.parse(existingUserData);
+
+    if (existingUser) {
+      if (existingUser.email === email) {
+        // If the current email matches the updated email, update the existing entry
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      } else {
+        // Check if an entry with the updated email already exists
+        var updatedUserData = localStorage.getItem(email);
+        var updatedUser = JSON.parse(updatedUserData);
+
+        if (updatedUser) {
+          console.log("Email already taken. Please choose a different email.");
+          return;
+        }
+
+        // Delete the old entry and update with the updated user data
+        localStorage.removeItem(existingUser.email);
+        existingUser.email = email;
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      }
+    } else {
+      // If user does not exist, create a new user object
+      var user = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+      };
+      existingUser = user;
+    }
+
+    // Store the updated/created user data in local storage under the email key
+    var json = JSON.stringify(existingUser);
+    localStorage.setItem(email, json);
+
+    // Update the value of the login key if necessary
+    localStorage.setItem("login", json);
+    console.log("User added/updated:", existingUser);
+  } else if (sessionStorage.getItem("login") != null) {
+    var existingUserData = sessionStorage.getItem("login");
+    var existingUser = JSON.parse(existingUserData);
+
+    if (existingUser) {
+      if (existingUser.email === email) {
+        // If the current email matches the updated email, update the existing entry
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      } else {
+        // Check if an entry with the updated email already exists
+        var updatedUserData = sessionStorage.getItem(email);
+        var updatedUser = JSON.parse(updatedUserData);
+
+        if (updatedUser) {
+          console.log("Email already taken. Please choose a different email.");
+          return;
+        }
+
+        // Delete the old entry and update with the updated user data
+        localStorage.removeItem(existingUser.email);
+        existingUser.email = email;
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      }
+    } else {
+      // If user does not exist, create a new user object
+      var user = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+      };
+      existingUser = user;
+    }
+
+    // Store the updated/created user data in local storage under the email key
+    var json = JSON.stringify(existingUser);
+    localStorage.setItem(email, json);
+
+    // Update the value of the login key if necessary
+    sessionStorage.setItem("login", json);
+
+    console.log("User added/updated:", existingUser);
+
+    // Retrieve existing user data from local storage using the current email
+    var existingUserData = sessionStorage.getItem("login");
+    var existingUser = JSON.parse(existingUserData);
+
+    if (existingUser) {
+      if (existingUser.email === email) {
+        // If the current email matches the updated email, update the existing entry
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      } else {
+        // Check if an entry with the updated email already exists
+        var updatedUserData = localStorage.getItem(email);
+        var updatedUser = JSON.parse(updatedUserData);
+
+        if (updatedUser) {
+          console.log("Email already taken. Please choose a different email.");
+          return;
+        }
+
+        // Delete the old entry and update with the updated user data
+        sessionStorage.removeItem(existingUser.email);
+        existingUser.email = email;
+        existingUser.firstName = firstName;
+        existingUser.lastName = lastName;
+      }
+    } else {
+      // If user does not exist, create a new user object
+      var user = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+      };
+      existingUser = user;
+    }
+
+    // Store the updated/created user data in local storage under the email key
+    var json = JSON.stringify(existingUser);
+    localStorage.setItem(email, json);
+
+    // Update the value of the login key if necessary
+    sessionStorage.setItem("login", json);
+    console.log("User added/updated:", existingUser);
   }
 }
 
-checkAccount();
-
+// Credit Card
 new Vue({
   el: "#app",
   data() {
@@ -449,9 +659,73 @@ new Vue({
   },
 });
 
+// Credit Card
+
 document.getElementById("logout-btn").addEventListener("click", logout);
 
 function logout() {
-  localStorage.removeItem("login");
-  window.location.href = "../index.html";
+  if (localStorage.getItem("login") != null) {
+    localStorage.removeItem("login");
+    window.location.href = "../index.html";
+  } else if (sessionStorage.getItem("login") != null) {
+    sessionStorage.removeItem("login");
+    window.location.href = "../index.html";
+  }
+}
+function deleteAccount() {
+  if (localStorage.getItem("login") != null) {
+    var email = document.getElementById("acc_email").value;
+    var checkbox = document.getElementById("terms");
+
+    if (checkbox.checked) {
+      // Retrieve the user data from local storage
+      var userData = localStorage.getItem(email);
+
+      if (userData) {
+        // Remove the user entry from local storage
+        localStorage.removeItem(email);
+        // Remove the login entry if the deleted account is the current user
+        if (localStorage.getItem("login") === userData) {
+          localStorage.removeItem("login");
+        }
+        console.log("Account deleted successfully");
+
+        // Delay before redirecting to the index page (200ms)
+        setTimeout(function () {
+          window.location.pathname = "../index.html";
+        }, 200);
+      } else {
+        console.log("Account not found");
+      }
+    } else {
+      console.log("Please check the checkbox to confirm account deletion");
+    }
+  } else if (sessionStorage.getItem("login") != null) {
+    var email = document.getElementById("acc_email").value;
+    var checkbox = document.getElementById("terms");
+
+    if (checkbox.checked) {
+      // Retrieve the user data from local storage
+      var userData = localStorage.getItem(email);
+
+      if (userData) {
+        // Remove the user entry from local storage
+        localStorage.removeItem(email);
+        // Remove the login entry if the deleted account is the current user
+        if (sessionStorage.getItem("login") === userData) {
+          sessionStorage.removeItem("login");
+        }
+        console.log("Account deleted successfully");
+
+        // Delay before redirecting to the index page (200ms)
+        setTimeout(function () {
+          window.location.pathname = "../index.html";
+        }, 200);
+      } else {
+        console.log("Account not found");
+      }
+    } else {
+      console.log("Please check the checkbox to confirm account deletion");
+    }
+  }
 }
