@@ -13,6 +13,8 @@
   color: white;
 }
 .conacom {
+  margin-top: 70px;
+  margin-bottom: 70px;
   animation-name: slideInLeft;
   animation-duration: 3s;
   animation-timing-function: ease;
@@ -45,15 +47,32 @@
 .spafitness {
   margin-left: 5px;
   margin-right: 5px;
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
-
+.theatreent {
+  margin-left: 5px;
+  margin-right: 5px;
+  animation-name: slideInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
 .swimpool h2 {
   text-align: center;
   user-select: none;
   color: var(--gold);
 }
 .swimpool p {
-  color: rgb(253, 246, 214);
+  color: white;
   text-align: left;
   user-select: none;
 }
@@ -68,6 +87,8 @@
 }
 .swimcon {
   background-image: url("../images/pool.jpg");
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   animation-name: slideInRight;
@@ -79,6 +100,7 @@
   animation-fill-mode: none;
 }
 .meeteventcon {
+  margin-top: 70px;
   animation-name: slideInLeft;
   animation-duration: 3s;
   animation-timing-function: ease;
@@ -106,8 +128,8 @@
   text-align: left;
   user-select: none;
 }
-.spafitnesscon {
-  animation-name: slideInRight;
+.spafitness {
+  animation-name: slideInLeft;
   animation-duration: 3s;
   animation-timing-function: ease;
   animation-delay: 0s;
@@ -116,12 +138,23 @@
   animation-fill-mode: none;
 }
 .spafitness h2 {
-  text-align: center;
+  text-align: left;
   user-select: none;
   color: var(--gold);
 }
 .spafitness p {
-  text-align: center;
+  text-align: left;
+  justify-content: start;
+  user-select: none;
+}
+.theatreent h2 {
+  text-align: left;
+  user-select: none;
+  color: var(--gold);
+}
+.theatreent p {
+  text-align: left;
+  justify-content: start;
   user-select: none;
 }
 .careercon {
