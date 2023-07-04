@@ -100,7 +100,7 @@ input.form-check-input {
   margin-bottom: 10px;
 }
 .input-field {
-  width: 100%;
+  width: 75%;
   height: 50px;
   background: #f0f0f0;
   margin: 10px 0;
@@ -287,4 +287,15 @@ a {
   .back-button {
     display: none;
   }
+}
+.input-field {
+  position: relative;
+}
+
+#togglePassword2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
