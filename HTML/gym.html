@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HOTEL DE LUNA -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f15b7da99a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="../CSS/spa.css" />
+    <link rel="stylesheet" href="../CSS/homepage.css" />
+    <link rel="stylesheet" href="../CSS/pool.css" />
+
+    <title>Hotel Del Luna | GYM</title>
+  </head>
+  <body>
+    <!-- ? THIS HEADER IS COMPLETE! -->
+    <header>
+      <div class="navbar">
+        <div class="nav_bar_left">
+          <a href="../index.html">
+            <img
+              href="../index.html"
+              src="../images/hotel_logo.png"
+              width="50px"
+              class="logo_img"
+            />
+            <h1 class="logo_name">Hotel Del Luna</h1>
+          </a>
+        </div>
+        <div class="nav_bar_right">
+          <a class="link_font" href="">Rooms and Suite</a>
+          <a class="link_font" href="">Dining</a>
+          <a class="link_font" href="">Meeting & Events </a>
+          <a class="link_font" href="">Entertainment </a>
+          <a class="link_font" href="">Wellness</a>
+          <a class="link_font" href="#">Careers </a>
+          <a
+            class="link_font"
+            id="login-nav-item"
+            href="../HTML/signin_signup.html"
+            >Login</a
+          >
+          <i class="pipe">|</i>
+          <a class="book_now" href="">Book Now!</a>
+        </div>
+        <div class="toggle">
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="toggle_option">
+            <a class="toggle_font" href="">Rooms and Suite</a>
+            <a class="toggle_font" href="">Dining</a>
+            <a class="toggle_font" href="">Meeting & Events </a>
+            <a class="toggle_font" href="">Entertainment </a>
+            <a class="toggle_font" href="">wellness</a>
+            <a class="toggle_font" href="">Careers </a>
+            <a
+              class="toggle_font"
+              id="loginStatus"
+              href="../HTML/signin_signup.html"
+              >Login</a
+            >
+            <i class="pipe">|</i>
+            <a class="book_now" href="">Book Now!</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="spa">
+        <img src="../images/gym.jpg" alt="" />
+      </div>
+      <div class="container spa-details">
+        <h1>HOTEL DEL LUNA GYM</h1>
+        <p>
+          Solaire’s wellness space is equipped with the latest and most advanced
+          gym equipment from Technogym, an award-winning Italian manufacturer
+          recognized for producing premium-grade and bio-mechanically precise
+          workout equipment. Solaire worked with E-Sports International to
+          design and build the center, featuring an impressive installation of
+          world-class gym equipment that makes it a favorite destination to
+          local and foreign guests. Amp up your staycation by sweating it out at
+          the luxury Solaire hotel gym.
+        </p>
+        <br />
+        <br />
+
+        <b>Operating Hours: 6:00 AM to 10:00 PM</b>
+        <br />
+        <br />
+        <div class="container"></div>
+        <form class="inquiry">
+          <h2>Make an Inquiry</h2>
+          <p>
+            Kindly enter your contact information and preferrences below. A
+            member of our team will contact you shortly.
+          </p>
+          <div class="col-sm-6 form-group">
+            <label for="fname">First Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="acc_fname"
+              id="acc_fname"
+              placeholder="Enter your first name"
+              required
+            />
+
+            <label for="lname" class="pt-4">Last name:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="acc_lname"
+              id="acc_lname"
+              placeholder="Enter your last name"
+              required
+            />
+
+            <label for="email" class="pt-4">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              name="acc_email"
+              id="acc_email"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="row">
+              <div class="date-reservation col-lg-7">
+                <label for="email" class="pt-4">Date reservation:</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="acc_email"
+                  id="acc_email"
+                  required
+                />
+              </div>
+              <div class="days_duration col-lg-5">
+                <label for="Number" class="pt-4">Days of duration:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="acc_email"
+                  id="acc_email"
+                  min="1"
+                  placeholder="Enter your days of duration"
+                  required
+                />
+              </div>
+            </div>
+            <label for="email" class="pt-4">Special request:</label>
+            <textarea
+              type="text"
+              class="form-control"
+              name="acc_email"
+              id="acc_email"
+              placeholder="Enter your special request"
+              required
+            ></textarea>
+            <div class="pt-3 buttons-acc-setting">
+              <button class="btn btn-warning">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row pt-4">
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-box">
+              <!-- <img src="../images/hotel_logo.png" alt="" id="logo-footer" /> -->
+              <h2>VISITOR INFORMATION</h2>
+              <ul>
+                <li><a href="#">Getting Here</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+              <h2 class="pt-4">ABOUT HOTEL MANILA</h2>
+              <ul>
+                <li><a href="HTML/aboutus.html">Company Information</a></li>
+                <li><a href="#">TRLEI</a></li>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Procurement</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+              <!-- <h3>We Accect</h3>
+                <div class="card-area">
+                  <i class="fa fa-cc-visa"></i>
+                  <i class="fa fa-credit-card"></i>
+                  <i class="fa fa-cc-mastercard"></i>
+                  <i class="fa fa-cc-paypal"></i>
+                </div> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 ps-lg-5">
+            <div class="single-box">
+              <h2>STAY</h2>
+              <ul>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Suites</a></li>
+                <li><a href="#">Villas</a></li>
+                <li><a href="#">Facilities</a></li>
+              </ul>
+              <h2 class="pt-4">SHOP</h2>
+              <ul>
+                <li><a href="#">Gift Boutique</a></li>
+                <li><a href="#">Pandora</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 ps-lg-5">
+            <div class="single-box">
+              <h2>DINE</h2>
+              <ul>
+                <li><a href="#">KFC</a></li>
+                <li><a href="#">McDonalds</a></li>
+                <li><a href="#">Greenwich</a></li>
+                <li><a href="#">Jollibee</a></li>
+                <li><a href="#">Gnern</a></li>
+              </ul>
+              <h2 class="pt-4">RELAX</h2>
+              <ul>
+                <li><a href="#">SPA</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-box">
+              <h2>STAY UPDATED</h2>
+              <p>
+                Sign up for our newsletter about our latest deals and update.
+              </p>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+                <button class="btn btn-warning input-btn" type="button">
+                  <i class="fa fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <h2 class="pt-4">Follow us on</h2>
+              <p class="socials">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul class="terms">
+            <li>About</li>
+            |
+            <li>Privacy</li>
+            |
+            <li>Terms of Use</li>
+            |
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/homepage.js"></script>
+    <script src="../JS/login.js"></script>
+  </body>
+</html>
