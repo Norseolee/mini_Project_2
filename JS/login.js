@@ -1,21 +1,16 @@
 function checkLogin() {
-  if (
-    localStorage.getItem("login") != null ||
-    sessionStorage.getItem("login") != null
-  ) {
+  if (localStorage.getItem("login") != null) {
     $("#login-nav-item").text("Account");
     document.getElementById("login-nav-item").href = "HTML/account.html";
     $("#loginStatus").text("Account");
     document.getElementById("login-nav-item").href = "HTML/account.html";
-    document.getElementById("dropdown-content").removeAttribute("hidden");
-  } else {
-    document.getElementById("login-nav-item").href = "#";
-    $("#loginStatus").text("Not logged in");
-    document.getElementById("login-nav-item").href = "HTML/signin_signup.html";
-    document.getElementById("dropdown-content").setAttribute("hidden", "true");
+  } else if (sessionStorage.getItem("login") != null) {
+    $("#login-nav-item").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
+    $("#loginStatus").text("Account");
+    document.getElementById("login-nav-item").href = "HTML/account.html";
   }
 }
-
 checkLogin();
 
 // var passwordField = document.getElementById("login-pass");
