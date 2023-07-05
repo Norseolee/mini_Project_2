@@ -51,43 +51,85 @@
   <body>
     <header>
       <div class="navbar">
-        <div class="nav_bar_left">
-          <img
-            href="index.html"
-            src="../images/hotel_logo.png"
-            width="50px"
-            class="logo_img"
-          />
-          <h1 class="logo_name">Hotel Del Luna</h1>
+        <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
+          <a href="/index.html">
+            <img
+              href="index.html"
+              src="images/hotel_logo.png"
+              width="50px"
+              class="logo_img"
+            />
+            <h1 class="logo_name">Hotel Del Luna</h1>
+          </a>
         </div>
-        <div class="nav_bar_right">
-          <a class="link_font" href="">Rooms and Suite</a>
+        <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
+          <a class="link_font" href="/HTML/rooms.html">Rooms and Suite</a>
           <a class="link_font" href="">Dining</a>
           <a class="link_font" href="">Meeting & Events </a>
-          <a class="link_font" href="">Entertainment </a>
+          <a class="link_font" href="/HTML/entertainment.html"
+            >Entertainment
+          </a>
           <a class="link_font" href="">wellness</a>
-          <a class="link_font" href="">Careers </a>
-          <a class="link_font" href="../HTML/signin_signup.html">Login</a>
+          <a class="link_font" href="#">Careers </a>
+          <div class="link_font dropdown">
+            <a
+              class="login_dropdown"
+              id="login-nav-item"
+              href="HTML/signin_signup.html"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+            <div class="login_content_dropdown">
+              <a class="account_info" href="/HTML/account.html">log out</a>
+            </div>
+          </div>
           <i class="pipe">|</i>
           <a class="book_now" href="">Book Now!</a>
         </div>
-        <div class="toggle">
+        <div class="toggle" data-aos="fade-left" data-aos-duration="800">
           <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
           </div>
           <div class="toggle_option">
-            <a class="toggle_font" href="">Rooms and Suite</a>
-            <a class="toggle_font" href="">Dining</a>
-            <a class="toggle_font" href="">Meeting & Events </a>
-            <a class="toggle_font" href="">Entertainment </a>
-            <a class="toggle_font" href="">wellness</a>
-            <a class="toggle_font" href="">Careers </a>
-            <a class="toggle_font" href="../HTML/signin_signup.html">Login</a>
-            <i class="pipe">|</i>
-            <a class="book_now" href="">Book Now!</a>
+            <div class="toggle_option_left">
+              <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="toggle_option_right">
+              <a class="toggle_font" href="">Rooms and Suite</a>
+              <a class="toggle_font" href="">Dining</a>
+              <a class="toggle_font" href="">Meeting & Events </a>
+              <a class="toggle_font" href="">Entertainment </a>
+              <a class="toggle_font" href="">wellness</a>
+              <a class="toggle_font" href="">Careers </a>
+              <a class="toggle_font_login" id="loginStatus">Login</a>
+              <div class="account_hover_toggle">
+                <a class="account_info" href="/HTML/account.html"
+                  >Account Setting</a
+                >
+                <a class="account_info" href="/HTML/account.html"
+                  >Account information</a
+                >
+                <a class="account_info" href="/HTML/account.html"
+                  >Reservation</a
+                >
+                <a class="account_info" href="/HTML/account.html"
+                  >History Trips</a
+                >
+                <a class="account_info" href="/HTML/account.html">Refund</a>
+                <a class="account_info" href="/HTML/account.html"
+                  >Payment Methods</a
+                >
+                <a class="account_info" href="/HTML/account.html">Membership</a>
+                <a class="account_info" href="/HTML/account.html">log out</a>
+              </div>
+              <a class="book_now" href="">Book Now!</a>
+              <a class="rewards" href="">Rewards</a>
+              <img src="/images/hotel_logo.png" width="100px" />
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- end login hover -->
       <div class="heroshoot"></div>
     </header>
     <div class="container shootcon">
