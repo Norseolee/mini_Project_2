@@ -144,6 +144,7 @@
   text-align: left;
   user-select: none;
   color: var(--gold);
+  text-decoration: none;
 }
 .spafitness p {
   text-align: left;
@@ -189,6 +190,18 @@
   text-align: left;
   justify-content: start;
   user-select: none;
+}
+.theatreent a {
+  text-decoration: none;
+}
+.theatreent a:hover {
+  text-decoration: none;
+}
+.spafitnesscon a {
+  text-decoration: none;
+}
+.spafitnesscon a:hover {
+  text-decoration: none;
 }
 @media (min-width: 800px) {
   .imgaccomsm {
