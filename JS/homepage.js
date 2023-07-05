@@ -80,3 +80,15 @@ $(function () {
 $(window).on("load", function () {
   $(".loader-wrapper").fadeOut("slow");
 });
+
+document.getElementById("logout-btn").addEventListener("click", logout);
+
+function logout() {
+  if (localStorage.getItem("login") != null) {
+    localStorage.removeItem("login");
+    window.location.href = "../index.html";
+  } else if (sessionStorage.getItem("login") != null) {
+    sessionStorage.removeItem("login");
+    window.location.href = "../index.html";
+  }
+}
