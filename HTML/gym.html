@@ -49,7 +49,7 @@
     <!-- ? THIS HEADER IS COMPLETE! -->
     <header>
       <div class="navbar">
-        <div class="nav_bar_left">
+        <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
           <a href="../index.html">
             <img
               href="../index.html"
@@ -60,41 +60,52 @@
             <h1 class="logo_name">Hotel Del Luna</h1>
           </a>
         </div>
-        <div class="nav_bar_right">
-          <a class="link_font" href="">Rooms and Suite</a>
+        <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
+          <a class="link_font" href="rooms.html">Rooms and Suite</a>
           <a class="link_font" href="">Dining</a>
           <a class="link_font" href="">Meeting & Events </a>
-          <a class="link_font" href="">Entertainment </a>
-          <a class="link_font" href="">Wellness</a>
-          <a class="link_font" href="#">Careers </a>
-          <a
-            class="link_font"
-            id="login-nav-item"
-            href="../HTML/signin_signup.html"
-            >Login</a
-          >
+          <a class="link_font" href="entertainment.html">Entertainment </a>
+          <a class="link_font" href="gym.html">Wellness</a>
+          <a class="link_font" href="career.html">Careers </a>
+          <div class="link_font dropdown">
+            <a
+              class="login_dropdown"
+              id="login-nav-item"
+              href="HTML/signin_signup.html"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+            <div class="login_content_dropdown">
+              <a class="account_info" href="../index.html" id="logout-btn"
+                >Log out</a
+              >
+            </div>
+          </div>
           <i class="pipe">|</i>
           <a class="book_now" href="">Book Now!</a>
         </div>
-        <div class="toggle">
+        <div class="toggle" data-aos="fade-left" data-aos-duration="800">
           <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
           </div>
           <div class="toggle_option">
-            <a class="toggle_font" href="">Rooms and Suite</a>
-            <a class="toggle_font" href="">Dining</a>
-            <a class="toggle_font" href="">Meeting & Events </a>
-            <a class="toggle_font" href="">Entertainment </a>
-            <a class="toggle_font" href="">wellness</a>
-            <a class="toggle_font" href="">Careers </a>
-            <a
-              class="toggle_font"
-              id="loginStatus"
-              href="../HTML/signin_signup.html"
-              >Login</a
-            >
-            <i class="pipe">|</i>
-            <a class="book_now" href="">Book Now!</a>
+            <div class="toggle_option_left">
+              <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="toggle_option_right">
+              <a class="toggle_font" href="rooms.html">Rooms and Suite</a>
+              <a class="toggle_font" href="">Dining</a>
+              <a class="toggle_font" href="">Meeting & Events </a>
+              <a class="toggle_font" href="">Entertainment </a>
+              <a class="toggle_font" href="gym.html">Wellness</a>
+              <a class="toggle_font" href="career.html">Careers </a>
+              <a class="toggle_font_login" id="loginStatus">Login</a>
+              <div class="account_hover_toggle">
+                <a class="account_info" href="account.html">Log out</a>
+              </div>
+              <a class="book_now" href="">Book Now!</a>
+              <a class="rewards" href="">Rewards</a>
+              <img src="/images/hotel_logo.png" width="100px" />
+            </div>
           </div>
         </div>
       </div>
@@ -106,14 +117,14 @@
       <div class="container spa-details">
         <h1>HOTEL DEL LUNA GYM</h1>
         <p>
-          Solaire’s wellness space is equipped with the latest and most advanced
-          gym equipment from Technogym, an award-winning Italian manufacturer
-          recognized for producing premium-grade and bio-mechanically precise
-          workout equipment. Solaire worked with E-Sports International to
-          design and build the center, featuring an impressive installation of
-          world-class gym equipment that makes it a favorite destination to
-          local and foreign guests. Amp up your staycation by sweating it out at
-          the luxury Solaire hotel gym.
+          Hotel Del Luna wellness space is equipped with the latest and most
+          advanced gym equipment from Technogym, an award-winning Italian
+          manufacturer recognized for producing premium-grade and
+          bio-mechanically precise workout equipment. Hotel Del Luna worked with
+          E-Sports International to design and build the center, featuring an
+          impressive installation of world-class gym equipment that makes it a
+          favorite destination to local and foreign guests. Amp up your
+          staycation by sweating it out at the luxury Hotel Del Luna hotel gym.
         </p>
         <br />
         <br />
@@ -212,7 +223,7 @@
               </ul>
               <h2 class="pt-4">ABOUT HOTEL MANILA</h2>
               <ul>
-                <li><a href="HTML/aboutus.html">Company Information</a></li>
+                <li><a href="aboutus.html">Company Information</a></li>
                 <li><a href="#">TRLEI</a></li>
                 <li><a href="#">Media Center</a></li>
                 <li><a href="#">Careers</a></li>

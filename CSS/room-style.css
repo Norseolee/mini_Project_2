@@ -337,3 +337,14 @@ footer {
   text-align: center;
   font-size: small;
 }
+
+#call {
+  font-size: 18px;
+  color: #ffce26;
+}
+
+#call:hover {
+  font-size: 18px;
+  color: #ffa000;
+}
+

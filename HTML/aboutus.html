@@ -49,58 +49,88 @@
   <body>
     <header>
       <div class="navbar">
-        <div class="nav_bar_left">
-          <img
-            href="index.html"
-            src="../images/hotel_logo.png"
-            width="50px"
-            class="logo_img"
-          />
-          <h1 class="logo_name">Hotel Del Luna</h1>
+        <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
+          <a href="../index.html">
+            <img
+              href="../index.html"
+              src="../images/hotel_logo.png"
+              width="50px"
+              class="logo_img"
+            />
+            <h1 class="logo_name">Hotel Del Luna</h1>
+          </a>
         </div>
-        <div class="nav_bar_right">
-          <a class="link_font" href="">Rooms and Suite</a>
-          <a class="link_font" href="">Dining</a>
-          <a class="link_font" href="">Meeting & Events </a>
-          <a class="link_font" href="">Entertainment </a>
-          <a class="link_font" href="">wellness</a>
-          <a class="link_font" href="">Careers </a>
-          <a class="link_font" href="../HTML/signin_signup.html">Login</a>
+        <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
+          <a class="link_font" href="rooms.html">Rooms and Suite</a>
+          <a class="link_font" href="dining.html">Dining</a>
+          <a class="link_font" href="meeting_Events.html">Meeting & Events </a>
+          <a class="link_font" href="entertainment.html">Entertainment </a>
+          <a class="link_font" href="gym.html">Wellness</a>
+          <a class="link_font" href="career.html">Careers </a>
+          <div class="link_font dropdown">
+            <a
+              class="login_dropdown"
+              id="login-nav-item"
+              href="HTML/signin_signup.html"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+            <div class="login_content_dropdown">
+              <a class="account_info" href="../mini_Project_2/HTML/account.html"
+                >Account Setting</a
+              >
+              <a class="account_info" href="../index.html" id="logout-btn"
+                >Log out</a
+              >
+            </div>
+          </div>
           <i class="pipe">|</i>
           <a class="book_now" href="">Book Now!</a>
         </div>
-        <div class="toggle">
+        <div class="toggle" data-aos="fade-left" data-aos-duration="800">
           <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
           </div>
           <div class="toggle_option">
-            <a class="toggle_font" href="">Rooms and Suite</a>
-            <a class="toggle_font" href="">Dining</a>
-            <a class="toggle_font" href="">Meeting & Events </a>
-            <a class="toggle_font" href="">Entertainment </a>
-            <a class="toggle_font" href="">wellness</a>
-            <a class="toggle_font" href="">Careers </a>
-            <a class="toggle_font" href="../HTML/signin_signup.html">Login</a>
-            <i class="pipe">|</i>
-            <a class="book_now" href="">Book Now!</a>
+            <div class="toggle_option_left">
+              <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="toggle_option_right">
+              <a class="toggle_font" href="rooms.html">Rooms and Suite</a>
+              <a class="toggle_font" href="dining.html">Dining</a>
+              <a class="toggle_font" href="meeting_Events.html"
+                >Meeting & Events
+              </a>
+              <a class="toggle_font" href="entertainment.html"
+                >Entertainment
+              </a>
+              <a class="toggle_font" href="gym.html">Wellness</a>
+              <a class="toggle_font" href="career.html">Careers </a>
+              <a class="toggle_font_login" id="loginStatus">Login</a>
+              <div class="account_hover_toggle">
+                <a class="account_info" href="account.html">Log out</a>
+              </div>
+              <a class="book_now" href="">Book Now!</a>
+              <a class="rewards" href="">Rewards</a>
+              <img src="/images/hotel_logo.png" width="100px" />
+            </div>
           </div>
         </div>
       </div>
-      <div class="herovid">
-        <video
-          oncontextmenu="return false;"
-          autoplay
-          muted
-          loop
-          src="../images/test.mkv"
-          width="100%"
-        ></video>
-      </div>
+
+      <!-- end login hover -->
+      <video
+        oncontextmenu="return false;"
+        autoplay
+        muted
+        loop
+        src="../images/test.mkv"
+        width="100%"
+      ></video>
     </header>
     <div class="container-fluid aboutcontainer">
       <div class="row" id="aboutrow">
         <div class="col-lg-10 offset-lg-1">
-          <h1 id="aboutintro">Welcome to Hotel De Luna</h1>
+          <h1 id="aboutintro">About Hotel De Luna</h1>
           <p id="aboutpar">
             At Hotel De Luna, we take pride in offering an exceptional array of
             amenities and services to ensure a memorable and delightful stay for
@@ -124,6 +154,7 @@
               Each room is thoughtfully furnished, creating a serene ambiance
               that promotes relaxation and rejuvenation.
             </p>
+            <button class="btn_Experience">Book Now</button>
           </div>
         </div>
         <div class="col-lg-6 d-none d-lg-block">
@@ -167,6 +198,7 @@
               elevate your relaxation at our rooftop swimming pool, where
               breathtaking views and a serene atmosphere await you.
             </p>
+            <a class="btn btn_Experience" href="swimmingpool.html">View More</a>
           </div>
         </div>
         <div class="col-lg-5 d-md-block d-lg-none">
@@ -186,6 +218,9 @@
               elevate your relaxation at our rooftop swimming pool, where
               breathtaking views and a serene atmosphere await you.
             </p>
+            <button href="swimmingpool.html" class="btn_Experience">
+              View More
+            </button>
           </div>
         </div>
       </div>
@@ -202,7 +237,7 @@
           />
         </div>
         <div class="col-lg-3">
-          <h2>Fitness Facilities</h2>
+          <a href="gym.html"> <h2>Fitness Facilities</h2></a>
           <p>
             Stay active and maintain your fitness routine at our
             state-of-the-art gym. Equipped with modern equipment and offering a
@@ -219,7 +254,7 @@
           />
         </div>
         <div class="col-lg-3">
-          <h2>Spa and Wellness</h2>
+          <a href="spa.html"> <h2>Spa and Wellness</h2></a>
           <p>
             Rejuvenate your mind, body, and soul at our luxurious spa. Indulge
             in a wide range of treatments and therapies designed to enhance
@@ -258,7 +293,7 @@
           />
         </div>
         <div class="col-lg-3 text-center">
-          <h2>Indoor Shooting</h2>
+          <a href="shooting.html"> <h2>Indoor Shooting</h2></a>
           <p>
             Experience the thrill of indoor shooting at our specially designed
             range. Whether you're a beginner or an experienced shooter, our
@@ -282,6 +317,7 @@
               event planning team is committed to ensuring every detail is
               flawlessly executed.
             </p>
+            <button class="btn_Experience">Reserve Now</button>
           </div>
         </div>
         <div class="col-lg-6 d-none d-lg-block">
