@@ -28,15 +28,24 @@
     />
     <!-- My CSS -->
     <link rel="stylesheet" href="../CSS/room-style.css" />
+    <link rel="stylesheet" href="../CSS/homepage.css" />
 
     <title>Hotel De Luna | Room</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand ms-2" href="#home"
-        ><img src="../images/hotel_logo.png" width="50px"
-      /></a>
+      <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
+        <a href="../mini_Project_2/index.html">
+          <img
+            href="../mini_Project_2/index.html"
+            src="../images/hotel_logo.png"
+            width="50px"
+            class="logo_img"
+          />
+          <h1 class="logo_name">Hotel Del Luna</h1>
+        </a>
+      </div>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto me-3">
           <a class="nav-item nav-link" href="rooms.html">Rooms and Suite</a>
@@ -49,6 +58,22 @@
           >
           <a class="nav-item nav-link" href="gym.html">Wellness</a>
           <a class="nav-item nav-link" href="career.html">Careers</a>
+          <div class="link_font dropdown">
+            <a
+              class="login_dropdown"
+              id="login-nav-item"
+              href="HTML/signin_signup.html"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+            <div class="login_content_dropdown" id="dropdown-content">
+              <a class="account_info" href="../mini_Project_2/HTML/account.html"
+                >Account Setting</a
+              >
+              <a class="account_info" href="../index.html" id="logout-btn"
+                >Log out</a
+              >
+            </div>
+          </div>
           <a class="nav-item nav-link">|</a>
         </div>
       </div>
@@ -392,6 +417,20 @@
       </div>
     </div>
 
+    <!-- Map -->
+
+    <section class="map top m-5">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57247880.37461633!2d-134.70241670956676!3d28.86465222091496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotel%20usa!5e0!3m2!1sen!2sph!4v1688489219447!5m2!1sen!2sph"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
     <!-- Gallery -->
     <h5 class="text-center mt-5">FEATURES AND AMENITIES</h5>
     <div class="gallery-image pt-0">
@@ -524,7 +563,7 @@
           <div class="col-lg-3 col-sm-6">
             <div class="single-box">
               <h2 id="contact">
-                CONTACT US
+                CONTACT US<img src="../images/phone_icon.png" width="50px" />
               </h2>
               <div class="input-group">
                 <input
@@ -541,7 +580,7 @@
                 />
               </div>
               <br />
-              <button type="submit" class="btn btn-warning">Submit</button><img src="../images/phone_icon.png" width="50px" /><span id="call">+945 5555</span>
+              <button type="submit" class="btn btn-warning">Submit</button>
 
               <h2 class="pt-4">Follow us on</h2>
               <p class="socials">
