@@ -3,30 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- aos -->
-    <link rel="stylesheet" href="aos-by-red.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- HOTEL DE LUNA -->
-
+    <!-- Boxicons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -45,180 +23,445 @@
       crossorigin="anonymous"
     ></script>
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../images/apple-touch-icon.png"
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../images/favicon-16x16.png"
-    />
-    <link rel="stylesheet" href="../CSS/spa.css" />
-    <link rel="stylesheet" href="../CSS/homepage.css" />
-    <link rel="stylesheet" href="../CSS/pool.css" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../CSS/room-style.css" />
 
-    <title>Hotel Del Luna | CAREER</title>
+    <title>Hotel De Luna | Room</title>
   </head>
   <body>
-    <!-- ? THIS HEADER IS COMPLETE! -->
-    <header>
-      <div class="navbar">
-        <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
-          <a href="../index.html">
-            <img
-              href="../index.html"
-              src="../images/hotel_logo.png"
-              width="50px"
-              class="logo_img"
-            />
-            <h1 class="logo_name">Hotel Del Luna</h1>
-          </a>
-        </div>
-        <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
-          <a class="link_font" href="rooms.html">Rooms and Suite</a>
-          <a class="link_font" href="dining.html">Dining</a>
-          <a class="link_font" href="meeting_Events.html">Meeting & Events </a>
-          <a class="link_font" href="entertainment.html">Entertainment </a>
-          <a class="link_font" href="gym.html">Wellness</a>
-          <a class="link_font" href="career.html">Careers </a>
-          <div class="link_font dropdown">
-            <a
-              class="login_dropdown"
-              id="login-nav-item"
-              href="HTML/signin_signup.html"
-              ><i class="fa-solid fa-circle-user"></i
-            ></a>
-            <div class="login_content_dropdown">
-              <a class="account_info" href="../mini_Project_2/HTML/account.html"
-                >Account Setting</a
-              >
-              <a class="account_info" href="index.html" id="logout-btn"
-                >Log out</a
-              >
-            </div>
-          </div>
-          <i class="pipe">|</i>
-          <a class="book_now" href="">Book Now!</a>
-        </div>
-        <div class="toggle" data-aos="fade-left" data-aos-duration="800">
-          <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="toggle_option">
-            <div class="toggle_option_left">
-              <i class="fa-solid fa-x"></i>
-            </div>
-            <div class="toggle_option_right">
-              <a class="toggle_font" href="rooms.html">Rooms and Suite</a>
-              <a class="toggle_font" href="dining.html">Dining</a>
-              <a class="toggle_font" href="meeting_Events.html"
-                >Meeting & Events
-              </a>
-              <a class="toggle_font" href="entertainment.html"
-                >Entertainment
-              </a>
-              <a class="toggle_font" href="gym.html">Wellness</a>
-              <a class="toggle_font" href="career.html">Careers </a>
-              <a class="toggle_font_login" id="loginStatus">Login</a>
-              <div class="account_hover_toggle">
-                <a class="account_info" href="account.html">Log out</a>
-              </div>
-              <a class="book_now" href="">Book Now!</a>
-              <a class="rewards" href="">Rewards</a>
-              <img src="/images/hotel_logo.png" width="100px" />
-            </div>
-          </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand ms-2" href="#home"
+        ><img src="../images/hotel_logo.png" width="50px"
+      /></a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto me-3">
+          <a class="nav-item nav-link" href="rooms.html">Rooms and Suite</a>
+          <a class="nav-item nav-link" href="dining.html">Dining</a>
+          <a class="nav-item nav-link" href="meeting_Events.html"
+            >Meeting & Events</a
+          >
+          <a class="nav-item nav-link" href="entertainment.html"
+            >Entertainment</a
+          >
+          <a class="nav-item nav-link" href="gym.html">Wellness</a>
+          <a class="nav-item nav-link" href="career.html">Careers</a>
+          <a class="nav-item nav-link">|</a>
         </div>
       </div>
-
-      <!-- end login hover -->
-    </header>
-    <main>
-      <div class="spa">
-        <img src="../images/career.jpg" alt="" />
-      </div>
-      <div class="container spa-details">
-        <h1>BE PART OF THE HOTEL DEL LUNA FAMILY!</h1>
-        <p>
-          Take the FIRST step to a brighter career. Your journey toward endless
-          possibilities begins at Hotel Del Luna! Join the Hotel Del Luna team
-          by submitting your application now.
-        </p>
-      </div>
-      <section
-        class="deal_of_month"
-        data-aos="zoom-in"
-        data-aos-duration="1100"
+      <button type="submit" id="btn-inquire">
+        <a href="#contact">Inquire Now</a>
+      </button>
+      <button
+        class="navbar-toggler me-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <div class="deal_right">
-          <div class="deals">
-            <div class="card_deal">
-              <div class="card_image_deal">
-                <img src="../images/SOLEC.jpg" alt="family in a spa message" />
-                <div class="content_card_deal">
-                  <div class="card_title">
-                    <h3>Career Opportunities at Hotel Del Luna</h3>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3500"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../images/hotel_bedroom9.jpg"
+            class="d-block w-100"
+            alt="Bedroom 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hotel_bedroom7.jpg"
+            class="d-block w-100"
+            alt="Bedroom 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hotel_bedroom6.jpg"
+            class="d-block w-100"
+            alt="Bedroom 3"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hotel_bedroom10.jpg"
+            class="d-block w-100"
+            alt="Bedroom 4"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
+
+    <!-- Section -->
+    <section class="book">
+      <div class="container flex">
+        <div class="row input grid">
+          <div class="col-lg-12 box">
+            <label>Check-in:</label>
+            <input type="date" placeholder="Check-in-Date" />
+          </div>
+          <div class="box">
+            <label>Check-out:</label>
+            <input type="date" placeholder="Check-out-Date" />
+          </div>
+          <div class="box">
+            <label>Adults:</label> <br />
+            <input type="number" placeholder="0" />
+          </div>
+          <div class="box">
+            <label>Children:</label> <br />
+            <input type="number" placeholder="0" />
+          </div>
+        </div>
+        <div class="search">
+          <input type="submit" value="SEARCH" id="search" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+
+    <div class="container mt-5">
+      <p>RAISING COMFORT TO THE HIGHEST LEVEL</p>
+      <h3>Rooms & Suites</h3>
+    </div>
+    <div class="container mt-5">
+      <div class="row mx-auto">
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Double Room</h5>
+              <p>$129 | <span id="price">per night</span></p>
+              <p class="card-text">
+                <i> "Twice the Comfort, Double the Relaxation."</i>
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        DOUBLE ROOM (1 QUEEN BED AND 1 SINGLE BED)
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      ROOM DETAILS
+                      <ul>
+                        <li>345 sq ft / 32 sq m</li>
+                        <li>1 Queen Beds</li>
+                        <li>1 Single Bed</li>
+                        <li>Maximum Occupancy: 3 Adults and 2 Kids</li>
+                        <li>Rooms located at 10/F - 29/F</li>
+                        <li>City View</li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
                   </div>
-                  <div class="card_content">Parañaque City, Philippines</div>
-                  <div class="deal_readmore">
-                    <button class="deal_btn">Learn More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card_deal">
-              <div class="card_image_deal">
-                <img
-                  src="../images/Facade.jpg"
-                  alt="child and father swimming in the pool"
-                />
-              </div>
-              <div class="content_card_deal">
-                <div class="card_title">
-                  <h3>Career Opportunities at Hotel Del Luna North</h3>
-                </div>
-                <div class="card_content">
-                  <p>Quezon City, Philippines</p>
-                </div>
-                <div class="deal_readmore">
-                  <button class="deal_btn">Learn More</button>
-                </div>
-              </div>
-            </div>
-            <div class="card_deal">
-              <div class="card_image_deal">
-                <img
-                  src="../images/Service-min.jpeg"
-                  alt="family swimming in the pool"
-                />
-              </div>
-              <div class="content_card_deal">
-                <div class="card_title">
-                  <h3>Take your FIRST step to a brighter career!</h3>
-                </div>
-                <div class="card_content">
-                  <p>Take your FIRST step to a brighter career!</p>
-                </div>
-                <div class="deal_readmore">
-                  <button class="deal_btn">View Details</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Queen Bed Room</h5>
+              <p>$129 | <span id="price">per night</span></p>
+              <p class="card-text">
+                <i> "Experience Regal Comfort in a Queen-Sized Haven."</i>
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed3.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">King Bed Room</h5>
+              <p>$129 | <span id="price">per night</span></p>
+              <p class="card-text">
+                <i> "Luxuriate in Royal Opulence in a King-Sized Retreat."</i>
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../images/hotelbed4.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Twin Room</h5>
+              <p>$129 | <span id="price">per night</span></p>
+              <p class="card-text">
+                <i>
+                  "Share Adventures and Sweet Dreams in a Cozy Twin-Sized
+                  Oasis."</i
+                >
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Book | Details
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Gallery -->
+    <h5 class="text-center mt-5">FEATURES AND AMENITIES</h5>
+    <div class="gallery-image pt-0">
+      <div class="img-box">
+        <img src="../images/swimmingpool.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Swimming Pool</p>
+            <p class="opacity-low">"Freshen your day!"</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="../images/spamassage.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Spa</p>
+            <p class="opacity-low">"Relax and Soothes your senses."</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="../images/surfing.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Surfing</p>
+            <p class="opacity-low">
+              "Different Stories, One Unforgettable Experience."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="../images/conference-room.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Conference</p>
+            <p class="opacity-low">"Reserved Comfort for your Meetings."</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="../images/snorkeling.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Snorkeling</p>
+            <p class="opacity-low">"Memories you will never forget."</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="../images/gym.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Gym</p>
+            <p class="opacity-low">"Energize your body."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-      <div class="container">
+      <div class="container pt-5">
+        <div class="row justify-content-center align-content-center">
+          <div class="logo-footer">
+            <img src="../images/hotel_logo.png" alt="" width="90px" />
+            <!-- <h3 class="logo_name ps-2">Hotel Del Luna</h3> -->
+          </div>
+        </div>
         <div class="row pt-4">
           <div class="col-lg-3 col-sm-6">
             <div class="single-box">
@@ -230,7 +473,7 @@
               </ul>
               <h2 class="pt-4">ABOUT HOTEL MANILA</h2>
               <ul>
-                <li><a href="HTML/aboutus.html">Company Information</a></li>
+                <li><a href="#">Company Information</a></li>
                 <li><a href="#">TRLEI</a></li>
                 <li><a href="#">Media Center</a></li>
                 <li><a href="#">Careers</a></li>
@@ -238,12 +481,12 @@
                 <li><a href="#">Contact Us</a></li>
               </ul>
               <!-- <h3>We Accect</h3>
-                <div class="card-area">
-                  <i class="fa fa-cc-visa"></i>
-                  <i class="fa fa-credit-card"></i>
-                  <i class="fa fa-cc-mastercard"></i>
-                  <i class="fa fa-cc-paypal"></i>
-                </div> -->
+                  <div class="card-area">
+                    <i class="fa fa-cc-visa"></i>
+                    <i class="fa fa-credit-card"></i>
+                    <i class="fa fa-cc-mastercard"></i>
+                    <i class="fa fa-cc-paypal"></i>
+                  </div> -->
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 ps-lg-5">
@@ -280,27 +523,32 @@
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="single-box">
-              <h2>STAY UPDATED</h2>
-              <p>
-                Sign up for our newsletter about our latest deals and update.
-              </p>
+              <h2 id="contact">
+                CONTACT US
+              </h2>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your First Name"
+                />
+              </div>
               <div class="input-group">
                 <input
                   type="email"
                   class="form-control"
                   placeholder="Enter your email"
                 />
-                <button class="btn btn-warning input-btn" type="button">
-                  <i class="fa fa-arrow-right"></i>
-                </button>
               </div>
+              <br />
+              <button type="submit" class="btn btn-warning">Submit</button><img src="../images/phone_icon.png" width="50px" /><span id="call">+945 5555</span>
 
               <h2 class="pt-4">Follow us on</h2>
               <p class="socials">
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-instagram"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
               </p>
             </div>
           </div>
@@ -316,19 +564,10 @@
             <li>Careers</li>
           </ul>
         </div>
-        <div class="bottom">
+        <div class="Bottom">
           <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
         </div>
       </div>
     </footer>
-    <script src="../JS/homepage.js"></script>
-    <script src="../JS/login.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 3000,
-        once: true,
-      });
-    </script>
   </body>
 </html>
