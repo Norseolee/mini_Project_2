@@ -22,8 +22,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="CSS/homepage.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="/CSS/rewards.css" />
+    <link rel="stylesheet" href="../" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -36,64 +37,64 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/apple-touch-icon.png" />
+      href="../images/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/favicon-32x32.png" />
+      href="../images/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/favicon-16x16.png" />
+      href="../images/favicon-16x16.png" />
 
     <title>Hotel De Luna</title>
   </head>
   <body>
+    <div class="loader-wrapper">
+      <span class="leader"><img src="../images/favicon.ico" /></span>
+      <!-- <span class="loader"><span class="loader-inner"></span></span> -->
+    </div>
+
+    <!-- ? THIS HEADER IS COMPLETE! -->
     <header>
       <div class="navbar">
         <div class="nav_bar_left" data-aos="fade-right" data-aos-duration="800">
           <a href="/index.html">
             <img
               href="index.html"
-              src="images/hotel_logo.png"
+              src="../images/hotel_logo.png"
               width="50px"
               class="logo_img" />
             <h1 class="logo_name">Hotel Del Luna</h1>
           </a>
         </div>
         <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
-          <a class="link_font" href="/HTML/rooms.html">Rooms and Suite</a>
-          <a class="link_font" href="">Dining</a>
-          <a class="link_font" href="">Meeting & Events </a>
-          <a class="link_font" href="">Entertainment </a>
-          <a class="link_font" href="">wellness</a>
+          <a class="link_font" href="../HTML/rooms.html">Rooms and Suite</a>
+          <a class="link_font" href="../HTML/dining.html">Dining</a>
+          <a class="link_font" href="../HTML/meeting_Events.html"
+            >Meeting & Events
+          </a>
+          <a class="link_font" href="../HTML/entertainment.html"
+            >Entertainment
+          </a>
+          <a class="link_font" href="../HTML/wellness.html">wellness</a>
           <a class="link_font" href="#">Careers </a>
           <div class="link_font dropdown">
             <a
               class="login_dropdown"
               id="login-nav-item"
-              href="HTML/signin_signup.html"
+              href="../HTML/signin_signup.html"
               ><i class="fa-solid fa-circle-user"></i
             ></a>
             <div class="login_content_dropdown">
-              <a class="account_info" href="/HTML/account.html"
+              <a class="account_info" href="../HTML/account.html"
                 >Account Setting</a
               >
-              <a class="account_info" href="/HTML/account.html"
-                >Account information</a
+              <a class="account_info" href="../HTML/signin_signup.html"
+                >log out</a
               >
-              <a class="account_info" href="/HTML/account.html">Reservation</a>
-              <a class="account_info" href="/HTML/account.html"
-                >History Trips</a
-              >
-              <a class="account_info" href="/HTML/account.html">Refund</a>
-              <a class="account_info" href="/HTML/account.html"
-                >Payment Methods</a
-              >
-              <a class="account_info" href="/HTML/account.html">Membership</a>
-              <a class="account_info" href="/HTML/account.html">log out</a>
             </div>
           </div>
           <i class="pipe">|</i>
@@ -142,9 +143,301 @@
           </div>
         </div>
       </div>
-
-      <!-- end login hover -->
       <div class="hero" data-aos="fade-down" data-aos-duration="1000"></div>
     </header>
+    <section class="reward py-3 px-4">
+      <div data-aos="zoom-in" data-aos-duration="800">
+        <h1>Rewards</h1>
+        <p>
+          Welcome to Hotel De Luna, where the living and departed converge in a
+          realm of enchantment and secrets. Immerse yourself in an extraordinary
+          experience that transcends the boundaries of the mortal world.
+        </p>
+      </div>
+    </section>
+    <main>
+      <section class="reward_cards_section">
+        <div data-aos="zoom-in" data-aos-duration="1000">
+          <h1>REWARDS</h1>
+          <p>
+            Experience a world of luxury at Hotel Del Luna and earn valuable
+            points with every purchase, check-in, and event attendance,
+            unlocking a realm of exclusive rewards and privileges."
+          </p>
+        </div>
+
+        <div
+          class="reward_card_design"
+          data-aos="zoom-in"
+          data-aos-duration="1000">
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />123 456 7890
+          </p>
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />975 310 4826
+          </p>
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />624 578 1930
+          </p>
+          <p class="reward_card">
+            <i><img src="/images/favicon.ico" /></i>
+            <br />408 729 5613
+          </p>
+        </div>
+      </section>
+
+      <div class="main col-12" data-aos="fade-up" data-aos-duration="800">
+        <h1>EARN & REDEEM RESORT DOLLARS</h1>
+        <p>
+          Earn Resort Dollarts with every purchase, check-in, renew Membership
+          at any Hotel participating outlets and redeemthem during future
+          purchases at the participating
+        </p>
+
+        <img src="../icons/icon-hand-with-dollar.svg" width="50px" />
+        <br />
+
+        <strong
+          >Earn instant Resort Dollars and redeem them for greater
+          savings</strong
+        >
+        <p>
+          Earn up to 20% of your total spend in Resort Dollars when you dine,
+          shop & stay. Resort Dollars earned can be immediately redeemed during
+          your next purchase.
+        </p>
+
+        <strong>Resort Dollars are as good as cash</strong>
+        <p>
+          Redeem Resort Dollars for shopping, dining, hotel stays and more at
+          over 250 Sands participating outlets.
+        </p>
+      </div>
+
+      <table class="table" data-aos="fade-up" data-aos-duration="800">
+        <tr class="table-warning">
+          <th>Card</th>
+          <th>Card Tier</th>
+          <th>Where to Redeem</th>
+        </tr>
+        <tr>
+          <td>Luna Star Card</td>
+          <td>
+            <p class="reward_card_front_4">
+              <i><img src="/images/favicon.ico" /></i>
+              <br />408 729 5613
+            </p>
+          </td>
+          <td>
+            Hotel stay, Banyan Tree Spa, attractions, entertainment, gift shops
+            and participating restaurants in Hodel Del Luna
+
+            <ul>
+              <li>10% discount on rooftop activities and services.</li>
+              <li>10% discount on rooftop activities and services.</li>
+              <li>Priority restaurant reservations.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Moonlight Elite Card</td>
+          <td>
+            <p class="reward_card_front_3">
+              <i><img src="/images/favicon.ico" /></i>
+              <br />408 729 5613
+            </p>
+          </td>
+          <td>
+            Hotel stay, Banyan Tree Spa, attractions, entertainment, gift shops
+            and participating restaurants in Hodel Del Luna
+
+            <ul>
+              <li>15% discount on rooftop activities and services.</li>
+              <li>10% discount at all hotel shops.</li>
+              <li>0% bonus Hotel Del Luna credits on all purchases.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Celestial Platinum Card</td>
+          <td>
+            <p class="reward_card_front_2">
+              <i><img src="/images/favicon.ico" /></i>
+              <br />408 729 5613
+            </p>
+          </td>
+          <td>
+            Hotel stay, Banyan Tree Spa, attractions, entertainment, gift shops
+            and participating restaurants in Hodel Del Luna
+
+            <ul>
+              <li>20% discount on rooftop activities and services.</li>
+              <li>15% discount at all hotel shops.</li>
+              <li>
+                Priority restaurant reservations with a complimentary welcome
+                drink and a complimentary dessert.
+              </li>
+              <li>Access to the platinum level of the hotel's clubs.</li>
+              <li>15% bonus Hotel Del Luna credits on all purchases.</li>
+              <li>Complimentary access to the hotel's spa facilities.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Eclipsia Diamond Card</td>
+          <td>
+            <p class="reward_card_front_1">
+              <i><img src="/images/favicon.ico" /></i>
+              <br />408 729 5613
+            </p>
+          </td>
+          <td>
+            Hotel stay, Banyan Tree Spa, attractions, entertainment, gift shops
+            and participating restaurants in Hodel Del Luna
+
+            <ul>
+              <li>25% discount on rooftop activities and services.</li>
+              <li>20% discount at all hotel shops.</li>
+              <li>
+                Exclusive priority restaurant reservations with a complimentary
+                welcome drink, appetizer, and dessert.
+              </li>
+              <li>
+                Access to the exclusive diamond level of the hotel's clubs.
+              </li>
+              <li>20% bonus Hotel Del Luna credits on all purchases.</li>
+              <li>Complimentary spa treatment of choice during each stay.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <div class="join_membership" data-aos="zoom-in" data-aos-duration="800">
+        <h2>Hotel Del Luna LifeStyle Membership</h2>
+        <h3><a href="signin_signup.html">JOIN FOR FREE</a></h3>
+      </div>
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center align-content-center">
+          <div class="logo-footer" data-aos="zoom-in" data-aos-duration="800">
+            <img src="images/hotel_logo.png" alt="" width="90px" />
+            <!-- <h3 class="logo_name ps-2">Hotel Del Luna</h3> -->
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-right"
+            data-aos-duration="800">
+            <div class="single-box">
+              <!-- <img src="../images/hotel_logo.png" alt="" id="logo-footer" /> -->
+              <h2>VISITOR INFORMATION</h2>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+              <h2 class="pt-4">ABOUT HOTEL MANILA</h2>
+              <ul>
+                <li><a href="/HTML/aboutus.html">About Us</a></li>
+                <li><a href="/HTML/career.html">Careers</a></li>
+                <li><a href="/HTML/contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6 ps-lg-5"
+            data-aos="fade-up"
+            data-aos-duration="800">
+            <div class="single-box">
+              <h2>STAY</h2>
+              <ul>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Suites</a></li>
+                <li><a href="#">Villas</a></li>
+                <li><a href="#">Facilities</a></li>
+              </ul>
+              <h2 class="pt-4">SHOP</h2>
+              <ul>
+                <li><a href="#">Gift Boutique</a></li>
+                <li><a href="#">Pandora</a></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6 ps-lg-5"
+            data-aos="fade-up"
+            data-aos-duration="800">
+            <div class="single-box">
+              <h2>DINE</h2>
+              <ul>
+                <li><a href="/HTML/dining.html">KFC</a></li>
+                <li><a href="/HTML/dining.html">McDonalds</a></li>
+                <li><a href="/HTML/dining.html">Greenwich</a></li>
+                <li><a href="/HTML/dining.html">Jollibee</a></li>
+                <li><a href="/HTML/dining.html">Gnern</a></li>
+              </ul>
+              <h2 class="pt-4">RELAX</h2>
+              <ul>
+                <li><a href="/HTML/spa.html">SPA</a></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-left"
+            data-aos-duration="800">
+            <div class="single-box">
+              <h2>STAY UPDATED</h2>
+              <p>
+                Sign up for our newsletter about our latest deals and update.
+              </p>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email" />
+                <button class="btn btn-warning input-btn" type="button">
+                  <i class="fa fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <h2 class="pt-4">Follow us on</h2>
+              <p class="socials">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800">
+          <ul class="terms">
+            <li>About</li>
+            |
+            <li>Privacy</li>
+            |
+            <li>Terms of Use</li>
+            |
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="Bottom" data-aos="fade-up" data-aos-duration="800">
+          <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/homepage.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
   </body>
 </html>

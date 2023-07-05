@@ -22,8 +22,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="CSS/homepage.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="/CSS/homepage.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -71,13 +71,15 @@
         </div>
         <div class="nav_bar_right" data-aos="fade-left" data-aos-duration="800">
           <a class="link_font" href="/HTML/rooms.html">Rooms and Suite</a>
-          <a class="link_font" href="">Dining</a>
-          <a class="link_font" href="">Meeting & Events </a>
+          <a class="link_font" href="/HTML/dining.html">Dining</a>
+          <a class="link_font" href="/HTML/meeting_Events.html"
+            >Meeting & Events
+          </a>
           <a class="link_font" href="/HTML/entertainment.html"
             >Entertainment
           </a>
-          <a class="link_font" href="">wellness</a>
-          <a class="link_font" href="#">Careers </a>
+          <a class="link_font" href="HTML/recreation.html">wellness</a>
+          <a class="link_font" href="HTML/career.html">Careers </a>
           <div class="link_font dropdown">
             <a
               class="login_dropdown"
@@ -89,19 +91,9 @@
               <a class="account_info" href="/HTML/account.html"
                 >Account Setting</a
               >
-              <a class="account_info" href="/HTML/account.html"
-                >Account information</a
+              <a class="account_info" href="/HTML/signin_signup.html"
+                >log out</a
               >
-              <a class="account_info" href="/HTML/account.html">Reservation</a>
-              <a class="account_info" href="/HTML/account.html"
-                >History Trips</a
-              >
-              <a class="account_info" href="/HTML/account.html">Refund</a>
-              <a class="account_info" href="/HTML/account.html"
-                >Payment Methods</a
-              >
-              <a class="account_info" href="/HTML/account.html">Membership</a>
-              <a class="account_info" href="/HTML/account.html">log out</a>
             </div>
           </div>
           <i class="pipe">|</i>
@@ -127,21 +119,9 @@
                 <a class="account_info" href="/HTML/account.html"
                   >Account Setting</a
                 >
-                <a class="account_info" href="/HTML/account.html"
-                  >Account information</a
+                <a class="account_info" href="/HTML/signin_signup.html"
+                  >log out</a
                 >
-                <a class="account_info" href="/HTML/account.html"
-                  >Reservation</a
-                >
-                <a class="account_info" href="/HTML/account.html"
-                  >History Trips</a
-                >
-                <a class="account_info" href="/HTML/account.html">Refund</a>
-                <a class="account_info" href="/HTML/account.html"
-                  >Payment Methods</a
-                >
-                <a class="account_info" href="/HTML/account.html">Membership</a>
-                <a class="account_info" href="/HTML/account.html">log out</a>
               </div>
               <a class="book_now" href="">Book Now!</a>
               <a class="rewards" href="">Rewards</a>
@@ -369,9 +349,11 @@ Family Fun Getaway: Make lasting memories with your family on Father's Day with 
                                 src="/images/shooting_thumbnail.webp" />
                               <div class="card_body_exp">
                                 <h3 class="card-title">Shooting Range</h3>
-                                <button class="btn_Experience">
-                                  Check out
-                                </button>
+                                <a
+                                  class="btn_Experience"
+                                  href="/HTML/shooting.html"
+                                  >Check Out</a
+                                >
                               </div>
                             </div>
                           </div>
@@ -631,39 +613,34 @@ Family Fun Getaway: Make lasting memories with your family on Father's Day with 
     <footer>
       <div class="container">
         <div class="row justify-content-center align-content-center">
-          <div class="logo-footer">
+          <div class="logo-footer" data-aos="zoom-in" data-aos-duration="800">
             <img src="images/hotel_logo.png" alt="" width="90px" />
             <!-- <h3 class="logo_name ps-2">Hotel Del Luna</h3> -->
           </div>
         </div>
         <div class="row pt-4">
-          <div class="col-lg-3 col-sm-6">
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-right"
+            data-aos-duration="800">
             <div class="single-box">
               <!-- <img src="../images/hotel_logo.png" alt="" id="logo-footer" /> -->
               <h2>VISITOR INFORMATION</h2>
               <ul>
-                <li><a href="#">Getting Here</a></li>
                 <li><a href="#">FAQ</a></li>
               </ul>
               <h2 class="pt-4">ABOUT HOTEL MANILA</h2>
               <ul>
-                <li><a href="#">Company Information</a></li>
-                <li><a href="#">TRLEI</a></li>
-                <li><a href="#">Media Center</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Procurement</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/HTML/aboutus.html">About Us</a></li>
+                <li><a href="/HTML/career.html">Careers</a></li>
+                <li><a href="/HTML/contact.html">Contact Us</a></li>
               </ul>
-              <!-- <h3>We Accect</h3>
-              <div class="card-area">
-                <i class="fa fa-cc-visa"></i>
-                <i class="fa fa-credit-card"></i>
-                <i class="fa fa-cc-mastercard"></i>
-                <i class="fa fa-cc-paypal"></i>
-              </div> -->
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 ps-lg-5">
+          <div
+            class="col-lg-3 col-sm-6 ps-lg-5"
+            data-aos="fade-up"
+            data-aos-duration="800">
             <div class="single-box">
               <h2>STAY</h2>
               <ul>
@@ -679,23 +656,29 @@ Family Fun Getaway: Make lasting memories with your family on Father's Day with 
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 ps-lg-5">
+          <div
+            class="col-lg-3 col-sm-6 ps-lg-5"
+            data-aos="fade-up"
+            data-aos-duration="800">
             <div class="single-box">
               <h2>DINE</h2>
               <ul>
-                <li><a href="#">KFC</a></li>
-                <li><a href="#">McDonalds</a></li>
-                <li><a href="#">Greenwich</a></li>
-                <li><a href="#">Jollibee</a></li>
-                <li><a href="#">Gnern</a></li>
+                <li><a href="/HTML/dining.html">KFC</a></li>
+                <li><a href="/HTML/dining.html">McDonalds</a></li>
+                <li><a href="/HTML/dining.html">Greenwich</a></li>
+                <li><a href="/HTML/dining.html">Jollibee</a></li>
+                <li><a href="/HTML/dining.html">Gnern</a></li>
               </ul>
               <h2 class="pt-4">RELAX</h2>
               <ul>
-                <li><a href="#">SPA</a></li>
+                <li><a href="/HTML/spa.html">SPA</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-left"
+            data-aos-duration="800">
             <div class="single-box">
               <h2>STAY UPDATED</h2>
               <p>
@@ -721,7 +704,7 @@ Family Fun Getaway: Make lasting memories with your family on Father's Day with 
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="800">
           <ul class="terms">
             <li>About</li>
             |
@@ -732,7 +715,7 @@ Family Fun Getaway: Make lasting memories with your family on Father's Day with 
             <li>Careers</li>
           </ul>
         </div>
-        <div class="Bottom">
+        <div class="Bottom" data-aos="fade-up" data-aos-duration="800">
           <p>Copyright @2023 Nor, Mat, Ameth, Poy, All Rigths Reserved</p>
         </div>
       </div>
